@@ -35,6 +35,8 @@ const config = {
   deploymentBranch: "main",
   trailingSlash: false,
 
+  favicon: "img/favicon.ico",
+
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
 
@@ -87,7 +89,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/social-card.png",
       colorMode: {
         defaultMode: "dark",
       },
@@ -101,7 +103,8 @@ const config = {
         title: "OverProtocol",
         logo: {
           alt: "Over Logo",
-          src: "img/logo.svg",
+          src: "img/Over-Logo_black.png",
+          className: "header-logo",
         },
         items: [
           {

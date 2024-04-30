@@ -105,6 +105,12 @@ img {
   vertical-align: top;
 }
 
+.header-logo {
+  padding: 4px !important;
+  border-radius: 4px !important;
+  width: 32px !important;
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }

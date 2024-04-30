@@ -22,7 +22,7 @@ To participate as a node in OverProtocol, the minimum hardware requirements are 
 
 - CPU: Dual-core or higher
 - Memory: 4GB RAM
-- Storage: SSD with at least 50GB capacity
+- Storage: SSD with at least 50GB available space
 - Network: 8MBit/sec download speed
 
 ### Recommended Hardware Requirements
@@ -31,7 +31,7 @@ For an optimal experience and enhanced performance, particularly for validators 
 
 - CPU: Fast CPU with 4 or more cores
 - Memory: 16GB RAM or more
-- Storage: SSD with at least 128GB capacity
+- Storage: SSD with at least 128GB available space
 - Network: 25+ MBit/s bandwidth
 
 By meeting or exceeding these recommended specifications, you can ensure that your node operates efficiently, contributes positively to the network, and minimizes the risk of downtime or performance issues.

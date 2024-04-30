@@ -27,9 +27,9 @@ For advanced users who prefer a hands-on, customized approach, building your nod
    You first have to clone the the execution client, and the consensus client software of OverProtocol.
    Access the official OverProtocol GitHub repository and clone it to your local machine.
 
-   **_OverProtocol Execution Client [Kairos](https://github.com/superblock-dev/kairos2.0)_**: The execution layer client handles the processing of transactions and the maintenance of the blockchain state. It must be fully synchronized with the OverProtocol network.
+   **_OverProtocol Execution Client [Kairos]_**: The execution layer client handles the processing of transactions and the maintenance of the blockchain state. It must be fully synchronized with the OverProtocol network.
 
-   **_OverProtocol Consensus Client [Chronos](https://github.com/superblock-dev/chronos)_**: This consensus client works in tandem with the execution layer to achieve network consensus on the current state of the blockchain. Synchronizing this client is crucial for participating in network validation.
+   **_OverProtocol Consensus Client [Chronos]_**: This consensus client works in tandem with the execution layer to achieve network consensus on the current state of the blockchain. Synchronizing this client is crucial for participating in network validation.
 
 2. **Prerequisites**: Make sure all required dependencies and development tools are installed on your machine. These are usually listed in the repository's README.
 
