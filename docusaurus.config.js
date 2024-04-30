@@ -135,7 +135,7 @@ const config = {
             ],
           },
           {
-            href: "https://www.github.com/overprotocol/overprotocol.github.io",
+            href: "https://www.github.com/overprotocol",
             position: "right",
             className: "header-github-link",
             "aria-label": "GitHub repository",
