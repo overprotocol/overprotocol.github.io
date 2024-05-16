@@ -4,11 +4,11 @@ description: An allocation information of OverProtocol
 lang: en
 ---
 
-Over has a supply schedule that releases 1 Billion OVER over 10 years. As we transition into the 11th year, the protocol initiates an annual minting of 15 million OVER, constituting roughly $1.5\%$ of the entire supply. This approach aims to strike a balance with careful burn mechanisms to maintain an adequate supply.
+Over has a supply schedule that releases 1 billion OVER over 10 years. As we transition into the 11th year, the protocol initiates an annual minting of 20 million OVER, constituting roughly $2\%$ of the entire supply. This approach is designed to prevent excessive issuance and explosive inflation.
 
 ## Staking Rewards
 
-$40\%$ of the total tokens, equating to 400 million OVER, will be distributed over 10 years. The issuance plan, designed for the first ten years, is crafted based on meticulous modeling that incrementally increases and then decreases annually, taking into account the desired number of validators. Further details are described in the [Issuance section](issuance.md).
+40% of the total tokens, equating to 400 million OVER, will be distributed over 10 years. The issuance plan ensures that 200 million OVER is allocated as the minimum guaranteed reward, distributed in equal annual amounts to stakers. The remaining 200 million OVER will be used as an adjustable reward, which is modulated in real-time by the system without human intervention, based on the desired staking quantity. Further details are provided in the [Staking Rewards section](issuance.md).
 
 ## Over Community Access Program (OCAP)
 
