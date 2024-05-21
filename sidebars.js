@@ -108,8 +108,8 @@ const operatorsSidebar = [
   },
   {
     type: "doc",
-    label: "Operate Restoration Node",
-    id: "operators/operate-restoration-node",
+    label: "Operate Restoration Client",
+    id: "operators/operate-restoration-client",
   },
   {
     type: "doc",

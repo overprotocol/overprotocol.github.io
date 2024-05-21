@@ -1,13 +1,13 @@
 ---
-title: Operate Restoration Node
-description: Step-by-step guides of how to operate restoration node.
+title: Operate Restoration Client
+description: Step-by-step guides of how to operate restoration client.
 lang: en
 ---
 
-To restore an expired account, you need to retrieve the proof of historical state. This requires running an execution client that stores historical state data. By operating both the execution client and the restoration node, you can help users restore expired accounts and receive additional rewards.
+To restore an expired account, you need to retrieve the proof of historical state. This requires running an execution client that stores historical state data. By operating both the execution client and the restoration client, you can help users restore expired accounts and receive additional rewards.
 
-## How to run a restoration node
-Restoration node is controlled using the command line. Here’s how to set it up:
+## How to run a restoration client
+Restoration client is controlled using the command line. Here’s how to set it up:
 
 ```sh
 restoration --help                                                                                                             
@@ -34,7 +34,7 @@ Usage of restoration:
 ```
 
 :::caution
-The execution node must be synced with full sync mode and store an unlimited number of epochs.
+The execution client must be synced with full sync mode and store an unlimited number of epochs.
 ```sh
 $ geth --syncmode full --epochLimit 0
 ```

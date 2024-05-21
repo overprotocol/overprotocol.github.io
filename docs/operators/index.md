@@ -11,7 +11,7 @@ Running your own node on the OverProtocol blockchain is not just about participa
 - **Increased Trust and Security**: Operating your own node allows you to independently verify transactions without relying on third-party services.
 - **Support for the Network**: By running a node, you contribute to the network’s health and decentralization, reducing the risk of central points of failure.
 - **Direct Participation in Consensus**: As a validator, you play a part in the consensus process, influencing the network’s integrity and progression.
-- **Potential Rewards**: Validators who actively participate in consensus can earn rewards, incentivizing the maintenance and operation of the network. Also By running restoration node, you can help users restore expired accounts and receive additional rewards.
+- **Potential Rewards**: Validators who actively participate in consensus can earn rewards, incentivizing the maintenance and operation of the network. [Also by running restoration node](/operators/operate-restoration-client), you can help users restore expired accounts and receive additional rewards.
 
 ## Step-by-Step Guide to Setting Up Your Node
 
