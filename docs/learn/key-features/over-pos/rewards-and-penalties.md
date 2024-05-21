@@ -52,11 +52,11 @@ Validator's risk score is added up by $a$ in downtime, and decreased by $b$ in u
 
 Then the expectation is $\text{risk score per epoch} = a(1-p)-bp = -(a+b)p +a$, and the x-intercept of this function would be $\frac{a}{a+b}$. We know that value $a$ is $\Delta{S_{max}}$, hence 1. So the x-intercept is $\frac{1}{1+b}$. We target the x-intercept to be the validator uptime threshold. That is, if we denote, $f$: the step function which indicates the required uptime depending on each validator (Illustrated in the figure below), $\frac{1}{1+b} = f$
 
-<img src="/img/fig-8.png" style={{width: 500}} alt="Required Validator Uptime" />
+<img src="/img/Fig-8.png" style={{width: 500}} alt="Required Validator Uptime" />
 
 Then the relationship between the validator's uptime and risk score delta per epoch is shown in the following illustration and equation.
 
-<img src="/img/fig-9.png" style={{width: 500}} alt="Delta Risk Score per epoch" />
+<img src="/img/Fig-9.png" style={{width: 500}} alt="Delta Risk Score per epoch" />
 
 $$
 \Delta\text{Risk Score per Epoch}= - \frac{\Delta S_{max}}{f}\cdot{P} + \Delta{S_{max}}
