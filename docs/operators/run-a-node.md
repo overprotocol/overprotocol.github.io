@@ -94,6 +94,13 @@ $ geth --gcmode archive
 
 If the combination is `geth --syncmode full --gcmode archive` then all blockchain data from the genesis block is written down in the database. If the combination is `geth --syncmode snap --gcmode archive` the blockchain data from the trusted checkpoint.
 
+**Choose the Number of Epochs to Store**:
+
+OverProtocol is lightweight because it only requires active and staged state data to progress blocks.
+
+You can use the **`geth --epochLimit 2`** command (default) to minimize storage by retaining only active and staged data.
+
+You can use the **`geth --epochLimit 0`** command (0 means unlimited) to store all inactive data in addition to active and staged data.
 <!-- **Becoming a Light Node**:
 
 Lastly this is an option to become a light node. Currently, there is no option for OverNode users to become a light node. Client software runners could become a light node by running the execution client with the following tag:
