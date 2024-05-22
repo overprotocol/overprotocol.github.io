@@ -6,15 +6,13 @@ lang: en
 
 ## Principles of Design
 
-The OverProtocol is committed to designing a robust tokenomics framework. In this context, we present three key principles that guide our approach throughout the entire course of tokenomics design.
+The OverProtocol is dedicated to crafting a robust tokenomics framework, guided by two fundamental principles throughout its design.
 
-Firstly, the tokenomics should reinforce the **security** of the blockchain. In Proof of Stake (PoS) systems, the value of tokens underpinning the network's security is of paramount importance. The greater the value of tokens safeguarding the network, the more robust it becomes against potential attacks. Therefore, the system needs to offer sufficient incentives to attract a significant number of validators, who contribute to securing the network through their tokens.
+Firstly, the tokenomics should enhance the **security** of the blockchain. In Proof of Stake(PoS) systems, The higher the value of tokens protecting the network, the more resilient it becomes against potential attacks. Thus, the system must provide adequate incentives to attract a substantial number of validators who secure the network with their tokens.
 
-Next, tokenomics should prioritize **stability**, establishing a reliable and functional environment that encourages user interaction with both the asset and its underlying network. This stability not only boosts user confidence but also gives the system more flexibility to overcome challenges. The system should be less sensitive to rapid changes to provide the resilience needed to respond effectively to external influences, ultimately facilitating recovery.
+Second, the tokenomics should emphasize **stability**, creating a dependable environment that fosters user engagement with the asset and its underlying network. Stability boosts user confidence and equips the system to handle challenges effectively. By being less vulnerable to rapid changes, the system gains the resilience to respond to external influences and facilitate recovery.
 
-Lastly, tokenomics must incorporate **adaptability**. Whether faced with external or internal challenges, the system may require adjustments at any time. Therefore, the system needs to possess the capability to modify its parameters. This adaptability ensures the system can maintain its security and stability under various circumstances.
-
-Guided by these principles, we carefully develop our tokenomics strategy, which includes allocation, issuance, fees, yield, and other key elements, to ensure alignment with these fundamental tenets. Now, let's explore each of these essential components in detail.
+With these principles as our guide, we meticulously develop our tokenomics strategy, covering allocation, issuance, fees, yield, and other critical elements to ensure alignment with these core tenets. Let’s delve into each of these key components in detail.
 
 ## OVER Token
 
