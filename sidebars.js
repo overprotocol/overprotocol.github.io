@@ -69,8 +69,11 @@ const learnSidebar = [
             label: "Overview",
             id: "learn/key-features/tokenomics/overview",
           },
-          "learn/key-features/tokenomics/allocation",
-          "learn/key-features/tokenomics/issuance",
+          {
+            type: "doc",
+            label: "Token Distribution",
+            id: "learn/key-features/tokenomics/distribution",
+          },
           "learn/key-features/tokenomics/feedback",
           "learn/key-features/tokenomics/fee",
         ],
