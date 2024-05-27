@@ -104,7 +104,7 @@ Follow steps 4 and 5.
 Run `validator` client to import the validator keys with the command similar to the following:
 
 ```sh
-$ ./validator accounts import --keys-dir=<path/to/your/validator/keys> --mainnet
+$ validator accounts import --keys-dir=<path/to/your/validator/keys> --mainnet
 ```
 
 ### 5. Run your Validator
@@ -112,7 +112,7 @@ $ ./validator accounts import --keys-dir=<path/to/your/validator/keys> --mainnet
 Run `validator` client to run the validator on your node like following:
 
 ```sh
-$ ./validator --wallet-dir=<path/to/your/wallet/directory> --mainnet --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
+$ validator --wallet-dir=<path/to/your/wallet/directory> --mainnet --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
 ```
 
 `--suggested-fee-recipient` will allow you to earn block priority fees. If no `--suggested-fee-recipient` is set neither on the validator client nor on the beacon node, the corresponding fees will be sent to the burn address, and forever lost.
@@ -134,7 +134,7 @@ Upon activation, your validator will begin participating in the creation and val
 For users who decide to cease staking and wish to withdraw their entire balance, a "voluntary exit" process must be initiated. This involves signing and broadcasting a voluntary exit message using your validator keys. The process is facilitated by your validator client and must be submitted to your beacon node. Importantly, this action does not require any gas fees, as it is a part of the consensus layer's functionality. You will have to rely on the following-like command:
 
 ```sh
-$ ./prysmctl validator exit --wallet-dir=<path/to/your/wallet/directory> --beacon-rpc-provider=<127.0.0.1:4000>
+$ prysmctl validator exit --wallet-dir=<path/to/your/wallet/directory> --beacon-rpc-provider=<127.0.0.1:4000>
 ```
 
 ### Exiting Process
