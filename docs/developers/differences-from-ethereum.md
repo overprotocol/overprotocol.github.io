@@ -4,35 +4,46 @@ description: A list of differences from Ethereum that can significantly impact h
 lang: en
 ---
 
-While OverProtocol is an independent Layer 1 protocol, it inherits the Ethereum Virtual Machine (EVM), making it compatible with Ethereum's established ecosystem. This compatibility allows developers familiar with Ethereum's development environment to transition smoothly and leverage their existing skills. Below, we outline the key aspects of OverProtocol that differentiate it from Ethereum, highlighting why understanding these distinctions is crucial for developers, as these differences can significantly impact how applications are built and function on this platform.
+OverProtocol is an independent Layer 1 protocol that inherits the Ethereum Virtual Machine (EVM), ensuring compatibility with Ethereum's established ecosystem. This compatibility enables developers familiar with Ethereum to transition smoothly and leverage their existing skills. However, there are key distinctions between OverProtocol and Ethereum that developers must understand, as these differences can significantly impact how applications are built and function on this platform. Here are the crucial aspects to consider and the actions to take:
 
-## Account Expiration
+## Your Accounts Can Be Expired
 
-In OverProtocol, accounts that remain inactive for an extended period are subject to expiration. [This mechanism](/learn/key-features/layered-architecture/ethanos) is designed to optimize the network's efficiency and scalability by reducing the overhead of maintaining dormant accounts.
+In OverProtocol, inactive accounts are subject to expiration. [This mechanism](/learn/key-features/layered-architecture/ethanos) optimizes network efficiency and scalability by reducing the overhead of maintaining dormant accounts. Account restoration involves [a new transaction type](/learn/key-features/layered-architecture/ethanos#restoration-transaction) and additional EVM functionalities rather than opcode-level implementation.
 
-Account restoration in OverProtocol is not implemented at the opcode level but rather as a combination of a new transaction type and additional EVM functionalities.
+On the mainnet, the Ethanos cycle lasts approximately 3 months, meaning that it takes 3 to 6 months for an inactive account to expire. The assessment of activity is based on the Ethanos cycle, so if you were active near the end of a cycle, your account could remain active for one more cycle. Conversely, if you were active at the beginning, your account could last for two cycles.
 
-:::warning
-Currently, contract accounts have restoration disabled to prevent their expiration. To keep a contract active and prevent it from expiring, it must be periodically used.
+### Actions to Take
 
-Usage is defined as any transaction querying the contract account's state or calling its functions, including view functions. This ensures that contracts remain active and functional within the network ecosystem, adhering to the protocol's operational requirements.
+**If Your Account is Expired**:
+
+- Do not worry; it can be restored without any penalties.
+- To restore your accounts, you can request to [restoration client](/operators/operate-restoration-client) for the restoration.
+- Currently, you need to operate your own restoration client, but future services will provide more convenient restoration options.
+
+**If Your Account is Not Expired**:
+
+- Ensure that accounts, especially contract accounts, are periodically used to prevent expiration. Usage is defined as any transaction that queries the contract account's state or calls its functions, including view functions.
+- Regularly monitor account activity to avoid unintentional expiration and ensure continuity of service. A monitoring tool will be available soon.
+- Especially for contract accounts with significant storage, prevent expiration as restoring storage can be costly. Future advancements will improve storage management efficiency, but for now, some monitoring and inconvenience are necessary.
+
+:::info
+For contract accounts, especially those with extensive storage, expiration can be costly to restore. While we are developing more efficient storage management techniques, please bear with the current monitoring requirements to prevent expiration.
 :::
 
-## Differences in Contract Address Derivation
+## You Can't Use the Same Contract Address in Ethereum
 
-:::caution
+:::tip
 While the same Externally Owned Account (EOA) address can be used across various EVM-compatible chains with the same private key, this does not apply to contract addresses.
 :::
-
-### Address Derivation
 
 Due to the state expiry feature in OverProtocol, all accounts, including contract accounts, could eventually expire. To mitigate the risk of an expired contract address being reused by a newly created contract, the contract creation operation always incorporates the caller account's `restoredEpoch` value. This inclusion alters the outcome of the `CREATE` operation, making the resulting addresses differ from those on other EVM chains.
 
 As a result, even though the `CREATE2` operation allows for deterministic address prediction and usage, it is not possible to reuse the same address across different chains as you would with EOA addresses.
 
-:::caution
-To use `CREATE2` for contract deployment, the address must be restored back to Epoch 0.
-:::
+### Actions to Take
+
+- Be aware that contract addresses on OverProtocol will differ from those on Ethereum and other EVM-compatible chains due to the inclusion of the `restoredEpoch` value.
+- When deploying contracts, account for the different address derivation method and plan your deployment strategy accordingly.
 
 ```go
 // Create creates a new contract using code as deployment code.
@@ -52,9 +63,7 @@ func (evm *EVM) Create2(caller ContractRef, code []byte, gas uint64, endowment *
 }
 ```
 
-## Differences in Account Structure
-
-### Account Nonce
+## Transaction has a `restoredEpoch` Field
 
 In traditional blockchain architectures, the `nonce` primarily tracks the number of transactions sent from a given account, ensuring transaction order and preventing double-spending. However, due to the expiration feature in OverProtocol, distinguishing explicitly between expired accounts and newly created accounts becomes challenging, raising the possibility of `nonce` overlap. To address this issue, OverProtocol introduces the `restoredEpoch` as a crucial component.
 
@@ -66,15 +75,12 @@ For a more detailed explanation, please refer to the [documentation](/learn/key-
 
 #### `nonce` Field in Transaction
 
-In RPC requests, such as `eth_getTransactionCount`, the response reflects this unique combination. The `nonce` is split into a 64-bit field, with the first 32 bits representing the `restoredEpoch` and the remaining 32 bits functioning as the traditional `nonce`. This adaptation allows developers to leverage existing Ethereum development environments while accommodating the unique features of OverProtocol.
+The existing `nonce` field is split into a 64-bit field, with the first 32 bits representing the `restoredEpoch` and the remaining 32 bits functioning as the traditional `nonce`. This adaptation allows developers to leverage existing Ethereum development environments while accommodating the unique features of OverProtocol.
 
-### Storage Count
+### Actions to Take
 
-This feature prepares for future functionalities where the cost associated with an account's storage usage might be billed. Each new storage slot created by an `SSTORE` operation increases the count, while emptying a slot decreases it.
-
-### UI Hash
-
-Reserved space for future proof related to an account's interaction with external layers. Currently, this feature is not utilized but is planned for future enhancements to enhance cross-layer interactions and verifications.
+- Learn how `restoredEpoch` functions and its interaction with the nonce to ensure each account's uniqueness.
+- Use RPC requests like `eth_getTransactionCount` when making transactions. The response will include the correct `nonce` value, considering both `nonce` and `restoredEpoch`.
 
 ## Misc
 
