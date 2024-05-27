@@ -137,6 +137,12 @@ For users who decide to cease staking and wish to withdraw their entire balance,
 $ prysmctl validator exit --wallet-dir=<path/to/your/wallet/directory> --beacon-rpc-provider=<127.0.0.1:4000>
 ```
 
+Alternatively, you can use Bazel to initiate a voluntary exit from the source as follows:
+
+```sh
+$ bazel run //cmd/prysmctl -- validator exit --wallet-dir=<path/to/your/wallet/directory> --beacon-rpc-provider=<127.0.0.1:4000> 
+```
+
 ### Exiting Process
 
 The time it takes for a validator to exit from staking can vary significantly depending on the number of other validators undergoing the same process simultaneously. After this period, your validator will no longer be eligible for validator duties, including block creation and voting.
