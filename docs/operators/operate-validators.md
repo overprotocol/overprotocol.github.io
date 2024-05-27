@@ -54,7 +54,6 @@ const web3 = new Web3('http://127.0.0.1:22000');
 
 const depositContractAddress = '0x000000000000000000000000000000000000beef';
 const depositContractABI = require('./depositContractABI.json').abi;
-const args = process.argv.slice(2);
 
 // Replace these with your own values
 async function stake(privateKey) {
