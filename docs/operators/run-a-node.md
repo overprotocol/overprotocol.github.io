@@ -112,7 +112,7 @@ geth --syncmode light
 
 ### Consensus Layer Sync Modes
 
-There are three ways to sync the consensus layer: initial sync, checkpoint sync. OverNodes users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
+There are two ways to sync the consensus layer: initial sync, and checkpoint sync. OverNodes users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
 
 **Initial sync**:
 
