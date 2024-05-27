@@ -101,6 +101,7 @@ OverProtocol is lightweight because it only requires active and staged state dat
 You can use the **`geth --epochLimit 2`** command (default) to minimize storage by retaining only active and staged data.
 
 You can use the **`geth --epochLimit 0`** command (0 means unlimited) to store all inactive data in addition to active and staged data.
+
 <!-- **Becoming a Light Node**:
 
 Lastly this is an option to become a light node. Currently, there is no option for OverNode users to become a light node. Client software runners could become a light node by running the execution client with the following tag:
@@ -132,7 +133,7 @@ $ chronos --checkpoint-sync-url value --genesis-beacon-api-url value
 ## What's Next
 
 Once your node is up, running and synced, the next step is to
-register and operate validators.This involves configuring your node to participate in the consensus process, enhancing the network's security and stability.
+register and operate validators. This involves configuring your node to participate in the consensus process, enhancing the network's security and stability.
 
 For OverNode users this step is pretty much straight-forward. After the node is synced, jump in to the Staking tab to register as a validator.
 
