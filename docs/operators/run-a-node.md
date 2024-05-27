@@ -127,7 +127,7 @@ There are three ways to sync the consensus layer: initial sync, checkpoint sync.
 - Append the following tags to enable the checkpoint sync
 
 ```sh
-$ chronos --checkpoint-sync-url value --genesis-beacon-api-url value
+$ beacon-chain --checkpoint-sync-url value
 ```
 
 ## What's Next
