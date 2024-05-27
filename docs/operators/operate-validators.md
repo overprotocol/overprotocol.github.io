@@ -151,6 +151,7 @@ The time it takes for a validator to exit from staking can vary significantly de
 
 Once the exit process is complete, the validator's account status changes in several key ways:
 
-- No Longer Active: The account will no longer perform any network duties as a validator.
-- Ineligibility for Rewards: It ceases to earn staking rewards.
-- Removal of Stake: The staked OVER tokens are no longer considered "at stake."
+- **No Longer Active**: The account will no longer perform any network duties as a validator.
+- **Ineligibility for Rewards**: The account ceases to earn staking rewards.
+- **Removal of Stake**: The staked OVER tokens are no longer considered "at stake."
+- **Full Withdrawal**: After some epochs, the staked OVER tokens will be withdrawn to the address set in the deposit data.
