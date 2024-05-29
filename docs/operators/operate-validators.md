@@ -33,7 +33,7 @@ To participate as a validator, you need 256 OVER tokens or multiples thereof, st
 
 ### 2. Generate Validator Keys (Mnemonics)
 
-1. **Go to the Deposit-cli Repository**: Go to the OverProtocol [Staking Deposit CLI] repository. This tool is used for creating [EIP-2335](https://eips.ethereum.org/EIPS/eip-2335) format BLS12-381 keystores and a corresponding `deposit_data-XXXXX.json` file.
+1. **Go to the Deposit-cli Repository**: Go to the OverProtocol [staking-deposit-cli](https://github.com/overprotocol/staking-deposit-cli) repository. This tool is used for creating [EIP-2335](https://eips.ethereum.org/EIPS/eip-2335) format BLS12-381 keystores and a corresponding `deposit_data-XXXXX.json` file.
 
 2. **Run CLI following the repository's `README.md`**: This will complete the process of generating the mnemonic. Ensure that the generated file is kept in a safe place, as this mnemonic will be associated with all future rewards and your withdrawal amount.
     
