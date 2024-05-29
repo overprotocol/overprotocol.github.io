@@ -52,15 +52,15 @@ As with other transactions, the transaction is sent from an account in the execu
 The execution layer's account needs 256 OVER per validator account it tries to enroll.
 
 Then you should run the following-styled code in your machine to sender deposit transactions the with the validator keys generated in step 2.
-The deposit contract's address is set to `0x000000000000000000000000000000000000beef` and the deposit contract ABI is set as the following link: [DepositContract.abi.json](./assets/DepositContract.abi.json).
+The deposit contract's address is set to `0x000000000000000000000000000000000beac017` and the deposit contract ABI is set as the following link: [DepositContract.abi.json](./assets/DepositContract.abi.json).
 
 ```js
 const Web3 = require('web3');
 const fs = require('fs');
 const path = require('path');
-const web3 = new Web3('http://127.0.0.1:22000');
+const web3 = new Web3('http://127.0.0.1:22000'); 
 
-const depositContractAddress = '0x000000000000000000000000000000000000beef';
+const depositContractAddress = '0x000000000000000000000000000000000beac017';
 const depositContractABI = require('./DepositContract.abi.json').abi;
 
 // Replace these with your own values
