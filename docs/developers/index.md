@@ -25,14 +25,14 @@ When working with OverProtocol, especially in a testnet environment, it's import
 
 The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
 
-| Key                 | Value                              |
-| ------------------- | ---------------------------------- |
-| Network             | OverProtocol Dolphin               |
-| RPC URL             | YOUR_OVER_RPC_URL                  |
-| Chain ID            | 541760                             |
-| Currency symbol     | OVER                               |
-| Block Explorer URL  | https://dolphin.view.over.network/ |
-| SweepEpoch          | 648000 (about 90 days)             |
+| Key                 | Value                                         |
+| ------------------- | ----------------------------------------------|
+| Network             | OverProtocol Dolphin                          |
+| RPC URL             | http://wallet-dolphin.rpc.over.network:22000/ |
+| Chain ID            | 541761                                        |
+| Currency symbol     | OVER                                          |
+| Block Explorer URL  | https://dolphin.view.over.network/            |
+| SweepEpoch          | 648000 (about 90 days)                        |
 
 ## Preparing an Account with OVER Tokens
 
