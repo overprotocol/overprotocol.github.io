@@ -58,7 +58,7 @@ The deposit contract's address is set to `0x000000000000000000000000000000000bea
 const Web3 = require('web3');
 const fs = require('fs');
 const path = require('path');
-const web3 = new Web3('http://127.0.0.1:22000'); 
+const web3 = new Web3('http://127.0.0.1:22000'); // RPC port of Kairos
 
 const depositContractAddress = '0x000000000000000000000000000000000beac017';
 const depositContractABI = require('./DepositContract.abi.json');
