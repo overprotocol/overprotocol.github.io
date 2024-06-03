@@ -61,7 +61,7 @@ const path = require('path');
 const web3 = new Web3('http://127.0.0.1:22000'); 
 
 const depositContractAddress = '0x000000000000000000000000000000000beac017';
-const depositContractABI = require('./DepositContract.abi.json').abi;
+const depositContractABI = require('./DepositContract.abi.json');
 
 // Replace these with your own values
 async function stake(privateKey) {
