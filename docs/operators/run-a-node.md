@@ -188,7 +188,7 @@ You can use the **`geth --epochLimit 0`** command (0 means unlimited) to store a
 
 ### Consensus Layer Sync Modes
 
-There are three ways to sync the consensus layer: initial sync, checkpoint sync. OverNodes users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
+There are two ways to sync the consensus layer: initial sync, and checkpoint sync. OverNodes users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
 
 **Initial sync**:
 
@@ -203,13 +203,13 @@ There are three ways to sync the consensus layer: initial sync, checkpoint sync.
 - Append the following tags to enable the checkpoint sync
 
 ```sh
-$ chronos --checkpoint-sync-url value --genesis-beacon-api-url value
+$ beacon-chain --checkpoint-sync-url value
 ```
 
 ## What's Next
 
 Once your node is up, running and synced, the next step is to
-register and operate validators.This involves configuring your node to participate in the consensus process, enhancing the network's security and stability.
+register and operate validators. This involves configuring your node to participate in the consensus process, enhancing the network's security and stability.
 
 For OverNode users this step is pretty much straight-forward. After the node is synced, jump in to the Staking tab to register as a validator.
 
