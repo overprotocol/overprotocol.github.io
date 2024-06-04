@@ -47,16 +47,16 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
    | Type               | Benefits                                                                                             | Recommended Requirements                                                                                                                                                                              |
    |--------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | **Execution + Consensus** | - Contributes to the security of Over ecosystem. <br> - Lets you access the Over network directly without having to trust a third party service.        | - **Software:** Execution node client, consensus node client (instructions for clients below) <br> - **OS:** 64-bit Linux, Mac OS X 10.14+, Windows 10+ 64-bit <br> - **CPU:** Fast CPU with 4 or more cores <br> - **Memory:** 16GB RAM or more <br> - **Storage:** SSD with at least 128GB free space <br> - **Network:** 25+ MBit/s bandwidth |
-   | **Validator**         | - Lets you stake OVER, propose + validate blocks, earn staking rewards + transaction fee tips.        | - Everything above, plus... <br> - **Software:** Validator client <br> - **Hardware:** (Recommended) A new machine that has never been connected to the internet that you can use to securely generate your mnemonic phrase and keypair <br> - **256 OVER** (Mainnet) <br> - **256 testnet OVER** (Testnets) |
+   | **Execution + Consensus** | - Contributes to the security of Over ecosystem.<br /> - Lets you access the Over network directly without having to trust a third party service.        | - **Software:** Execution node client, consensus node client (instructions for clients below)<br />  - **OS:** 64-bit Linux, Mac OS X 10.14+, Windows 10+ 64-bit<br />  - **CPU:** Fast CPU with 4 or more cores<br />  - **Memory:** 16GB RAM or more<br />  - **Storage:** SSD with at least 128GB free space<br />  - **Network:** 25+ MBit/s bandwidth |
+   | **Validator**         | - Lets you stake OVER, propose + validate blocks, earn staking rewards + transaction fee tips.        | - Everything above, plus...<br />  - **Software:** Validator client<br />  - **Hardware:** (Recommended) A new machine that has never been connected to the internet that you can use to securely generate your mnemonic phrase and keypair<br />  - **256 OVER** (Mainnet)<br />  - **256 testnet OVER** (Testnets) |
    
    **Best practices**
    - **If you're staking OVER as a validator, try this guide on a testnet first, _then_ mainnet.**
    - **Keep things simple.** This guidance assumes all client software will run on a single machine.
    - **Join the community** - join our [OverProtocol Discord server](https://discord.com/invite/overprotocol) for updates and support.
 
-2. **Prepare Binary**
-   Create a folder called `overprotocol` on your SSD, and then two subfolders within it: `consensus` and `execution`:
+
+2. **Prepare Binary**<br /> Create a folder called `overprotocol` on your SSD, and then two subfolders within it: `consensus` and `execution`:
 
    ```plaintext
    overprotocol
@@ -69,10 +69,10 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
       | Operating System     | OverProtocol Execution Client [Kairos]                                               | OverProtocol Consensus Client [Chronos]                                               |
       |----------------------|--------------------------------------------------------|--------------------------------------------------------|
-      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.16/develop/chronos_linux_amd64.zip)      |
-      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.16/develop/chronos_osx_arm64.zip)    |
-      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.16/develop/chronos_osx_amd64.zip)    |
-      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.16/develop/chronos_windows.zip)        |
+      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_linux_amd64.zip)      |
+      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_osx_arm64.zip)    |
+      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_osx_amd64.zip)    |
+      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_windows.zip)        |
 
    - Then your binary directory structure should look like this:
 
@@ -91,74 +91,34 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
       And let's try to run a fullnode for dolphin testnet for example.
 
-3. **Run an execution client**: Navigate to your execution directory and run the following command to start your execution node
+3. **Run an execution client**<br /> Navigate to your execution directory and run the following command to start your execution node
 
       ```sh
       mkdir data
-      geth --dolphin --datadir=./data
+      ./geth --dolphin --datadir=./data
       ```
 
    The execution layer client cannot sync without an attached beacon node. We'll see how to setup a beacon node in the next step.
 
-4. **Run an consensus client**: In this step, you'll run a consensus node(chronos).
+4. **Run an consensus client**<br /> In this step, you'll run a consensus node(chronos).
 
    There is two main ways to sync a consensus node: from genesis, and from a checkpoint. It is safer and a considerably faster to sync from a checkpoint. When syncing from a checkpoint, the simplest is to connect to a checkpoint sync endpoint. In the following examples, we'll use the checkpoint sync endpoint provided by Over Foundation.
    Navigate to your execution directory and run the following command to start your consensus node
 
       ```sh
       mkdir data
-      beacon-chain --dolphin --datadir=./data --jwt-secret ../execution/data/geth/geth/jwtsecret --checkpoint-sync-url="https://asia-northeast3-protocol-pool.cloudfunctions.net"
+      ./beacon-chain --dolphin --datadir=./data --jwt-secret ../execution/data/geth/jwtsecret --checkpoint-sync-url="https://asia-northeast3-protocol-pool.cloudfunctions.net"
       ```
 
    Syncing from a checkpoint usually takes a couple of minutes.
 
-   If you wish to sync from genesis, you need to remove `--checkpoint-sync-url` flag from the previous command and add the `--genesis-state`=genesis.ssz flag. Syncing from genesis usually takes a couple days, but it can take longer depending on your network and hardware specs. Download the [Dolphin genesis.ssz from Github](will/be/updated) into your consensus directory.
+   If you wish to sync from genesis, you need to remove `--checkpoint-sync-url` flag from the previous command and add the `--genesis-state=genesis.ssz` flag. Syncing from genesis usually takes a couple of hours, but it can take longer depending on your network and hardware specs. Download the [Dolphin genesis.ssz from Over Foundation](https://storage.googleapis.com/overprotocol-configs/dolphin/genesis.ssz) into your consensus directory.
    If you are planning to run a validator, it is strongly advised to use the `--suggested-fee-recipient=<WALLET ADDRESS>` option. When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips".
 
    Congratulations - you’re now running a full OverProtocol node. 
 
 5. **Run a validator client**
-   Next, we'll create your validator keys with the [Ethereum Staking Deposit CLI](https://our-over-protocol-github/staking-deposit-cli).
-
-   Download – ideally on a new machine that has never been connected to the internet – the latest stable version of the deposit CLI from the [Staking Deposit CLI Releases page](https://our-over-protocol-github/staking-deposit-cli/releases).
-
-   Run the following command to create your mnemonic (a unique and **highly sensitive** 24-word phrase) and keys:
-
-   ```sh
-   ./deposit new-mnemonic --num_validators=1 --mnemonic_language=english --chain=sepolia
-   ```
-
-   Follow the CLI prompts to generate your keys. The password you choose will be needed later when importing the generated data into the validator client. This will give you the following artifacts:
-
-   1. A **new mnemonic seed phrase**. This is **highly sensitive** and should never be exposed to other people or networked hardware.
-   2. A `validator_keys` folder. This folder will contain two files:
-      1. `deposit_data-*.json` - contains deposit data that you’ll later upload to the Ethereum launchpad.
-      2. `keystore-m_*.json` - contains your public key and encrypted private key.
-   
-   If needed, copy the `validator_keys` folder to your primary machine. Run the following command to import your keystores, replacing `<YOUR_FOLDER_PATH>` with the full path to your `validator_keys` folder:
-
-   ```sh
-   validator accounts import --keys-dir=<YOUR_FOLDER_PATH> --dolphin
-   ```
-
-   You’ll be prompted to specify a wallet directory twice. Provide the path to your consensus folder for both prompts. You should see Imported accounts [...] view all of them by running accounts list when your account has been successfully imported into validator client.
-
-   Finally, run the following command to start your validator, replacing `<YOUR_FOLDER_PATH>` with the full path to your consensus folder and `<YOUR_WALLET_ADDRESS>` by the address of a wallet you own. When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips". See How to configure Fee Recipient for more information about this feature:
-
-   ```sh
-   validator --wallet-dir=<YOUR_FOLDER_PATH> --sepolia --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
-   ```
-
-   You may wonder why you need to use the `--suggested-fee-recipient` in both consensus node and validator client. The reason is it is possible to plug multiple validator clients to the same consensus node. If no `--suggested-fee-recipient` is set on a validator client, then the consensus node will fallback on its own `--suggested-fee-recipient` when proposing a block.
-
-   If no `--suggested-fee-recipient` is set neither on the validator client nor on the consensus node, the corresponding tips will be sent to the burn address, and forever lost,
-
-   :::tip CONGRATULATIONS!
-   You're now running a **full Over node** and a **validator client**.
-   :::
-
-   You can leave your execution client, beacon node, and validator client terminal windows open and running. Once your validator is activated, it will automatically begin proposing and validating blocks.
-
+   You can follow the [Setting up Validators](./operate-validators) to run a validator client.
 
 ## Node Types
 
