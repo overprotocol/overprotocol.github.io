@@ -71,10 +71,10 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
       | Operating System     | OverProtocol Execution Client [Kairos]                                               | OverProtocol Consensus Client [Chronos]                                               |
       |----------------------|--------------------------------------------------------|--------------------------------------------------------|
-      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_linux_amd64.zip)      |
-      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_osx_arm64.zip)    |
-      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_osx_amd64.zip)    |
-      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.17/develop/chronos_windows.zip)        |
+      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.18/develop/chronos_linux_amd64.zip)      |
+      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.18/develop/chronos_osx_arm64.zip)    |
+      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.18/develop/chronos_osx_amd64.zip)    |
+      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.18/develop/chronos_windows.zip)        |
 
     Then your binary directory structure should look like this:
 
@@ -123,7 +123,7 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
   **Congratulations!** you’re now running a full OverProtocol node.
 
-5. **Run a validator client**
+1. **Run a validator client**
    You can follow the [Setting up Validators](./operate-validators) to run a validator client.
 
 ## Node Types
