@@ -55,7 +55,7 @@ Then you should run the following-styled code in your machine to sender deposit 
 The deposit contract's address is set to `0x000000000000000000000000000000000beac017` and the deposit contract ABI is set as the following link: [DepositContract.abi.json](./assets/DepositContract.abi.json).
 
 ```js
-const Web3 = require('web3');
+const { ethers } = require("ethers"); // ethers.js v5
 const fs = require('fs');
 const path = require('path');
 const web3 = new Web3('http://127.0.0.1:22000'); // RPC port of Kairos
@@ -65,35 +65,38 @@ const depositContractABI = require('./DepositContract.abi.json');
 
 // Replace these with your own values
 async function stake(privateKey) {
-    const account = web3.eth.accounts.privateKeyToAccount(privateKey);
-    let accountNonce = await web3.eth.getTransactionCount(account.address);
-    const stakingContract = new web3.eth.Contract(depositContractABI, depositContractAddress);
-    const amount = web3.utils.toWei('256', 'ether')
+  const stakingContract = new ethers.Contract(
+    depositContractAddress,
+    depositContractABI,
+    privateKey
+  );
 
-    let depositDatas;
-    depositDatas = require('./deposit_data.json'); // The validator key you've generated from step 2.
+  const amount = ethers.utils.parseEther("256");
 
-    for (let i = 0; i < depositDatas.length; i++) {
-        const encodedABI = stakingContract.methods.deposit(
-            '0x' + depositDatas[i].pubkey,
-            '0x' + depositDatas[i].withdrawal_credentials, // if it already contains the withdrawal_credentials
-            '0x' + depositDatas[i].signature,
-            '0x' + depositDatas[i].deposit_data_root
-        ).encodeABI();
-        const tx = {
-            from: account.address,
-            to: depositContractAddress,
-            value: amount,
-            gas: 2000000,
-            data: encodedABI,
-            nonce: accountNonce + i
-        };
+  let depositDatas;
+  depositDatas = require("./deposit_data.json"); // The validator key you've generated from step 2.
 
-        const signedTx = await web3.eth.accounts.signTransaction(tx, privateKey);
-        web3.eth.sendSignedTransaction(signedTx.rawTransaction);
+  for (let i = 0; i < depositDatas.length; i++) {
+    const tx = await stakingContract.deposit(
+      "0x" + depositDatas[i].pubkey,
+      "0x" + depositDatas[i].withdrawal_credentials,
+      "0x" + depositDatas[i].signature,
+      "0x" + depositDatas[i].deposit_data_root,
+      {
+        value: amount,
+        gasLimit: 2000000,
+      }
+    );
+
+    try {
+      const receipt = await tx.wait();
+      console.log(`Transaction ${i + 1}:`);
+      console.log(`Transaction Hash: ${receipt.transactionHash}`); // Search by transaction hash at OverView
+    } catch (error) {
+      console.error(`Error in transaction ${i + 1}: ${error.message}`);
     }
+  }
 }
-
 ```
 
 If you've succeeded in registering your validator to the blockchain, you should now run your validator software.
@@ -103,8 +106,17 @@ Follow steps 4 and 5.
 
 Run `validator` client to import the validator keys with the command similar to the following:
 
-```sh
+```console
 $ validator accounts import --keys-dir=<path/to/your/validator/keys> --mainnet
+```
+
+If you successfully imported validator keys, the result will be:
+
+```sh
+Importing accounts, this may take a while...
+Importing accounts... 100% [==========================================================]  [0s:0s]
+[2024-06-04 15:41:33]  INFO local-keymanager: Successfully imported validator key(s) publicKeys=<YOUR_VALIDATOR_PUBKEYS>
+[2024-06-04 15:41:33]  INFO accounts: Imported accounts <YOUR_VALIDATOR_PUBKEYS>, view all of them by running `accounts list`
 ```
 
 ### 5. Run your Validator
