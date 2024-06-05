@@ -21,13 +21,18 @@ To interact with the OverProtocol network, you'll need access to a node capable 
 When working with OverProtocol, especially in a testnet environment, it's important to note that testnet configurations and details may change at any time. This variability is typical of test environments, which are often updated or reset to test new features and improvements in the blockchain protocol.
 :::
 
-| Key                 | Value                        |
-| ------------------- | ---------------------------- |
-| Network             | OverProtocol Creeper         |
-| RPC URL             | YOUR_OVER_RPC_URL            |
-| Chain ID            | 27882                        |
-| Currency symbol     | OVER                         |
-| Block Explorer URL  | https://view.over.network/   |
+#### Dolphin Testnet
+
+The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
+
+| Key                 | Value                                         |
+| ------------------- | ----------------------------------------------|
+| Network             | OverProtocol Dolphin                          |
+| RPC URL             | YOUR_RPC_URL                                  |
+| Chain ID            | 541762                                        |
+| Currency symbol     | OVER                                          |
+| Block Explorer URL  | https://dolphin.view.over.network/            |
+| SweepEpoch          | 648000 (about 90 days)                        |
 
 ## Preparing an Account with OVER Tokens
 
@@ -36,5 +41,5 @@ Developing on OverProtocol typically requires interacting with the network, whic
 **Setting Up Your Developer Account**:
 
 - **Acquire OVER Tokens**: If you are working on the main network, you'll need to acquire OVER tokens, which can be done through exchanges or from other token holders.
-- **Testnet Tokens**: For testing purposes, you can use the OverProtocol testnet, where tokens can often be acquired for free from a faucet that distributes small amounts of tokens for development use. Currently, you can receive 10 OVER testnet tokens every day from [OverWallet](https://over.network/overwallet).
+- **Testnet Tokens**: For testing purposes, you can use the OverProtocol testnet, where tokens can often be acquired for free from a faucet that distributes small amounts of tokens for development use. You can receive a certain amount of OVER testnet tokens every day from [OverWallet](https://over.network/overwallet).
 - **Secure Your Account**: Ensure that your account is secure, especially if you are working with real tokens. Utilize hardware wallets or secure key management solutions to protect your private keys and account credentials.
