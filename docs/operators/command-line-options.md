@@ -1,5 +1,5 @@
 ---
-title: Commmand Line Options
+title: Command Line Options
 description: Geth command line options and sub-commands.
 lang: en
 ---
@@ -10,14 +10,14 @@ geth --help
 
 ```
 NAME:
-   geth - the go-ethereum command line interface
+   geth - the kairos command line interface
 
 USAGE:
    geth [global options] command [command options] [arguments...]
 
 VERSION:
-   1.0.2-stable-dfef2418
-
+   1.0.3-unstable-ff8c2d62-20240605
+q
 COMMANDS:
    account                Manage accounts
    attach                 Start an interactive JavaScript environment (connect to node)
@@ -38,7 +38,6 @@ COMMANDS:
    verkle                 A set of experimental verkle tree management commands
    version                Print version numbers
    version-check          Checks (online) for known Geth security vulnerabilities
-   wallet                 Manage Ethereum presale wallets
    help, h                Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
@@ -223,7 +222,7 @@ GLOBAL OPTIONS:
     --dev.period value                  (default: 0)                       ($GETH_DEV_PERIOD)
           Block period to use in developer mode (0 = mine only if transaction pending)
 
-   ETHEREUM
+   ETH
 
    
     --bloomfilter.size value            (default: 2048)                    ($GETH_BLOOMFILTER_SIZE)
@@ -559,7 +558,7 @@ GLOBAL OPTIONS:
           year, 0 = entire chain)
    
     --state.scheme value                                                   ($GETH_STATE_SCHEME)
-          Scheme to use for storing ethereum state ('hash' or 'path')
+          Scheme to use for storing kairos state ('hash' or 'path')
    
     --syncmode value                    (default: snap)                    ($GETH_SYNCMODE)
           Blockchain sync mode ("snap" or "full")
