@@ -202,11 +202,19 @@ If the combination is `geth --syncmode full --gcmode archive` then all blockchai
 
 **Choose the Number of Epochs to Store**:
 
-OverProtocol is lightweight because it only requires active and staged state data to progress blocks.
+By default the OverProtocol client runs with minimum storage usage. You can change the epochLimit flag to change how many checkpoints to store.
 
-You can use the **`geth --epochLimit 2`** command (default) to minimize storage by retaining only active and staged data.
+```sh
+$ geth --epochLimit X
+```
+This stores checkpoints states until X epoch to the past (default is set to minimum, which is 2).
 
-You can use the **`geth --epochLimit 0`** command (0 means unlimited) to store all inactive data in addition to active and staged data.
+```sh
+$ geth --epochLimit 0
+```
+This stores all inactive data in addition to active and staged data.
+
+Normally default setting is enough, but saving previous checkpoints can be usefull when you want to retrieve states from preivous epochs.
 
 ### Consensus Layer Sync Modes
 
