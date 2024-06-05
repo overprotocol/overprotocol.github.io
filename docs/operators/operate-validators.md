@@ -4,6 +4,9 @@ description: Step-by-step guides of how to operate validators.
 lang: en
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 To operate validators means to stake OVER and participate in OverProtocol's Consensus mechanism. In order to be an validator, a user must first have its own full node running. Follow [Run a node](./run-a-node) page for more.
 
 ## Prerequisites
@@ -25,7 +28,21 @@ Being a validator on OverProtocol without using OverNode requires specific skill
 
 Operating a validator node on OverProtocol can be rewarding but demands a high level of dedication and technical expertise to ensure the security and efficacy of the blockchain network.
 
-## Setting up Validators
+
+
+<Tabs
+  groupId="set-up-validators"
+  defaultValue="scratch"
+  values={[
+    {label: 'From scratch', value: 'scratch'},
+    {label: 'Migration from OverNode', value: 'migration'},
+  ]}
+>
+  <TabItem value="scratch">
+
+## Option 1. Setting up Validators From Scratch
+
+<br />
 
 ### 1. Obtain OVER
 
@@ -102,7 +119,25 @@ async function stake(privateKey) {
 If you've succeeded in registering your validator to the blockchain, you should now run your validator software.
 Follow steps 4 and 5.
 
-### 4. Transfer Validator Keys
+  </TabItem>
+  <TabItem value="migration">
+
+## Option 2. Migrating your validators from OverNode
+
+<br />
+
+### 1. Save your validator mnemonic
+
+### 2. Generate keystore files
+
+### 3. Check your validators
+
+  </TabItem>
+</Tabs>
+
+## Run your validator
+
+### Transfer Validator Keys
 
 Run `validator` client to import the validator keys with the command similar to the following:
 
@@ -112,14 +147,14 @@ $ validator accounts import --keys-dir=<path/to/your/validator/keys> --mainnet
 
 If you successfully imported validator keys, the result will be:
 
-```sh
+```plaintext
 Importing accounts, this may take a while...
 Importing accounts... 100% [==========================================================]  [0s:0s]
 [2024-06-04 15:41:33]  INFO local-keymanager: Successfully imported validator key(s) publicKeys=<YOUR_VALIDATOR_PUBKEYS>
 [2024-06-04 15:41:33]  INFO accounts: Imported accounts <YOUR_VALIDATOR_PUBKEYS>, view all of them by running `accounts list`
 ```
 
-### 5. Run your Validator
+### Run your Validator
 
 Run `validator` client to run the validator on your node like following:
 
