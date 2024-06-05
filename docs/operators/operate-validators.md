@@ -40,7 +40,7 @@ To participate as a validator, you need 256 OVER tokens or multiples thereof, st
     You should run the command similar to the following:
 
     ```shell
-    $ ./deposit new-mnemonic --num_validators=1 --mnemonic_language=english --execution_address=<YOUR_WALLET_ADDRESS>
+    $ ./deposit new-mnemonic --num_validators=1 --mnemonic_language=english --execution_address=<YOUR_WALLET_ADDRESS> --chain=over_dolphin
     ```
 
     Adding `--execution_address=<YOUR_WALLET_ADDRESS>` will generate deposit data with a withdrawal credential, which is required for withdrawal.
@@ -107,7 +107,7 @@ Follow steps 4 and 5.
 Run `validator` client to import the validator keys with the command similar to the following:
 
 ```console
-$ validator accounts import --keys-dir=<path/to/your/validator/keys> --mainnet
+$ validator accounts import --keys-dir=<path/to/your/validator/keys> --dolphin
 ```
 
 If you successfully imported validator keys, the result will be:
@@ -124,7 +124,7 @@ Importing accounts... 100% [====================================================
 Run `validator` client to run the validator on your node like following:
 
 ```sh
-$ validator --wallet-dir=<path/to/your/wallet/directory> --mainnet --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
+$ validator --wallet-dir=<path/to/your/wallet/directory> --dolphin --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
 ```
 
 `--suggested-fee-recipient` will allow you to earn block priority fees. If no `--suggested-fee-recipient` is set neither on the validator client nor on the beacon node, the corresponding fees will be sent to the burn address, and forever lost.
