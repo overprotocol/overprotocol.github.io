@@ -16,7 +16,7 @@ On the mainnet, the Ethanos cycle lasts approximately 3 months, meaning that it 
 
 **If Your Account is Expired**:
 
-- Do not worry; it can be restored without any penalties.
+- Do not worry; it can be restored without any penalties. [How?](/developers/how-can-i-restore-my-account)
 - To restore your accounts, you can request to [restoration client](/operators/operate-restoration-client) for the restoration.
 - Currently, you need to operate your own restoration client, but future services will provide more convenient restoration options.
 

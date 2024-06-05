@@ -151,6 +151,11 @@ const developersSidebar = [
   },
   {
     type: "doc",
+    label: "How to Restore an Expired Account",
+    id: "developers/how-can-i-restore-my-account",
+  },
+  {
+    type: "doc",
     label: "Client APIs",
     id: "developers/client-apis",
   },
