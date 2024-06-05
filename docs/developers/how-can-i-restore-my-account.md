@@ -19,7 +19,7 @@ A valid restore data should include the following fields.
 
 In order to construct your restore data, you should retrieve the proper `Fee` and `FeeRecipient` by sending a http request to the store server you will use. Typically the restore server will provide this through http request named something like `minimumFee` for fee information and `feeRecipient` for fee recipient. Your request will look something like this.
 ```
-curl -X GET "http://hostAddress:hostPort/mimimumFee"
+curl -X GET "http://hostAddress:hostPort/minimumFee"
 curl -X GET "http://hostAddress:hostPort/feeRecipient"
 ```
 
