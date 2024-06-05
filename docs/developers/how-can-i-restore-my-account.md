@@ -25,7 +25,7 @@ curl -X GET "http://hostAddress:hostPort/feeRecipient"
 
 Now before sending this restore data, you have to sign it. There are multiple reasons for this procedure, but the most important reason is so the restore server can’t manipulate the restoration fee. You can sign the restore data by using the `SignRestoreData` function in the [types](https://pkg.go.dev/github.com/ethereum/go-ethereum/core/types) package. 
 
-After making a valid restore data and signing it, you can send the restore data through `reqeustRestoration` http post method. The request should look something like this.
+After making a valid restore data and signing it, you can send the restore data through `requestRestoration` http post method. The request should look something like this.
 
 ```
 curl -H 'Content-Type: application/json' \
