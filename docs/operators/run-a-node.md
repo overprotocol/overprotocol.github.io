@@ -8,7 +8,7 @@ Once you've set up your hardware in either a local or cloud environment, the nex
 
 ## Setting up a Node
 
-There are various methods to set up a node in the OverProtocol network, ranging from [user-friendly approaches](#start-with-overnode) for beginners to more [advanced, manual configurations](#build-from-source) for experienced users seeking customized setups.
+There are various methods to set up a node in the OverProtocol network, ranging from [user-friendly approaches](#start-with-overnode) for beginners to more [advanced, manual configurations](#build-from-source) for experienced users seeking customized setups. You can checkout network configurations for mainnet and testnets [here](#network-configurations).
 
 ### Start with OverNode
 
@@ -125,6 +125,28 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
 1. **Run a validator client**
    You can follow the [Setting up Validators](./operate-validators) to run a validator client.
+
+## Network Configurations
+
+### OverProtocol Testnet Configuration
+
+:::tip
+When working with OverProtocol, especially in a testnet environment, it's important to note that testnet configurations and details may change at any time. This variability is typical of test environments, which are often updated or reset to test new features and improvements in the blockchain protocol.
+:::
+
+#### Dolphin Testnet
+
+The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
+
+| Key                 | Value                                         |
+| ------------------- | ----------------------------------------------|
+| Network             | OverProtocol Dolphin                          |
+| RPC URL             | YOUR_RPC_URL                                  |
+| Chain ID            | 541762                                        |
+| Currency symbol     | OVER                                          |
+| Block Explorer URL  | https://dolphin.view.over.network/            |
+| SweepEpoch          | 648000 (about 90 days)                        |
+
 
 ## Node Types
 

@@ -28,7 +28,7 @@ The Dolphin testnet operates with the goal of providing an environment identical
 | Key                 | Value                                         |
 | ------------------- | ----------------------------------------------|
 | Network             | OverProtocol Dolphin                          |
-| RPC URL             | http://wallet-dolphin.rpc.over.network:22000/ |
+| RPC URL             | YOUR_RPC_URL                                  |
 | Chain ID            | 541762                                        |
 | Currency symbol     | OVER                                          |
 | Block Explorer URL  | https://dolphin.view.over.network/            |

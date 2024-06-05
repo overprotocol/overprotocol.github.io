@@ -21,7 +21,7 @@ Although OverProtocol does not demand extensive computing power, maintaining a c
 To participate as a node in OverProtocol, the minimum hardware requirements are relatively modest. However participating in a blockchain system is input/output intensive. Therefore, **securing a solid-state drive (SSD)** is crucial for efficient data handling and quick access to blockchain records.
 
 - CPU: Dual-core or higher
-- Memory: 4GB RAM
+- Memory: 8GB RAM
 - Storage: SSD with at least 50GB available space
 - Network: 8MBit/sec download speed
 
