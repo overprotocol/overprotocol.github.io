@@ -128,6 +128,8 @@ The precise return data varies between client implementations. All clients retur
 - `healedBytecodeBytes` : Number of bytecodes persisted to disk
 - `healingTrienodes` : Number of state trie nodes pending
 - `healingBytecode` : Number of bytecodes pending
+- `syncMode` : Sync mode: full, snap, light
+- `committed` : Check if pivot sync is done
 
 **Example**
 
@@ -154,7 +156,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":70
     "syncedBytecodeBytes": "0x0",
     "syncedBytecodes": "0x0",
     "syncedStorage": "0x0",
-    "syncedStorageBytes": "0x0"
+    "syncedStorageBytes": "0x0",
+    "syncMode": "snap",
+    "committed": false,
   }
 }
 // Or when not syncing
