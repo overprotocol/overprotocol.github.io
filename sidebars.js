@@ -116,6 +116,11 @@ const operatorsSidebar = [
   },
   {
     type: "doc",
+    label: "Command-line Options",
+    id: "operators/command-line-options",
+  },
+  {
+    type: "doc",
     label: "FAQs",
     id: "operators/faqs",
   },
@@ -148,6 +153,11 @@ const developersSidebar = [
       "developers/build-your-contract/deploy-your-contract",
       "developers/build-your-contract/developer-tools",
     ],
+  },
+  {
+    type: "doc",
+    label: "How to Restore an Expired Account",
+    id: "developers/how-can-i-restore-my-account",
   },
   {
     type: "doc",

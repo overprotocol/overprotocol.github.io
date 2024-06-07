@@ -16,7 +16,7 @@ Running your own node on the OverProtocol blockchain is not just about participa
 ## Step-by-Step Guide to Setting Up Your Node
 
 1. **Check Hardware Requirements**: Ensure you have the necessary hardware that meets the [specifications](/operators/system-requirements) required for running a node on OverProtocol.
-2. **Software Installation**: Download the latest version of [OverNode](https://over.network/overnode), the OverProtocol node software. Then, follow the installation instructions specific to your operating system.
+2. **Software Installation**: Follow the [installation instructions](/operators/run-a-node) specific to your operating system.
 3. **Syncing the Blockchain**: Before your node can start validating, it must sync with the existing blockchain data. This process can take several minutes to hours, depending on the network's size and your internet speed.
 4. **Register as a Validator**: Once your node is set up and fully synced, you need to [register as a validator](/operators/operate-validators). This involves locking up a certain amount of the OVER tokens as a stake, signifying your commitment to the network’s integrity.
 5. **Start Validating**: With your node running and registered as a validator, you will begin to participate in the creation and validation of blocks. Monitor your node’s performance and participate in the OverProtocol blockchain consensus as required.

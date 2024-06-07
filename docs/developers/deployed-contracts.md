@@ -8,9 +8,11 @@ To avoid unnecessary redeployment and to streamline your development process, we
 
 Here, you can access comprehensive information for each contract, including source code links and ABI (Application Binary Interface) details. Using these verified contracts allows you to quickly integrate and interact with established functionalities on the network.
 
-## Over Creeper Testnet
+## Dolphin Testnet
 
 | name         | address                                    |
 |--------------|--------------------------------------------|
-| Home staking | 0x000000000000000000000000000000000000beef |
-| Palm staking | 0xe695a6b20c3dd09add46e0c1605650a1cf9a97a3 |
+| PoS deposit  | 0x000000000000000000000000000000000beac017 |
+| Palm staking | 0x5f840d54a42AB85c6A5bc50AE773a9E3531b171f |
+| wrapped OVER | 0x2eFE8DBa880813F1d988208Ad35c184593559a9D |
+| multicall3   | 0xC973B98AB6ffAf2289E9A8956D156f3897053aa5 |
