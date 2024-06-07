@@ -56,19 +56,22 @@ The deposit contract's address is set to `0x000000000000000000000000000000000bea
 
 ```js
 const { ethers } = require("ethers"); // ethers.js v5
-const fs = require('fs');
-const path = require('path');
-const web3 = new Web3('http://127.0.0.1:22000'); // RPC port of Kairos
+
+const provider = new ethers.providers.JsonRpcProvider(
+  "http://127.0.0.1:22000"
+); // RPC port of Kairos
 
 const depositContractAddress = '0x000000000000000000000000000000000beac017';
 const depositContractABI = require('./DepositContract.abi.json');
 
 // Replace these with your own values
 async function stake(privateKey) {
+  const wallet = new ethers.Wallet(privateKey, provider);
+
   const stakingContract = new ethers.Contract(
     depositContractAddress,
     depositContractABI,
-    privateKey
+    wallet
   );
 
   const amount = ethers.utils.parseEther("256");
@@ -97,6 +100,8 @@ async function stake(privateKey) {
     }
   }
 }
+
+stake(YOUR_PRIVATE_KEY_WITH_0x_PREFIX)
 ```
 
 If you've succeeded in registering your validator to the blockchain, you should now run your validator software.
