@@ -786,3 +786,112 @@ interop OPTIONS:
    --interop-genesis-time value    Specify the genesis time for interop genesis state generation. Must be used with --interop-num-validators (default: 0)
    --interop-num-validators value  Specify number of genesis validators to generate for interop. Must be used with --interop-genesis-time (default: 0)
 ```
+
+### Validator
+
+```
+validator help
+```
+
+```
+NAME:
+   validator - launches an Over Protocol validator client that interacts with a beacon chain, starts proposer and attester services, p2p connections, and more
+USAGE:
+   validator [options] command [command options] [arguments...]
+
+AUTHOR:
+
+
+GLOBAL OPTIONS:
+   wallet                       defines commands for interacting with Over Protocol validator wallets
+   accounts                     defines commands for interacting with Over Protocol validator accounts
+   slashing-protection-history  defines commands for interacting your validator's slashing protection history
+   db                           defines commands for interacting with the Chronos validator database
+   help, h                      Shows a list of commands or help for one command
+
+cmd OPTIONS:
+  --accept-terms-of-use          Accept Terms and Conditions (for non-interactive environments) (default: false)
+  --api-timeout value            Specifies the timeout value for API requests in seconds (default: 120)
+  --chain-config-file value      The path to a YAML file with chain config values
+  --clear-db                     Prompt for clearing any previously stored data at the data directory (default: false)
+  --config-file value            The filepath to a yaml file with flag values
+  --datadir value                Data directory for the databases (default: "${HOME}/Eth2")
+  --db-backup-output-dir value   Output directory for db backups
+  --disable-monitoring           Disable monitoring service. (default: false)
+  --e2e-config                   Use the E2E testing config, only for use within end-to-end testing. (default: false)
+  --enable-db-backup-webhook     Serve HTTP handler to initiate database backups. The handler is served on the monitoring port at path /db/backup. (default: false)
+  --enable-tracing               Enable request tracing. (default: false)
+  --force-clear-db               Clear any previously stored data at the data directory (default: false)
+  --grpc-max-msg-size value      Integer to define max receive message call size. If serving a public gRPC server, set this to a more reasonable size to avoid resource exhaustion from large messages. Validators with as many as 10000 keys can be run with a max message size of less than 50Mb. The default here is set to a very high value for local users. (default: 2147483647 (2Gi)). (default: 2147483647)
+  --log-compress                 Compress the log files (default: false)
+  --log-file value               Specify log file name, relative or absolute
+  --log-format value             Specify log formatting. Supports: text, json, fluentd, journald. (default: "text")
+  --log-maxage value             Maximum number of days to retain a log file (default: 30)
+  --log-maxbackups value         Maximum number of log files to retain (default: 10)
+  --log-maxsize value            Maximum size in MBs of a single log file (default: 100)
+  --log-rotate                   Enables log file rotation (default: false)
+  --minimal-config               Use minimal config with parameters as defined in the spec. (default: false)
+  --monitoring-host value        Host used for listening and responding metrics for prometheus. (default: "127.0.0.1")
+  --monitoring-port value        Port used to listening and respond metrics for prometheus. (default: 8081)
+  --trace-sample-fraction value  Indicate what fraction of p2p messages are sampled for tracing. (default: 0.2)
+  --tracing-endpoint value       Tracing endpoint defines where beacon chain traces are exposed to Jaeger. (default: "http://127.0.0.1:14268/api/traces")
+  --tracing-process-name value   The name to apply to tracing tag "process_name"
+  --verbosity value              Logging verbosity (trace, debug, info=default, warn, error, fatal, panic) (default: "info")
+
+debug OPTIONS:
+  --blockprofilerate value      Turn on block profiling with the given rate (default: 0)
+  --cpuprofile value            Write CPU profile to the given file
+  --memprofilerate value        Turn on memory profiling with the given rate (default: 524288)
+  --mutexprofilefraction value  Turn on mutex profiling with the given rate (default: 0)
+  --pprof                       Enable the pprof HTTP server (default: false)
+  --pprofaddr value             pprof HTTP server listening interface (default: "127.0.0.1")
+  --pprofport value             pprof HTTP server listening port (default: 6060)
+  --trace value                 Write execution trace to the given file
+
+validator OPTIONS:
+  --beacon-rest-api-provider value                                                                   Beacon node REST API provider endpoint (default: "http://127.0.0.1:3500")
+  --beacon-rpc-gateway-provider value                                                                Beacon node RPC gateway provider endpoint (default: "127.0.0.1:3500")
+  --beacon-rpc-provider value                                                                        Beacon node RPC provider endpoint (default: "127.0.0.1:4000")
+  --disable-account-metrics                                                                          Disable prometheus metrics for validator accounts. Operators with high volumes of validating keys may wish to disable granular prometheus metrics as it increases the data cardinality. (default: false)
+  --disable-rewards-penalties-logging                                                                Disable reward/penalty logging during cluster deployment (default: false)
+  --enable-builder, --enable-validator-registration                                                  Enables Builder validator registration APIs for the validator client to update settings such as fee recipient and gas limit. Note* this flag is not required if using proposer settings config file (default: false)
+  --graffiti value                                                                                   String to include in proposed blocks
+  --graffiti-file value                                                                              The path to a YAML file with graffiti values
+  --grpc-gateway-corsdomain value                                                                    Comma separated list of domains from which to accept cross origin requests (browser enforced). This flag has no effect if not used with --grpc-gateway-port. (default: "http://localhost:7500,http://127.0.0.1:7500,http://0.0.0.0:7500,http://localhost:4242,http://127.0.0.1:4242,http://localhost:4200,http://0.0.0.0:4242,http://127.0.0.1:4200,http://0.0.0.0:4200,http://localhost:3000,http://0.0.0.0:3000,http://127.0.0.1:3000")
+  --grpc-gateway-host value                                                                          The host on which the gateway server runs on (default: "127.0.0.1")
+  --grpc-gateway-port value                                                                          Enable gRPC gateway for JSON requests (default: 7500)
+  --grpc-headers value                                                                               A comma separated list of key value pairs to pass as gRPC headers for all gRPC calls. Example: --grpc-headers=key=value
+  --grpc-retries value                                                                               Number of attempts to retry gRPC requests (default: 5)
+  --grpc-retry-delay value                                                                           The amount of time between gRPC retry requests. (default: 1s)
+  --over-node                                                                                        Enables validator client for OverNode  (default: false)
+  --proposer-settings-file value                                                                     Set path to a YAML or JSON file containing validator settings used when proposing blocks such as (fee recipient and gas limit) (i.e. --proposer-settings-file=/path/to/proposer.json). File format found in docs
+  --proposer-settings-url value                                                                      Set URL to a REST endpoint containing validator settings used when proposing blocks such as (fee recipient) (i.e. --proposer-settings-url=https://example.com/api/getConfig). File format found in docs
+  --rpc                                                                                              Enables the RPC server for the validator client (without Web UI) (default: false)
+  --rpc-host value                                                                                   Host on which the RPC server should listen (default: "127.0.0.1")
+  --rpc-port value                                                                                   RPC port exposed by a validator client (default: 7000)
+  --slasher-rpc-provider value                                                                       Slasher node RPC provider endpoint (default: "127.0.0.1:4002")
+  --slasher-tls-cert value                                                                           Certificate for secure slasher gRPC. Pass this and the tls-key flag in order to use gRPC securely.
+  --suggested-fee-recipient value                                                                    Sets ALL validators' mapping to a suggested eth address to receive gas fees when proposing a block. note that this is only a suggestion when integrating with a Builder API, which may choose to specify a different fee recipient as payment for the blocks it builds. For additional setting overrides use the --proposer-settings-file or --proposer-settings-url Flags.  (default: "0x0000000000000000000000000000000000000000")
+  --suggested-gas-limit value                                                                        Sets gas limit for the builder to use for constructing a payload for all the validators (default: "30000000")
+  --tls-cert value                                                                                   Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely.
+  --validators-external-signer-public-keys value [ --validators-external-signer-public-keys value ]  comma separated list of public keys OR an external url endpoint for the validator to retrieve public keys from for usage with web3signer
+  --validators-external-signer-url value                                                             URL for consensys' web3signer software to use with the Prysm validator client
+  --wallet-dir value                                                                                 Path to a wallet directory on-disk for Prysm validator accounts (default: "${HOME}/Eth2Validators/prysm-wallet-v2")
+  --wallet-password-file value                                                                       Path to a plain-text, .txt file containing your wallet password
+
+features OPTIONS:
+  --attest-timely                               Fixes validator can attest timely after current block processes. See #8185 for more details (default: false)
+  --dolphin                                     Run Chronos configured for the Dolphin test network (default: false)
+  --dynamic-key-reload-debounce-interval value  (Advanced): Specifies the time duration the validator waits to reload new keys if they have changed on disk. Default 1s, can be any type of duration such as 1.5s, 1000ms, 1m. (default: 1s)
+  --enable-beacon-rest-api                      Experimental enable of the beacon REST API when querying a beacon node (default: false)
+  --enable-doppelganger                         Enables the validator to perform a doppelganger check. (Warning): This is not a foolproof method to find duplicate instances in the network. Your validator will still be vulnerable if it is being run in unsafe configurations. (default: false)
+  --enable-external-slasher-protection          Enables the validator to connect to a beacon node using the --slasher flagfor remote slashing protection (default: false)
+  --enable-slashing-protection-history-pruning  Enables the pruning of the validator client's slashing protection database (default: false)
+  --mainnet                                     Run on Over Protocol Beacon Chain Main Net. This is the default and can be omitted. (default: true)
+  --write-wallet-password-on-web-onboarding     (Danger): Writes the wallet password to the wallet directory on completing Prysm web onboarding. We recommend against this flag unless you are an advanced user. (default: false)
+  
+interop OPTIONS:
+  --interop-num-validators value  The number of validators to deterministically generate. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7. (default: 0)
+  --interop-start-index value     The start index to deterministically generate validator keys when used in combination with --interop-num-validators. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7. (default: 0)
+
+```
