@@ -116,6 +116,11 @@ const operatorsSidebar = [
   },
   {
     type: "doc",
+    label: "Command-line Options",
+    id: "operators/command-line-options",
+  },
+  {
+    type: "doc",
     label: "FAQs",
     id: "operators/faqs",
   },
