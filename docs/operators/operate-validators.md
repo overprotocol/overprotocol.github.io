@@ -107,12 +107,12 @@ Follow steps 4 and 5.
 Run `validator` client to import the validator keys with the command similar to the following:
 
 ```console
-$ validator accounts import --keys-dir=<path/to/your/validator/keys> --dolphin
+$ validator accounts import --keys-dir=<path/to/your/validator/keys> --dolphin --wallet-dir=<path/to/your/wallet/directory>
 ```
 
 If you successfully imported validator keys, the result will be:
 
-```sh
+```plaintext
 Importing accounts, this may take a while...
 Importing accounts... 100% [==========================================================]  [0s:0s]
 [2024-06-04 15:41:33]  INFO local-keymanager: Successfully imported validator key(s) publicKeys=<YOUR_VALIDATOR_PUBKEYS>
