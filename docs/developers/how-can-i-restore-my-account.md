@@ -29,7 +29,7 @@ After making a valid restore data and signing it, you can send the restore data 
 
 ```
 curl -H 'Content-Type: application/json' \
--X POST "http://localhost:32311/requestRestoration" \
+-X POST "http://hostAddress:hostPort/requestRestoration" \
 --data '{"chainId": "0x84442", 
 "target": "0x1923f626bb8dc025849e00f99c25fe2b2f7fb0db", 
 "sourceEpoch": "0x10",
