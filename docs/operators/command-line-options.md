@@ -849,35 +849,33 @@ debug OPTIONS:
   --trace value                 Write execution trace to the given file
 
 validator OPTIONS:
-  --beacon-rest-api-provider value                                                                   Beacon node REST API provider endpoint (default: "http://127.0.0.1:3500")
-  --beacon-rpc-gateway-provider value                                                                Beacon node RPC gateway provider endpoint (default: "127.0.0.1:3500")
-  --beacon-rpc-provider value                                                                        Beacon node RPC provider endpoint (default: "127.0.0.1:4000")
-  --disable-account-metrics                                                                          Disable prometheus metrics for validator accounts. Operators with high volumes of validating keys may wish to disable granular prometheus metrics as it increases the data cardinality. (default: false)
-  --disable-rewards-penalties-logging                                                                Disable reward/penalty logging during cluster deployment (default: false)
-  --enable-builder, --enable-validator-registration                                                  Enables Builder validator registration APIs for the validator client to update settings such as fee recipient and gas limit. Note* this flag is not required if using proposer settings config file (default: false)
-  --graffiti value                                                                                   String to include in proposed blocks
-  --graffiti-file value                                                                              The path to a YAML file with graffiti values
-  --grpc-gateway-corsdomain value                                                                    Comma separated list of domains from which to accept cross origin requests (browser enforced). This flag has no effect if not used with --grpc-gateway-port. (default: "http://localhost:7500,http://127.0.0.1:7500,http://0.0.0.0:7500,http://localhost:4242,http://127.0.0.1:4242,http://localhost:4200,http://0.0.0.0:4242,http://127.0.0.1:4200,http://0.0.0.0:4200,http://localhost:3000,http://0.0.0.0:3000,http://127.0.0.1:3000")
-  --grpc-gateway-host value                                                                          The host on which the gateway server runs on (default: "127.0.0.1")
-  --grpc-gateway-port value                                                                          Enable gRPC gateway for JSON requests (default: 7500)
-  --grpc-headers value                                                                               A comma separated list of key value pairs to pass as gRPC headers for all gRPC calls. Example: --grpc-headers=key=value
-  --grpc-retries value                                                                               Number of attempts to retry gRPC requests (default: 5)
-  --grpc-retry-delay value                                                                           The amount of time between gRPC retry requests. (default: 1s)
-  --over-node                                                                                        Enables validator client for OverNode  (default: false)
-  --proposer-settings-file value                                                                     Set path to a YAML or JSON file containing validator settings used when proposing blocks such as (fee recipient and gas limit) (i.e. --proposer-settings-file=/path/to/proposer.json). File format found in docs
-  --proposer-settings-url value                                                                      Set URL to a REST endpoint containing validator settings used when proposing blocks such as (fee recipient) (i.e. --proposer-settings-url=https://example.com/api/getConfig). File format found in docs
-  --rpc                                                                                              Enables the RPC server for the validator client (without Web UI) (default: false)
-  --rpc-host value                                                                                   Host on which the RPC server should listen (default: "127.0.0.1")
-  --rpc-port value                                                                                   RPC port exposed by a validator client (default: 7000)
-  --slasher-rpc-provider value                                                                       Slasher node RPC provider endpoint (default: "127.0.0.1:4002")
-  --slasher-tls-cert value                                                                           Certificate for secure slasher gRPC. Pass this and the tls-key flag in order to use gRPC securely.
-  --suggested-fee-recipient value                                                                    Sets ALL validators' mapping to a suggested eth address to receive gas fees when proposing a block. note that this is only a suggestion when integrating with a Builder API, which may choose to specify a different fee recipient as payment for the blocks it builds. For additional setting overrides use the --proposer-settings-file or --proposer-settings-url Flags.  (default: "0x0000000000000000000000000000000000000000")
-  --suggested-gas-limit value                                                                        Sets gas limit for the builder to use for constructing a payload for all the validators (default: "30000000")
-  --tls-cert value                                                                                   Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely.
-  --validators-external-signer-public-keys value [ --validators-external-signer-public-keys value ]  comma separated list of public keys OR an external url endpoint for the validator to retrieve public keys from for usage with web3signer
-  --validators-external-signer-url value                                                             URL for consensys' web3signer software to use with the Prysm validator client
-  --wallet-dir value                                                                                 Path to a wallet directory on-disk for Prysm validator accounts (default: "${HOME}/Eth2Validators/prysm-wallet-v2")
-  --wallet-password-file value                                                                       Path to a plain-text, .txt file containing your wallet password
+  --beacon-rest-api-provider value                   Beacon node REST API provider endpoint (default: "http://127.0.0.1:3500")
+  --beacon-rpc-gateway-provider value                Beacon node RPC gateway provider endpoint (default: "127.0.0.1:3500")
+  --beacon-rpc-provider value                        Beacon node RPC provider endpoint (default: "127.0.0.1:4000")
+  --disable-account-metrics                          Disable prometheus metrics for validator accounts. Operators with high volumes of validating keys may wish to disable granular prometheus metrics as it increases the data cardinality. (default: false)
+  --disable-rewards-penalties-logging                Disable reward/penalty logging during cluster deployment (default: false)
+  --enable-builder, --enable-validator-registration  Enables Builder validator registration APIs for the validator client to update settings such as fee recipient and gas limit. Note* this flag is not required if using proposer settings config file (default: false)
+  --graffiti value                                   String to include in proposed blocks
+  --graffiti-file value                              The path to a YAML file with graffiti values
+  --grpc-gateway-corsdomain value                    Comma separated list of domains from which to accept cross origin requests (browser enforced). This flag has no effect if not used with --grpc-gateway-port. (default: "http://localhost:7500,http://127.0.0.1:7500,http://0.0.0.0:7500,http://localhost:4242,http://127.0.0.1:4242,http://localhost:4200,http://0.0.0.0:4242,http://127.0.0.1:4200,http://0.0.0.0:4200,http://localhost:3000,http://0.0.0.0:3000,http://127.0.0.1:3000")
+  --grpc-gateway-host value                          The host on which the gateway server runs on (default: "127.0.0.1")
+  --grpc-gateway-port value                          Enable gRPC gateway for JSON requests (default: 7500)
+  --grpc-headers value                               A comma separated list of key value pairs to pass as gRPC headers for all gRPC calls. Example: --grpc-headers=key=value
+  --grpc-retries value                               Number of attempts to retry gRPC requests (default: 5)
+  --grpc-retry-delay value                           The amount of time between gRPC retry requests. (default: 1s)
+  --over-node                                        Enables validator client for OverNode  (default: false)
+  --proposer-settings-file value                     Set path to a YAML or JSON file containing validator settings used when proposing blocks such as (fee recipient and gas limit) (i.e. --proposer-settings-file=/path/to/proposer.json). File format found in docs
+  --proposer-settings-url value                      Set URL to a REST endpoint containing validator settings used when proposing blocks such as (fee recipient) (i.e. --proposer-settings-url=https://example.com/api/getConfig). File format found in docs
+  --rpc                                              Enables the RPC server for the validator client (without Web UI) (default: false)
+  --rpc-host value                                   Host on which the RPC server should listen (default: "127.0.0.1")
+  --rpc-port value                                   RPC port exposed by a validator client (default: 7000)
+  --slasher-rpc-provider value                       Slasher node RPC provider endpoint (default: "127.0.0.1:4002")
+  --slasher-tls-cert value                           Certificate for secure slasher gRPC. Pass this and the tls-key flag in order to use gRPC securely.
+  --suggested-fee-recipient value                    Sets ALL validators' mapping to a suggested eth address to receive gas fees when proposing a block. note that this is only a suggestion when integrating with a Builder API, which may choose to specify a different fee recipient as payment for the blocks it builds. For additional setting overrides use the --proposer-settings-file or --proposer-settings-url Flags.  (default: "0x0000000000000000000000000000000000000000")
+  --suggested-gas-limit value                        Sets gas limit for the builder to use for constructing a payload for all the validators (default: "30000000")
+  --tls-cert value                                   Certificate for secure gRPC. Pass this and the tls-key flag in order to use gRPC securely.
+  --wallet-dir value                                 Path to a wallet directory on-disk for Chronos validator accounts (default: "${HOME}/Eth2Validators/chronos-wallet-v2")
+  --wallet-password-file value                       Path to a plain-text, .txt file containing your wallet password
 
 features OPTIONS:
   --attest-timely                               Fixes validator can attest timely after current block processes. See #8185 for more details (default: false)
@@ -888,10 +886,10 @@ features OPTIONS:
   --enable-external-slasher-protection          Enables the validator to connect to a beacon node using the --slasher flagfor remote slashing protection (default: false)
   --enable-slashing-protection-history-pruning  Enables the pruning of the validator client's slashing protection database (default: false)
   --mainnet                                     Run on Over Protocol Beacon Chain Main Net. This is the default and can be omitted. (default: true)
-  --write-wallet-password-on-web-onboarding     (Danger): Writes the wallet password to the wallet directory on completing Prysm web onboarding. We recommend against this flag unless you are an advanced user. (default: false)
-  
+
 interop OPTIONS:
   --interop-num-validators value  The number of validators to deterministically generate. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7. (default: 0)
   --interop-start-index value     The start index to deterministically generate validator keys when used in combination with --interop-num-validators. Example: --interop-start-index=5 --interop-num-validators=3 would generate keys from index 5 to 7. (default: 0)
+
 
 ```
