@@ -23,7 +23,7 @@ curl -X GET "http://hostAddress:hostPort/minimumFee"
 curl -X GET "http://hostAddress:hostPort/feeRecipient"
 ```
 
-Now before sending this restore data, you have to sign it. There are multiple reasons for this procedure, but the most important reason is so the restoration client can’t manipulate the restoration fee. You can sign the restore data by using the `SignRestoreData` function in the [types](https://pkg.go.dev/github.com/ethereum/go-ethereum/core/types) package. Note that the one who signs the restore data, which is the owner of the private key used to signed the restore data, will be the one who pays the restoration fee.
+Now before sending this restore data, you have to sign it. There are multiple reasons for this procedure, but the most important reason is so the restoration client can’t manipulate the restoration fee. You can sign the restore data by using the `SignRestoreData` function in the [types](https://pkg.go.dev/github.com/ethereum/go-ethereum/core/types) package. Any account including the owner expired account can be used to sign the restore data. Note that the one who signs the restore data, which is the owner of the private key used to signed the restore data, will be the one who pays the restoration fee.
 
 After making a valid restore data and signing it, you can send the restore data through `requestRestoration` http post method. The request should look something like this.
 
