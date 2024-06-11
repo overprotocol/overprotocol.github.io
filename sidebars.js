@@ -115,9 +115,22 @@ const operatorsSidebar = [
     id: "operators/operate-restoration-client",
   },
   {
-    type: "doc",
-    label: "Command-line Options",
-    id: "operators/command-line-options",
+    type: "category",
+    label: "Command line options",
+    collapsible: true,
+    collapsed: true,
+    items: [
+    {
+      type: "doc",
+      label: "Kairos",
+      id: "operators/CLI-options/kairos",
+    },
+    {
+      type: "doc",
+      label: "Chronos",
+      id: "operators/CLI-options/chronos",
+    }
+    ],
   },
   {
     type: "doc",
