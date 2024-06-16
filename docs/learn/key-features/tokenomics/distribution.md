@@ -26,7 +26,9 @@ Of the total supply, 15% is initially allocated to the OCAP. OCAP facilitates th
 
 ### 4. Others
 
-The remaining 450 Million OVER is earmarked for distribution to 4 entities (Core Contributors, Investors, Over Technologies, and Over Foundation) over a 4-year schedule. Refer to Table \ref{table:0} for the yearly allocation amounts. Each percentage point indicates the proportion of allocation distribution relative to the total 1 billion OVER.
+The remaining 450 million OVER tokens are earmarked for distribution to four entities: Core
+Contributors, Investors, Over Technologies, and the Over Foundation. The distribution will follow a
+2-year schedule, which includes a 6-month cliff and 18 months of linear vesting.
 
 <img src="/img/alloc_chart.png" style={{width: 500}} alt="alloc_chart" />
 
