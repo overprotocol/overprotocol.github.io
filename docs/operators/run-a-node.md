@@ -71,10 +71,10 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
       | Operating System     | OverProtocol Execution Client [Kairos]                                               | OverProtocol Consensus Client [Chronos]                                               |
       |----------------------|--------------------------------------------------------|--------------------------------------------------------|
-      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.19/develop/chronos_linux_amd64.zip)      |
-      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.19/develop/chronos_osx_arm64.zip)    |
-      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.19/develop/chronos_osx_amd64.zip)    |
-      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v1.0.2/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/v0.5.19/develop/chronos_windows.zip)        |
+      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_linux_amd64.zip)      |
+      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_arm64.zip)    |
+      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_amd64.zip)    |
+      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_windows.zip)        |
 
     Then your binary directory structure should look like this:
 
@@ -113,7 +113,7 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
   ```sh
   mkdir data
-  ./beacon-chain --dolphin --datadir=./data --jwt-secret ../execution/data/geth/jwtsecret --checkpoint-sync-url="https://asia-northeast3-protocol-pool.cloudfunctions.net"
+  ./beacon-chain --dolphin --datadir=./data --jwt-secret ../execution/data/geth/jwtsecret --checkpoint-sync-url="https://dolphin-checkpoint.over.network"
   ```
 
   Syncing from a checkpoint usually takes a couple of minutes.
@@ -200,7 +200,7 @@ $ geth --gcmode archive
 
 If the combination is `geth --syncmode full --gcmode archive` then all blockchain data from the genesis block is written down in the database. If the combination is `geth --syncmode snap --gcmode archive` the blockchain data from the trusted checkpoint.
 
-**Choose the Number of Epochs to Store**:
+<!-- **Choose the Number of Epochs to Store**:
 
 By default the OverProtocol client runs with minimum storage usage. You can change the epochLimit flag to change how many checkpoints to store.
 
@@ -214,7 +214,7 @@ $ geth --epochLimit 0
 ```
 This stores all inactive data in addition to active and staged data.
 
-Normally default setting is enough, but saving previous checkpoints can be usefull when you want to retrieve states from preivous epochs.
+Normally default setting is enough, but saving previous checkpoints can be usefull when you want to retrieve states from preivous epochs. -->
 
 ### Consensus Layer Sync Modes
 
