@@ -4,6 +4,9 @@ description: Step-by-step guides of how to operate validators.
 lang: en
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 To operate validators means to stake OVER and participate in OverProtocol's Consensus mechanism. In order to be an validator, a user must first have its own full node running. Follow [Run a node](./run-a-node) page for more.
 
 ## Prerequisites
@@ -25,7 +28,27 @@ Being a validator on OverProtocol without using OverNode requires specific skill
 
 Operating a validator node on OverProtocol can be rewarding but demands a high level of dedication and technical expertise to ensure the security and efficacy of the blockchain network.
 
-## Setting up Validators
+
+
+<Tabs
+  groupId="set-up-validators"
+  defaultValue="scratch"
+  values={[
+    {label: 'From scratch', value: 'scratch'},
+    {label: 'Migration from OverNode', value: 'migration'},
+  ]}
+>
+  <TabItem value="scratch">
+
+## Option 1. Setting up Validators From Scratch
+
+:::note
+
+This section is intended for users who wish to set up validator keys using command-line tools. If you already possess mnemonics or keys, please refer to the **`Migration from OverNode`** tab for guidance on migrating your setup.
+
+:::
+
+<br />
 
 ### 1. Obtain OVER
 
@@ -56,19 +79,22 @@ The deposit contract's address is set to `0x000000000000000000000000000000000bea
 
 ```js
 const { ethers } = require("ethers"); // ethers.js v5
-const fs = require('fs');
-const path = require('path');
-const web3 = new Web3('http://127.0.0.1:22000'); // RPC port of Kairos
+
+const provider = new ethers.providers.JsonRpcProvider(
+  "http://127.0.0.1:22000"
+); // RPC port of Kairos
 
 const depositContractAddress = '0x000000000000000000000000000000000beac017';
 const depositContractABI = require('./DepositContract.abi.json');
 
 // Replace these with your own values
 async function stake(privateKey) {
+  const wallet = new ethers.Wallet(privateKey, provider);
+
   const stakingContract = new ethers.Contract(
     depositContractAddress,
     depositContractABI,
-    privateKey
+    wallet
   );
 
   const amount = ethers.utils.parseEther("256");
@@ -97,12 +123,108 @@ async function stake(privateKey) {
     }
   }
 }
+
+stake(YOUR_PRIVATE_KEY_WITH_0x_PREFIX)
 ```
 
 If you've succeeded in registering your validator to the blockchain, you should now run your validator software.
 Follow steps 4 and 5.
 
-### 4. Transfer Validator Keys
+  </TabItem>
+  <TabItem value="migration">
+
+## Option 2. Migrating your validators from OverNode
+
+:::note
+
+This section is designed for users who are looking to migrate their existing validator setup from OverNode. If you are setting up a validator from scratch, please see the **`From scratch`** tab for detailed instructions.
+
+:::
+
+<br />
+
+### 1. Save your validator mnemonic
+
+If you have previously set up validators through OverNode, you should already have a validator mnemonic (12 words). If you did not back up your mnemonic, OverNode allows you to retrieve it by entering your password.
+
+1. **Go to Settings > Node data**: Here, you will find the option `Reveal validator recovery phrase`. Click the `Reveal phrase` button.
+2. **Enter your password, and backup your validator phrase**: A password is required to encrypt your validator keystore for security.
+
+### 2. Generate keystore files
+
+The OverProtocol [staking-deposit-cli](https://github.com/overprotocol/staking-deposit-cli) supports generating validator keys from an existing mnemonic. Follow the instructions in the repository's `README.md` to run the CLI.
+
+Execute the command as follows:
+
+```shell
+$ ./deposit existing-mnemonic
+```
+
+Follow the CLI prompts. Typically, the starting index will be `0`, as shown below:
+
+```plaintext
+Please choose your language ['1. العربية', '2. ελληνικά', '3. English', '4. Français', '5. Bahasa melayu', '6. Italiano', '7. 日本語', '8. 한국어', '9. Português do Brasil', '10. român', '11. Türkçe', '12. 简体中文']:  [English]:
+Please enter your mnemonic separated by spaces (" "). Note: you only need to enter the first 4 letters of each word if you'd prefer.: <YOUR_VALIDATOR_MNEMONIC>
+Enter the index (key number) you wish to start generating more keys from. For example, if you've generated 4 keys in the past, you'd enter 4 here. [0]: 0
+Please repeat the index to confirm: 0
+Please choose how many new validators you wish to run: 1
+Please choose the (mainnet or testnet) network/chain name ['mainnet', 'over', 'over_dolphin']:  [over]: over_dolphin
+Create a password that secures your validator keystore(s). You will need to re-enter this to decrypt them when you setup your Ethereum validators.:
+Repeat your keystore password for confirmation:
+Creating your keys.
+Creating your keystores:	  [####################################]  1/1
+Verifying your keystores:	  [####################################]  1/1
+
+Success!
+Your keys can be found at: <path/to/your/validator/keys>
+```
+
+### 3. Check your validators
+
+To ensure the correct validator keys are imported, it is highly recommended to verify whether your validators are currently active on OverProtocol. Common issues include entering an incorrect mnemonic, starting index, or selecting a different chain name.
+
+Verify your validators by querying Chronos. The `deposit_data-*.json` file contains the `pubkey` field, which serves as a unique identifier for querying your validators.
+
+```shell
+curl -X 'GET' \
+  'http://127.0.0.1:3500/eth/v1/beacon/states/head/validators?id=<YOUR_PUBKEY_WITH_0x_PREFIX>' \
+  -H 'accept: application/json'
+```
+
+If your validator is active, the response will include the current state of your validator. If not, it will return an empty list.
+
+
+```json
+{
+  "data": [
+    {
+      "index": "20000",
+      "balance": "253802023102",
+      "status": "active_ongoing",
+      "validator": {
+        "pubkey": "0x8541054c41a9a36a5ae1717e321850f9c662d61b8430b12abda89030daa301d00b925a19363375f05e5b07d43f643717",
+        "withdrawal_credentials": "0x010000000000000000000000533bf49c40cb17a1c4eb479355e1a10942feb13f",
+        "effective_balance": "248000000000",
+        "slashed": false,
+        "activation_eligibility_epoch": "289",
+        "activation_epoch": "295",
+        "exit_epoch": "18446744073709551615",
+        "withdrawable_epoch": "18446744073709551615"
+      }
+    }
+  ],
+  "execution_optimistic": false,
+  "finalized": false
+}
+```
+
+
+  </TabItem>
+</Tabs>
+
+## Run your validator
+
+### Transfer Validator Keys
 
 Run `validator` client to import the validator keys with the command similar to the following:
 
@@ -119,7 +241,7 @@ Importing accounts... 100% [====================================================
 [2024-06-04 15:41:33]  INFO accounts: Imported accounts <YOUR_VALIDATOR_PUBKEYS>, view all of them by running `accounts list`
 ```
 
-### 5. Run your Validator
+### Run your Validator
 
 Run `validator` client to run the validator on your node like following:
 
