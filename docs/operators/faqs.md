@@ -10,9 +10,9 @@ OverProtocol utilizes Proof of Stake (PoS) to reach consensus on the blockchain.
 
 Validators of OverProtocol contribute to the blockchain by participating in block validation, block creation, and synchronization proof, and receive rewards accordingly.
 
-### 2. What is block attestation, block proposal, and sync-committee?
+### 2. What is block attestation, block proposal?
 
-Block attestation, block proposal, and sync committee are roles that validators in OverProtocol must perform. All validators participate in block attestation, and a randomly selected group of validators participates in block proposal and sync-committee. Validators who participate in block proposal and sync-committee can get more rewards if they perform their roles well.
+Block attestation and block proposal are roles that validators in OverProtocol must perform. All validators participate in block attestation, and a randomly selected group of validators participates in block proposal. Validators who participate in block proposal can get more rewards if they perform their roles well.
 
 ### 3. How can i run a validator?
 

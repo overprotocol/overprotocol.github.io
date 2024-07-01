@@ -7,7 +7,7 @@ const math = require("remark-math");
 const katex = require("rehype-katex");
 
 function getNextVersionName() {
-  return "Canary";
+  return "v1.0.0";
   /*
   const expectedPrefix = '2.0.0-rc.';
 
@@ -64,7 +64,7 @@ const config = {
           rehypePlugins: [katex],
           versions: {
             current: {
-              label: `${getNextVersionName()} 🚧`,
+              label: `${getNextVersionName()}`,
             },
           },
         },
@@ -91,7 +91,7 @@ const config = {
       // Replace with your project's social card
       image: "img/social-card.png",
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: "light",
       },
       docs: {
         sidebar: {

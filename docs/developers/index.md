@@ -32,7 +32,6 @@ The Dolphin testnet operates with the goal of providing an environment identical
 | Chain ID            | 541762                                        |
 | Currency symbol     | OVER                                          |
 | Block Explorer URL  | https://dolphin.view.over.network/            |
-| SweepEpoch          | 648000 (about 90 days)                        |
 
 ## Preparing an Account with OVER Tokens
 

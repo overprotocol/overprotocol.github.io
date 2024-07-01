@@ -4,6 +4,10 @@ description: Ethanos is an effective mechanism for managing blockchain's state a
 lang: en
 ---
 
+:::info
+The Ethanos has been designed and implemented, but it introduces overhead when the state size is not sufficiently large. Therefore, Ethanos will remain disabled until the state size within OverProtocol grows sufficiently large. In the meantime, the team plans to undertake additional design and enhancement processes to handle contract storage more efficiently.
+:::
+
 Ethanos is an effective mechanism for managing blockchain's state and history. It periodically resets the state, expiring old data and referencing previous cycles to manage a bounded state size. This approach lowers entry barriers, promotes decentralization, and fosters an inclusive blockchain system.
 
 ## What is the Problem?
@@ -160,15 +164,3 @@ $$
 $$
 
 Here, 37000 gas covers the initial operations such as account creation and transaction verification, 900 gas for each epoch reflects the fixed costs per epoch, 3 gas per word accounts for variable decoding and proof verification costs, and additional memory costs.
-
-## The Endgame
-
-### Future Directions for Contract Restoration
-
-In Ethanos, state expiration occurs on an account-by-account basis. However, dealing with contracts poses a challenge due to the storage managed under contract accounts.
-
-In the EVM, the storage owned by contracts can grow indefinitely in size. Handling unlimited data sizes within transaction forms to restore contracts is not feasible; it would potentially flood and paralyze the peer-to-peer network. Therefore, currently, **OverProtocol has disabled the restoration functionality for contracts.** Contracts must be managed in a way that prevents them from expiring.
-
-In the ultimate vision of Ethanos, overcoming these limitations requires moving away from the traditional storage layout of the EVM. It becomes necessary to bound the size of data that accounts can own, and allow for contract-managed storages to be partially expired and restored.
-
-In due time, a process of state and storage migration for all contracts will be implemented. This migration will occur between sweep epochs, facilitating a transition that maintains system integrity while accommodating the expansive nature of contract storage.

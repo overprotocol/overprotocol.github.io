@@ -110,11 +110,6 @@ const operatorsSidebar = [
     id: "operators/operate-validators",
   },
   {
-    type: "doc",
-    label: "Operate Restoration Client",
-    id: "operators/operate-restoration-client",
-  },
-  {
     type: "category",
     label: "Command line options",
     collapsible: true,
@@ -169,17 +164,12 @@ const developersSidebar = [
   },
   {
     type: "doc",
-    label: "How to Restore an Expired Account",
-    id: "developers/how-can-i-restore-my-account",
-  },
-  {
-    type: "doc",
     label: "Client APIs",
     id: "developers/client-apis",
   },
   {
     type: "doc",
-    label: "Deployed Contracts",
+    label: "Deployed Contracts",  
     id: "developers/deployed-contracts",
   },
 ];
