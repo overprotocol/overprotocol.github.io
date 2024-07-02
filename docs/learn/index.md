@@ -1,4 +1,5 @@
 ---
+slug: "/"
 title: What is OverProtocol
 description: OverProtocol is a brand new layer 1 with lightweight nodes empowering personal computers, enabling anyone to run a node on their PCs and become a validator.
 lang: en

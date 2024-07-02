@@ -110,17 +110,17 @@ const config = {
           {
             label: "Learn",
             position: "left",
-            to: "/learn",
+            to: "/",
           },
           {
             label: "Operators",
             position: "left",
-            to: "operators",
+            to: "/operators",
           },
           {
             label: "Developers",
             position: "left",
-            to: "developers",
+            to: "/developers",
           },
           {
             type: "docsVersionDropdown",
