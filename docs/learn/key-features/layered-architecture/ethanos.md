@@ -140,7 +140,7 @@ Here is a breakdown of the costs associated with different operations during the
 
 | Operation | Gas |
 | --- | --- |
-| read restoredEpoch | 20 |
+| read epochCoverage | 20 |
 | read nonce | 20 |
 | read balance | 20 |
 | Keccak256 | 100 |
