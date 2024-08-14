@@ -14,5 +14,5 @@ Here, you can access comprehensive information for each contract, including sour
 |--------------|--------------------------------------------|
 | PoS deposit  | 0x000000000000000000000000000000000beac017 |
 | Palm staking | 0x5f840d54a42AB85c6A5bc50AE773a9E3531b171f |
-| wrapped OVER | 0x2eFE8DBa880813F1d988208Ad35c184593559a9D |
-| multicall3   | 0xC973B98AB6ffAf2289E9A8956D156f3897053aa5 |
+| Wrapped OVER | 0x59c914C8ac6F212bb655737CC80d9Abc79A1e273 |
+| Multicall3   | 0xcA11bde05977b3631167028862bE2a173976CA11 |
