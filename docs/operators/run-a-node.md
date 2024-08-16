@@ -87,8 +87,7 @@ For advanced users who prefer a hands-on, customized approach, building your nod
       │   └── validator
       └── execution
           ├── bootnode
-          ├── geth
-          └── restoration
+          └── geth
       ```
 
     And let's try to run a fullnode for dolphin testnet for example.

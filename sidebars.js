@@ -115,16 +115,16 @@ const operatorsSidebar = [
     collapsible: true,
     collapsed: true,
     items: [
-    {
-      type: "doc",
-      label: "Kairos",
-      id: "operators/CLI-options/kairos",
-    },
-    {
-      type: "doc",
-      label: "Chronos",
-      id: "operators/CLI-options/chronos",
-    }
+      {
+        type: "doc",
+        label: "Kairos",
+        id: "operators/CLI-options/kairos",
+      },
+      {
+        type: "doc",
+        label: "Chronos",
+        id: "operators/CLI-options/chronos",
+      },
     ],
   },
   {
@@ -147,11 +147,6 @@ const developersSidebar = [
     label: "Getting Started",
   },
   {
-    type: "doc",
-    label: "Differences from Ethereum",
-    id: "developers/differences-from-ethereum",
-  },
-  {
     type: "category",
     label: "Build Your Contract",
     collapsible: true,
@@ -169,7 +164,7 @@ const developersSidebar = [
   },
   {
     type: "doc",
-    label: "Deployed Contracts",  
+    label: "Deployed Contracts",
     id: "developers/deployed-contracts",
   },
 ];
