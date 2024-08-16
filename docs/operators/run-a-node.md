@@ -142,7 +142,7 @@ The Dolphin testnet operates with the goal of providing an environment identical
 | ------------------- | ----------------------------------------------|
 | Network             | OverProtocol Dolphin                          |
 | RPC URL             | YOUR_RPC_URL                                  |
-| Chain ID            | 541762                                        |
+| Chain ID            | 541764                                        |
 | Currency symbol     | OVER                                          |
 | Block Explorer URL  | https://dolphin.view.over.network/            |
 
