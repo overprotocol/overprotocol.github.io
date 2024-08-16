@@ -28,7 +28,7 @@ Before validator activation, no separate rewards or penalties apply to validator
 
 When staking for validator operation, a waiting time is required until the staking transaction is processed and validator registration is completed. Validator activation waiting time can be divided into two stages: primary and secondary.
 
-- Primary waiting: It is used to calculate the **time it takes for the validator to be activated** for about the first 2 hours. It is estimated to take about 2 hours, but the exact waiting time cannot be determined.
+- Primary waiting: It is used to calculate the **time it takes for the validator to be activated** for about the first 8 hours. It is estimated to take about 8 hours, but the exact waiting time cannot be determined.
 
 - Secondary waiting: The exact waiting time until validator activation can be known and confirmed in the Validator menu. Once the validator is activated, you can participate in the network immediately.
 
