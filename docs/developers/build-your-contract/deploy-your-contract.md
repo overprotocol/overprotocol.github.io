@@ -4,9 +4,7 @@ description: Step-by-step guides for developers who wants to utilize Foundry, Ha
 lang: en
 ---
 
-:::caution
-While OverProtocol is EVM-compatible, there are important differences that developers should be aware of. Please refer to the [documentation](../differences-from-ethereum) thoroughly before proceeding to ensure you understand these distinctions.
-:::
+
 
 OverProtocol's compatibility with the Ethereum Virtual Machine (EVM) allows you to leverage various Ethereum development environments to build and deploy your smart contracts. This guide outlines how to use popular tools like Foundry, Hardhat and Remix for developing on OverProtocol. Detailed steps and tips will ensure you understand the nuances of deploying effectively in each environment.
 

@@ -19,8 +19,8 @@ USAGE:
    geth [global options] command [command options] [arguments...]
 
 VERSION:
-   1.0.3-unstable-ff8c2d62-20240605
-q
+   1.1.6-stable-9df6c196
+
 COMMANDS:
    account                Manage accounts
    attach                 Start an interactive JavaScript environment (connect to node)

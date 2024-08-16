@@ -87,8 +87,7 @@ For advanced users who prefer a hands-on, customized approach, building your nod
       │   └── validator
       └── execution
           ├── bootnode
-          ├── geth
-          └── restoration
+          └── geth
       ```
 
     And let's try to run a fullnode for dolphin testnet for example.
@@ -142,7 +141,7 @@ The Dolphin testnet operates with the goal of providing an environment identical
 | ------------------- | ----------------------------------------------|
 | Network             | OverProtocol Dolphin                          |
 | RPC URL             | YOUR_RPC_URL                                  |
-| Chain ID            | 541762                                        |
+| Chain ID            | 541764                                        |
 | Currency symbol     | OVER                                          |
 | Block Explorer URL  | https://dolphin.view.over.network/            |
 
