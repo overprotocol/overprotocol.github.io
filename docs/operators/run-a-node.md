@@ -4,6 +4,9 @@ description: A description for how to run a node.
 lang: en
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Once you've set up your hardware in either a local or cloud environment, the next step is to download and run the node client software, enabling you to join the blockchain network.
 
 ## Setting up a Node
@@ -19,17 +22,17 @@ There are various methods to set up a node in the OverProtocol network, ranging 
 3. **Launch and Sync**: Once installed, launch the application. It will automatically begin syncing with the OverProtocol blockchain, downloading the necessary blockchain data.
 4. **Node Configuration**: Through OverNode’s interface, you can easily configure basic settings. Advanced settings can also be accessed for more tailored operations.
 
-<!-- ### Build from Source
+### Build from Source
 
 For advanced users who prefer a hands-on, customized approach, building your node from source allows for maximum customization and optimization. Here’s how you can build from source:
 
 1. **Clone Client Repository**:
    You first have to clone the the execution client, and the consensus client software of OverProtocol.
-   Access the official OverProtocol GitHub repository and clone it to your local machine.
+   Access the [official OverProtocol GitHub repository](https://github.com/overprotocol) and clone it to your local machine.
 
-   **_OverProtocol Execution Client [Kairos]_**: The execution layer client handles the processing of transactions and the maintenance of the blockchain state. It must be fully synchronized with the OverProtocol network.
+   **_OverProtocol Execution Client [[Kairos](https://github.com/overprotocol/kairos)]_**: The execution layer client handles the processing of transactions and the maintenance of the blockchain state. It must be fully synchronized with the OverProtocol network.
 
-   **_OverProtocol Consensus Client [Chronos]_**: This consensus client works in tandem with the execution layer to achieve network consensus on the current state of the blockchain. Synchronizing this client is crucial for participating in network validation.
+   **_OverProtocol Consensus Client [[Chronos](https://github.com/overprotocol/chronos)]_**: This consensus client works in tandem with the execution layer to achieve network consensus on the current state of the blockchain. Synchronizing this client is crucial for participating in network validation.
 
 2. **Prerequisites**: Make sure all required dependencies and development tools are installed on your machine. These are usually listed in the repository's README.
 
@@ -37,18 +40,18 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
 4. **Configure Your Node**: After building, configure your node’s settings, including network options and security measures. This may involve editing configuration files manually.
 
-5. **Run the Node**: Execute the node software. You might need to use command line options to start it with specific parameters tailored to your needs. -->
+5. **Run the Node**: Execute the node software. You might need to use command line options to start it with specific parameters tailored to your needs.
 
 ### Run with Binary
 
-For advanced users who prefer a hands-on, customized approach, building your node from source allows for maximum customization and optimization. Here’s how you can build from source:
+For users who want a balance between ease of setup and control, running a node with pre-compiled binaries is an excellent option. This method allows you to quickly set up a node without the need for compilation while still providing flexibility for configuration. Here's how you can run a node using binaries:
 
 1. **Review Prerequisites and Best Practices**
 
-   | Type               | Benefits                                                                                             | Recommended Requirements                                                                                                                                                                              |
-   |--------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | **Execution + Consensus** | - Contributes to the security of Over ecosystem.<br /> - Lets you access the Over network directly without having to trust a third party service.        | - **Software:** Execution node client, consensus node client (instructions for clients below)<br />  - **OS:** 64-bit Linux, Mac OS X 10.14+, Windows 10+ 64-bit<br />  - **CPU:** Fast CPU with 4 or more cores<br />  - **Memory:** 16GB RAM or more<br />  - **Storage:** SSD with at least 128GB free space<br />  - **Network:** 25+ MBit/s bandwidth |
-   | **Validator**         | - Lets you stake OVER, propose + validate blocks, earn staking rewards + transaction fee tips.        | - Everything above, plus...<br />  - **Software:** Validator client<br />  - **Hardware:** (Recommended) A new machine that has never been connected to the internet that you can use to securely generate your mnemonic phrase and keypair<br />  - **256 OVER** (Mainnet)<br />  - **256 testnet OVER** (Testnets) |
+   | Type                      | Benefits                                                                                                                                          | Recommended Requirements                                                                                                                                                                                                                                                                                                                                   |
+   | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | **Execution + Consensus** | - Contributes to the security of Over ecosystem.<br /> - Lets you access the Over network directly without having to trust a third party service. | - **Software:** Execution node client, consensus node client (instructions for clients below)<br />  - **OS:** 64-bit Linux, Mac OS X 10.14+, Windows 10+ 64-bit<br />  - **CPU:** Fast CPU with 4 or more cores<br />  - **Memory:** 16GB RAM or more<br />  - **Storage:** SSD with at least 128GB free space<br />  - **Network:** 25+ MBit/s bandwidth |
+   | **Validator**             | - Lets you stake OVER, propose + validate blocks, earn staking rewards + transaction fee tips.                                                    | - Everything above, plus...<br />  - **Software:** Validator client<br />  - **Hardware:** (Recommended) A new machine that has never been connected to the internet that you can use to securely generate your mnemonic phrase and keypair<br />  - **256 OVER** (Mainnet)<br />  - **256 testnet OVER** (Testnets)                                       |
 
    **Best practices**
    - **If you're staking OVER as a validator, try this guide on a testnet first, _then_ mainnet.**
@@ -69,12 +72,12 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
       Select the execution client and the consensus client binary zip files for your operating system from the links below and download it to your local machine and extract it to corresponding directory above.
 
-      | Operating System     | OverProtocol Execution Client [Kairos]                                               | OverProtocol Consensus Client [Chronos]                                               |
-      |----------------------|--------------------------------------------------------|--------------------------------------------------------|
-      | Linux x64            | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_linux.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_linux_amd64.zip)      |
-      | MacOS X (Apple)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_arm64.zip)    |
-      | MacOS X (Intel)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_amd64.zip)    | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_amd64.zip)    |
-      | Windows              | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_windows.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_windows.zip)        |
+      | Operating System | OverProtocol Execution Client [Kairos]                                                                       | OverProtocol Consensus Client [Chronos]                                                                       |
+      | ---------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+      | Linux x64        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_linux.zip)        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_linux_amd64.zip) |
+      | MacOS X (Apple)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin.zip)       | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_arm64.zip)   |
+      | MacOS X (Intel)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_amd64.zip) | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_amd64.zip)   |
+      | Windows          | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_windows.zip)      | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_windows.zip)     |
 
     Then your binary directory structure should look like this:
 
@@ -96,10 +99,31 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
   Navigate to your execution directory and run the following command to start your execution node
 
-  ```sh
-  mkdir data
-  ./geth --dolphin --datadir=./data
-  ```
+  <Tabs
+    groupId="network"
+    defaultValue="mainnet"
+    values={[
+      {label: 'Mainnet', value: 'mainnet'},
+      {label: 'Dolphin', value: 'dolphin'},
+    ]}
+  >
+    <TabItem value="mainnet">
+
+    ```sh
+    mkdir data
+    ./geth --datadir=./data
+    ```
+
+    </TabItem>
+    <TabItem value="dolphin">
+
+    ```sh
+    mkdir data
+    ./geth --dolphin --datadir=./data
+    ```
+
+    </TabItem>
+  </Tabs>
 
   The execution layer client cannot sync without an attached beacon node. We'll see how to setup a beacon node in the next step.
 
@@ -110,14 +134,40 @@ For advanced users who prefer a hands-on, customized approach, building your nod
   There is two main ways to sync a consensus node: from genesis, and from a checkpoint. It is safer and a considerably faster to sync from a checkpoint. When syncing from a checkpoint, the simplest is to connect to a checkpoint sync endpoint. In the following examples, we'll use the checkpoint sync endpoint provided by Over Foundation.
   Navigate to your execution directory and run the following command to start your consensus node
 
-  ```sh
-  mkdir data
-  ./beacon-chain --dolphin --datadir=./data --jwt-secret ../execution/data/geth/jwtsecret --checkpoint-sync-url="https://dolphin-checkpoint.over.network"
-  ```
+  <Tabs
+    groupId="network"
+    defaultValue="mainnet"
+    values={[
+      {label: 'Mainnet', value: 'mainnet'},
+      {label: 'Dolphin', value: 'dolphin'},
+    ]}
+  >
+    <TabItem value="mainnet">
 
-  Syncing from a checkpoint usually takes a couple of minutes.
+    ```sh
+    mkdir data
+    ./beacon-chain --datadir=./data --jwt-secret ../execution/data/geth/jwtsecret --checkpoint-sync-url="https://mainnet-checkpoint.over.network"
+    ```
 
-  If you wish to sync from genesis, you need to remove `--checkpoint-sync-url` flag from the previous command and add the `--genesis-state=genesis.ssz` flag. Syncing from genesis usually takes a couple of hours, but it can take longer depending on your network and hardware specs. Download the [Dolphin genesis.ssz from Over Foundation](https://storage.googleapis.com/overprotocol-configs/dolphin/genesis.ssz) into your consensus directory.
+    Syncing from a checkpoint usually takes a couple of minutes.
+
+    If you wish to sync from genesis, you need to remove `--checkpoint-sync-url` flag from the previous command. Syncing from genesis usually takes a couple of hours, but it can take longer depending on your network and hardware specs.
+
+    </TabItem>
+    <TabItem value="dolphin">
+
+    ```sh
+    mkdir data
+    ./beacon-chain --dolphin --datadir=./data --jwt-secret ../execution/data/geth/jwtsecret --checkpoint-sync-url="https://dolphin-checkpoint.over.network"
+    ```
+
+    Syncing from a checkpoint usually takes a couple of minutes.
+
+    If you wish to sync from genesis, you need to remove `--checkpoint-sync-url` flag from the previous command and add the `--genesis-state=genesis.ssz` flag. Syncing from genesis usually takes a couple of hours, but it can take longer depending on your network and hardware specs. Download the [Dolphin genesis.ssz from Over Foundation](https://storage.googleapis.com/overprotocol-configs/dolphin/genesis.ssz) into your consensus directory.
+
+    </TabItem>
+  </Tabs>
+
   If you are planning to run a validator, it is strongly advised to use the `--suggested-fee-recipient=<WALLET ADDRESS>` option. When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips".
 
   **Congratulations!** you’re now running a full OverProtocol node.
@@ -127,23 +177,44 @@ For advanced users who prefer a hands-on, customized approach, building your nod
 
 ## Network Configurations
 
-### OverProtocol Testnet Configuration
+<Tabs
+  groupId="network"
+  defaultValue="mainnet"
+  values={[
+    {label: 'Mainnet', value: 'mainnet'},
+    {label: 'Dolphin', value: 'dolphin'},
+  ]}
+>
+  <TabItem value="mainnet">
+
+| Key                | Value                              |
+| ------------------ | ---------------------------------- |
+| Network            | OverProtocol Mainnet               |
+| RPC URL            | YOUR_RPC_URL                       |
+| Chain ID           | 54176                              |
+| Currency symbol    | OVER                               |
+| Block Explorer URL | https://mainnet.view.over.network/ |
+
+  </TabItem>
+
+  <TabItem value="dolphin">
 
 :::tip
 When working with OverProtocol, especially in a testnet environment, it's important to note that testnet configurations and details may change at any time. This variability is typical of test environments, which are often updated or reset to test new features and improvements in the blockchain protocol.
 :::
 
-#### Dolphin Testnet
-
 The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
 
-| Key                 | Value                                         |
-| ------------------- | ----------------------------------------------|
-| Network             | OverProtocol Dolphin                          |
-| RPC URL             | YOUR_RPC_URL                                  |
-| Chain ID            | 541764                                        |
-| Currency symbol     | OVER                                          |
-| Block Explorer URL  | https://dolphin.view.over.network/            |
+| Key                | Value                              |
+| ------------------ | ---------------------------------- |
+| Network            | OverProtocol Dolphin               |
+| RPC URL            | YOUR_RPC_URL                       |
+| Chain ID           | 541764                             |
+| Currency symbol    | OVER                               |
+| Block Explorer URL | https://dolphin.view.over.network/ |
+
+  </TabItem>
+</Tabs>
 
 
 ## Node Types
