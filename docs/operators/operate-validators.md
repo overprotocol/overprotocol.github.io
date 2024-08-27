@@ -61,9 +61,9 @@ To participate as a validator, you need 256 OVER tokens or multiples thereof, st
 2. **Run CLI following the repository's `README.md`**: This will complete the process of generating the mnemonic. Ensure that the generated file is kept in a safe place, as this mnemonic will be associated with all future rewards and your withdrawal amount.
     
     You should run the command similar to the following:
-
+  
     ```shell
-    $ ./deposit new-mnemonic --num_validators=1 --mnemonic_language=english --execution_address=<YOUR_WALLET_ADDRESS> --chain=over_dolphin
+    $ ./deposit new-mnemonic --num_validators=1 --mnemonic_language=english --execution_address=<YOUR_WALLET_ADDRESS>
     ```
 
     Adding `--execution_address=<YOUR_WALLET_ADDRESS>` will generate deposit data with a withdrawal credential, which is required for withdrawal.
@@ -168,7 +168,7 @@ Please enter your mnemonic separated by spaces (" "). Note: you only need to ent
 Enter the index (key number) you wish to start generating more keys from. For example, if you've generated 4 keys in the past, you'd enter 4 here. [0]: 0
 Please repeat the index to confirm: 0
 Please choose how many new validators you wish to run: 1
-Please choose the (mainnet or testnet) network/chain name ['mainnet', 'over', 'over_dolphin']:  [over]: over_dolphin
+Please choose the (over or testnet) network/chain name ['over', 'over_dolphin']:  [over]: over
 Create a password that secures your validator keystore(s). You will need to re-enter this to decrypt them when you setup your Ethereum validators.:
 Repeat your keystore password for confirmation:
 Creating your keys.
@@ -228,9 +228,32 @@ If your validator is active, the response will include the current state of your
 
 Run `validator` client to import the validator keys with the command similar to the following:
 
-```console
-$ validator accounts import --keys-dir=<path/to/your/validator/keys> --dolphin --wallet-dir=<path/to/your/wallet/directory>
-```
+<Tabs
+  groupId="network"
+  defaultValue="mainnet"
+  values={[
+    {label: 'Mainnet', value: 'mainnet'},
+    {label: 'Dolphin', value: 'dolphin'},
+  ]}
+>
+
+  <TabItem value="mainnet">
+
+  ```console
+  $ validator accounts import --keys-dir=<path/to/your/validator/keys> --wallet-dir=<path/to/your/wallet/directory>
+  ```
+
+  </TabItem>
+
+  <TabItem value="dolphin">
+
+  ```console
+  $ validator accounts import --keys-dir=<path/to/your/validator/keys> --dolphin --wallet-dir=<path/to/your/wallet/directory>
+  ```
+
+  </TabItem>  
+
+</Tabs>
 
 If you successfully imported validator keys, the result will be:
 
@@ -245,9 +268,32 @@ Importing accounts... 100% [====================================================
 
 Run `validator` client to run the validator on your node like following:
 
-```sh
-$ validator --wallet-dir=<path/to/your/wallet/directory> --dolphin --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
-```
+<Tabs
+  groupId="network"
+  defaultValue="mainnet"
+  values={[
+    {label: 'Mainnet', value: 'mainnet'},
+    {label: 'Dolphin', value: 'dolphin'},
+  ]}
+>
+
+  <TabItem value="mainnet">
+
+  ```sh
+  $ validator --wallet-dir=<path/to/your/wallet/directory> --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
+  ```
+
+  </TabItem>
+
+  <TabItem value="dolphin">
+
+  ```sh
+  $ validator --wallet-dir=<path/to/your/wallet/directory> --dolphin --suggested-fee-recipient=<YOUR_WALLET_ADDRESS>
+  ```
+
+  </TabItem>  
+
+</Tabs>
 
 `--suggested-fee-recipient` will allow you to earn block priority fees. If no `--suggested-fee-recipient` is set neither on the validator client nor on the beacon node, the corresponding fees will be sent to the burn address, and forever lost.
 
