@@ -168,7 +168,7 @@ Please enter your mnemonic separated by spaces (" "). Note: you only need to ent
 Enter the index (key number) you wish to start generating more keys from. For example, if you've generated 4 keys in the past, you'd enter 4 here. [0]: 0
 Please repeat the index to confirm: 0
 Please choose how many new validators you wish to run: 1
-Please choose the (mainnet or testnet) network/chain name ['mainnet', 'over', 'over_dolphin']:  [over]: over
+Please choose the (over or testnet) network/chain name ['over', 'over_dolphin']:  [over]: over
 Create a password that secures your validator keystore(s). You will need to re-enter this to decrypt them when you setup your Ethereum validators.:
 Repeat your keystore password for confirmation:
 Creating your keys.
