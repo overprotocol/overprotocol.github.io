@@ -187,13 +187,13 @@ For users who want a balance between ease of setup and control, running a node w
 >
   <TabItem value="mainnet">
 
-| Key                | Value                              |
-| ------------------ | ---------------------------------- |
-| Network            | OverProtocol Mainnet               |
-| RPC URL            | YOUR_RPC_URL                       |
-| Chain ID           | 54176                              |
-| Currency symbol    | OVER                               |
-| Block Explorer URL | https://mainnet.view.over.network/ |
+| Key                | Value                                |
+| ------------------ | ------------------------------------ |
+| Network            | OverProtocol Mainnet                 |
+| RPC URL            | https://rpc.public.overprotocol.com/ |
+| Chain ID           | 54176                                |
+| Currency symbol    | OVER                                 |
+| Block Explorer URL | https://mainnet.view.over.network/   |
 
   </TabItem>
 
@@ -205,13 +205,13 @@ When working with OverProtocol, especially in a testnet environment, it's import
 
 The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
 
-| Key                | Value                              |
-| ------------------ | ---------------------------------- |
-| Network            | OverProtocol Dolphin               |
-| RPC URL            | YOUR_RPC_URL                       |
-| Chain ID           | 541764                             |
-| Currency symbol    | OVER                               |
-| Block Explorer URL | https://dolphin.view.over.network/ |
+| Key                | Value                                |
+| ------------------ | ------------------------------------ |
+| Network            | OverProtocol Dolphin                 |
+| RPC URL            | https://wallet-dolphin.over.network/ |
+| Chain ID           | 541764                               |
+| Currency symbol    | OVER                                 |
+| Block Explorer URL | https://dolphin.view.over.network/   |
 
   </TabItem>
 </Tabs>
