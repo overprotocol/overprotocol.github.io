@@ -217,6 +217,27 @@ The Dolphin testnet operates with the goal of providing an environment identical
 </Tabs>
 
 
+## Port and Firewall Configurations
+
+If you followed the default setup instructions without customizing the port configurations, your node will use the following network settings. It's crucial to configure your firewall as shown below for smooth node operation. Please note that connection issues with peers often arise due to incorrect firewall settings, so pay close attention to these configurations:
+
+
+
+| Port/protocol   | Firewall rule                       | Reason/caveats                                                                                                                                                                                                                                                                                               |
+| --------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `8545/TCP`      | Block all traffic.                  | This is the JSON-RPC port for your execution node's Query API. You (and apps) can use this port to check execution node status, query execution-layer chain data, and even submit transactions. This port generally shouldn't be exposed to the outside world.                                               |
+| `3500/TCP`      | Block all traffic.                  | This is the JSON-RPC port for your beacon node's Query API. You (and apps) can use this port to check beacon node status and query consensus-layer chain data. This port generally shouldn't be exposed to the outside world.                                                                                |
+| `8551/TCP`      | Block all traffic.                  | Your beacon node connects to your execution node's [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) using this port. Inbound and outbound traffic should be allowed through this port only if your local beacon node is connecting to a remote execution node. |
+| `4000/TCP`      | Block all traffic.                  | Your validator uses this port to connect to your beacon node via [gRPC](https://grpc.io/). Inbound and outbound traffic should be allowed through this port only if your local validator is connecting to a remote beacon node.                                                                              |
+| `*/UDP+TCP`     | Allow outbound traffic.             | To [discover](https://github.com/ethereum/devp2p/wiki/Discovery-Overview) peers, Chronos' beacon node dials out through random ports. Allowing outbound TCP/UDP traffic from any port will help Chronos find peers.                                                                                          |
+| `13000/TCP`     | Allow inbound and outbound traffic. | After we discover peers, we dial them through this port to establish an ongoing connection for [libp2p](https://libp2p.io/) and through which all gossip/p2p request and responses will flow.                                                                                                                |
+| `12000/UDP`     | Allow inbound and outbound traffic. | Your beacon node exposes this UDP port so that other Over nodes can discover your node, request chain data, and provide chain data.                                                                                                                                                                          |
+| `30303/TCP+UDP` | Allow inbound and outbound traffic. | `30303/TCP` is your execution node's listener port, while `30303/UDP` is its discovery port. This rule lets your execution node connect to other peers.                                                                                                                                                      |
+
+<br />
+
+Ensuring these firewall settings are correctly configured will help prevent common connectivity issues and ensure your node can effectively participate in the network.
+
 ## Node Types
 
 OverProtocol supports several types of nodes, each serving distinct functions within the network:
