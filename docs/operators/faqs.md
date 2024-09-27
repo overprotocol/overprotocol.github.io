@@ -16,7 +16,7 @@ Block attestation and block proposal are roles that validators in OverProtocol m
 
 ### 3. How can i run a validator?
 
-If your are a OverNode user, you can start the validator application in the Validator menu. Follow the instructions on the screen to register as a validator. If you are choosing to run the client software yourself, refer to [Operate Validators](./operate-validators) page.
+If your are a OverScape user, you can start the validator application in the Validator menu. Follow the instructions on the screen to register as a validator. If you are choosing to run the client software yourself, refer to [Operate Validators](./operate-validators) page.
 
 You must stake 256 OVER(for testing) per validator, and you can apply for more validators depending on the OVER you have.
 
@@ -34,7 +34,7 @@ When staking for validator operation, a waiting time is required until the staki
 
 In OBT #2, after successfully sending the staking transaction, depending on the network status and the number of validator operation applications, a waiting time of at least 2 hours to up to 3 days may occur.
 
-If multiple users apply for validator operation, the secondary waiting time may increase significantly. Therefore, during this time, it is recommended to leave OverNode running in the background and keep the computer on.
+If multiple users apply for validator operation, the secondary waiting time may increase significantly. Therefore, during this time, it is recommended to leave OverScape running in the background and keep the computer on.
 
 If the node was turned off due to the waiting time, please make sure to turn on the node and complete synchronization to the completion state before the validator activation time. If the node is still off at the time of validator activation, you will immediately receive penalties.
 

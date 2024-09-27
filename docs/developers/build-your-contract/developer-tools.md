@@ -28,4 +28,4 @@ Additionally, we are in the process of developing OverProtocol-specific, develop
 ## Wallets
 
 - [Metamask](https://metamask.io/)
-- OverWallet
+- [OverFlex](https://over.network/overflex)

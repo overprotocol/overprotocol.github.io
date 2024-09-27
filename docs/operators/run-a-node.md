@@ -11,16 +11,16 @@ Once you've set up your hardware in either a local or cloud environment, the nex
 
 ## Setting up a Node
 
-There are various methods to set up a node in the OverProtocol network, ranging from [user-friendly approaches](#start-with-overnode) for beginners to more [advanced, manual configurations](#build-from-source) for experienced users seeking customized setups. You can checkout network configurations for mainnet and testnets [here](#network-configurations).
+There are various methods to set up a node in the OverProtocol network, ranging from [user-friendly approaches](#start-with-overscape) for beginners to more [advanced, manual configurations](#build-from-source) for experienced users seeking customized setups. You can checkout network configurations for mainnet and testnets [here](#network-configurations).
 
-### Start with OverNode
+### Start with OverScape
 
-[OverNode](https://over.network/overnode) offers a streamlined, user-friendly way to set up your node with minimal technical hassle. This method is ideal for those who prefer a straightforward approach or are new to running nodes. Here’s how to get started:
+[OverScape](https://over.network/overscape) offers a streamlined, user-friendly way to set up your node with minimal technical hassle. This method is ideal for those who prefer a straightforward approach or are new to running nodes. Here’s how to get started:
 
-1. **Download OverNode**: Visit the official OverNode website or trusted source to download the OverNode installation package.
+1. **Download OverScape**: Visit the official OverScape website or trusted source to download the OverScape installation package.
 2. **Install the Software**: Follow the on-screen instructions to install the software on your machine. This will involve agreeing to the terms, selecting an installation directory, and configuring your firewall to allow the application to communicate on the network.
 3. **Launch and Sync**: Once installed, launch the application. It will automatically begin syncing with the OverProtocol blockchain, downloading the necessary blockchain data.
-4. **Node Configuration**: Through OverNode’s interface, you can easily configure basic settings. Advanced settings can also be accessed for more tailored operations.
+4. **Node Configuration**: Through OverScape's interface, you can easily configure basic settings. Advanced settings can also be accessed for more tailored operations.
 
 ### Build from Source
 
@@ -256,7 +256,7 @@ These synchronization modes provide different trade-offs between speed, disk usa
 
 ### Execution Layer Sync Modes
 
-In the execution layer, there are two primary synchronization modes to **become a full node: Full Sync and Snap Sync**. OverNode users can easily select the execution sync modes, upon blockchain data download.
+In the execution layer, there are two primary synchronization modes to **become a full node: Full Sync and Snap Sync**. OverScape users can easily select the execution sync modes, upon blockchain data download.
 
 **Full Sync**:
 
@@ -282,7 +282,7 @@ $ geth --syncmode snap
 
 **Becoming an Archive Node**:
 
-There is an option to become an archive node. Currently, there is no option for OverNode users to become an archive node. Client software runners could become an archive node by running the execution client with the following tag:
+There is an option to become an archive node. Currently, there is no option for OverScape users to become an archive node. Client software runners could become an archive node by running the execution client with the following tag:
 
 ```sh
 $ geth --gcmode archive
@@ -308,7 +308,7 @@ Normally default setting is enough, but saving previous checkpoints can be usefu
 
 ### Consensus Layer Sync Modes
 
-There are two ways to sync the consensus layer: initial sync, and checkpoint sync. OverNodes users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
+There are two ways to sync the consensus layer: initial sync, and checkpoint sync. OverScape users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
 
 **Initial sync**:
 
@@ -331,7 +331,7 @@ $ beacon-chain --checkpoint-sync-url value
 Once your node is up, running and synced, the next step is to
 register and operate validators. This involves configuring your node to participate in the consensus process, enhancing the network's security and stability.
 
-For OverNode users this step is pretty much straight-forward. After the node is synced, jump in to the Staking tab to register as a validator.
+For OverScape users this step is pretty much straight-forward. After the node is synced, jump in to the Staking tab to register as a validator.
 
 For advanced users running the client software from scratch follow
 [register and operate validators](./operate-validators) section.

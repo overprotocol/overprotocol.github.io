@@ -14,14 +14,14 @@ To operate validators means to stake OVER and participate in OverProtocol's Cons
 ### Before We Go Further
 
 :::tip
-You have the option to install [OverNode](https://over.network/overnode). Just launch it and follow the clear, step-by-step instructions provided within the application. We highly recommend users to participate in OverProtocol through the use of OverNode.
+You have the option to install [OverScape](https://over.network/overscape). Just launch it and follow the clear, step-by-step instructions provided within the application. We highly recommend users to participate in OverProtocol through the use of OverScape.
 
-OverNode simplifies the process of setting up and maintaining your node and validators by automating many of the initial configuration and synchronization tasks. With OverNode users could easily register and withdraw from validator status.
+OverScape simplifies the process of setting up and maintaining your node and validators by automating many of the initial configuration and synchronization tasks. With OverScape users could easily register and withdraw from validator status.
 :::
 
 ### Skills for Operating a Validator
 
-Being a validator on OverProtocol without using OverNode requires specific skills and commitments:
+Being a validator on OverProtocol without using OverScape requires specific skills and commitments:
 
 - **Technical Proficiency**: You need operational knowledge on how to set up, run, and maintain both an Ethereum consensus client and an execution client alongside a validator client. This includes understanding the software interactions and network requirements.
 - **Commitment**: Operating a validator node requires a long-term commitment. Your node needs to run continuously (24/7/365) to support the network effectively. Interruptions in service can lead to penalties, thus reliability and dedication are key.
@@ -35,7 +35,7 @@ Operating a validator node on OverProtocol can be rewarding but demands a high l
   defaultValue="scratch"
   values={[
     {label: 'From scratch', value: 'scratch'},
-    {label: 'Migration from OverNode', value: 'migration'},
+    {label: 'Migration from OverScape', value: 'migration'},
   ]}
 >
   <TabItem value="scratch">
@@ -44,7 +44,7 @@ Operating a validator node on OverProtocol can be rewarding but demands a high l
 
 :::note
 
-This section is intended for users who wish to set up validator keys using command-line tools. If you already possess mnemonics or keys, please refer to the **`Migration from OverNode`** tab for guidance on migrating your setup.
+This section is intended for users who wish to set up validator keys using command-line tools. If you already possess mnemonics or keys, please refer to the **`Migration from OverScape`** tab for guidance on migrating your setup.
 
 :::
 
@@ -133,11 +133,11 @@ Follow steps 4 and 5.
   </TabItem>
   <TabItem value="migration">
 
-## Option 2. Migrating your validators from OverNode
+## Option 2. Migrating your validators from OverScape
 
 :::note
 
-This section is designed for users who are looking to migrate their existing validator setup from OverNode. If you are setting up a validator from scratch, please see the **`From scratch`** tab for detailed instructions.
+This section is designed for users who are looking to migrate their existing validator setup from OverScape. If you are setting up a validator from scratch, please see the **`From scratch`** tab for detailed instructions.
 
 :::
 
@@ -145,7 +145,7 @@ This section is designed for users who are looking to migrate their existing val
 
 ### 1. Save your validator mnemonic
 
-If you have previously set up validators through OverNode, you should already have a validator mnemonic (12 words). If you did not back up your mnemonic, OverNode allows you to retrieve it by entering your password.
+If you have previously set up validators through OverScape, you should already have a validator mnemonic (12 words). If you did not back up your mnemonic, OverScape allows you to retrieve it by entering your password.
 
 1. **Go to Settings > Node data**: Here, you will find the option `Reveal validator recovery phrase`. Click the `Reveal phrase` button.
 2. **Enter your password, and backup your validator phrase**: A password is required to encrypt your validator keystore for security.
