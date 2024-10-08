@@ -25,59 +25,48 @@ const learnSidebar = [
   },
   {
     type: "category",
-    label: "Key Features",
+    label: "Layered Architecture",
     collapsible: true,
     collapsed: true,
+    link: {
+      type: "doc",
+      id: "learn/layered-architecture/overview",
+    },
+    items: [
+      "learn/layered-architecture/ethanos",
+    ],
+  },
+  {
+    type: "category",
+    label: "Consensus",
+    collapsible: true,
+    collapsed: true,
+    link: {
+      type: "doc",
+      id: "learn/consensus/overview",
+    },
+    items: [
+      "learn/consensus/requirements",
+      "learn/consensus/rewards-and-penalties",
+    ],
+  },
+  {
+    type: "category",
+    label: "Tokenomics",
+    collapsible: true,
+    collapsed: true,
+    link: {
+      type: "doc",
+      id: "learn/tokenomics/overview",
+    },
     items: [
       {
-        type: "category",
-        label: "Layered Architecture",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            type: "doc",
-            label: "Overview",
-            id: "learn/key-features/layered-architecture/overview",
-          },
-          "learn/key-features/layered-architecture/ethanos",
-        ],
+        type: "doc",
+        label: "Token Distribution",
+        id: "learn/tokenomics/distribution",
       },
-      {
-        type: "category",
-        label: "Consensus",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            type: "doc",
-            label: "Overview",
-            id: "learn/key-features/over-pos/overview",
-          },
-          "learn/key-features/over-pos/requirements",
-          "learn/key-features/over-pos/rewards-and-penalties",
-        ],
-      },
-      {
-        type: "category",
-        label: "Tokenomics",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            type: "doc",
-            label: "Overview",
-            id: "learn/key-features/tokenomics/overview",
-          },
-          {
-            type: "doc",
-            label: "Token Distribution",
-            id: "learn/key-features/tokenomics/distribution",
-          },
-          "learn/key-features/tokenomics/feedback",
-          "learn/key-features/tokenomics/fee",
-        ],
-      },
+      "learn/tokenomics/feedback",
+      "learn/tokenomics/fee",
     ],
   },
 ];
