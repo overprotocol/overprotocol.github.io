@@ -21,7 +21,7 @@ const learnSidebar = [
   {
     type: "doc",
     id: "learn/index",
-    label: "What is OverProtocol",
+    label: "Welcome to OverProtocol",
   },
   {
     type: "category",
