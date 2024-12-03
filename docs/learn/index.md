@@ -12,7 +12,7 @@ Blockchain thrives on a virtuous cycle: participation drives growth, and growth 
 
 - [Get Started with the Network 🤝](/operators/index.md)
 - [Create Your Next Big Idea 🛠️](/developers/index.md)
-- Connect with the Community 🎉
+- [Connect with the Community 🎉](https://discord.gg/overprotocol)
 - [Discover the Vision 📖](https://drive.google.com/file/d/1DNK0FFOVhnVDRnz8h9RJ1NoDUN4W0He8/view?usp=sharing)
 
 ### How Does OverProtocol Work?

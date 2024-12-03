@@ -81,7 +81,7 @@ const operatorsSidebar = [
   {
     type: "doc",
     id: "operators/index",
-    label: "Overview",
+    label: "Getting Started",
   },
   {
     type: "doc",
