@@ -100,7 +100,7 @@ const operatorsSidebar = [
   },
   {
     type: "category",
-    label: "Command line options",
+    label: "Command Line Options",
     collapsible: true,
     collapsed: true,
     items: [
