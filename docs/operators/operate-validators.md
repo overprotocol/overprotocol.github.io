@@ -1,40 +1,55 @@
 ---
 title: Operate Validators
-description: Step-by-step guides of how to operate validators.
+description: Learn how to register and operate validators in the OverProtocol network. This guide covers setup, staking, and best practices to help you actively contribute to network security, earn rewards, and enhance blockchain decentralization.
 lang: en
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-To operate validators means to stake OVER and participate in OverProtocol's Consensus mechanism. In order to be an validator, a user must first have its own full node running. Follow [Run a node](./run-a-node) page for more.
+### Welcome to OverProtocol Validators 🙌
 
-## Prerequisites
+Operating a validator is one of the most important roles in the OverProtocol network, and by choosing this path, you’ve already demonstrated your commitment to decentralization and security. Thank you for stepping up to help power the future of OverProtocol! 🌟
 
-### Before We Go Further
+---
 
-:::tip
-You have the option to install [OverScape](https://over.network/overscape). Just launch it and follow the clear, step-by-step instructions provided within the application. We highly recommend users to participate in OverProtocol through the use of OverScape.
+## What to Expect as a Validator
 
-OverScape simplifies the process of setting up and maintaining your node and validators by automating many of the initial configuration and synchronization tasks. With OverScape users could easily register and withdraw from validator status.
-:::
+### Your Commitment Matters
 
-### Skills for Operating a Validator
+Becoming a validator isn’t just about running software—it’s about dedicating yourself to the network’s long-term health and stability. Validator nodes are expected to run continuously, 24/7, ensuring that OverProtocol remains resilient and secure.
 
-Being a validator on OverProtocol without using OverScape requires specific skills and commitments:
+In the early stages of the network, there may be unique challenges as we refine and optimize the system. By participating now, you’re joining a pioneering group that is laying the foundation for OverProtocol’s success. Your willingness to navigate these early hurdles shows incredible dedication, and **we deeply value your contribution**. 💪
 
-- **Technical Proficiency**: You need operational knowledge on how to set up, run, and maintain both an Ethereum consensus client and an execution client alongside a validator client. This includes understanding the software interactions and network requirements.
-- **Commitment**: Operating a validator node requires a long-term commitment. Your node needs to run continuously (24/7/365) to support the network effectively. Interruptions in service can lead to penalties, thus reliability and dedication are key.
+### Don’t Worry About Technical Skills
 
-Operating a validator node on OverProtocol can be rewarding but demands a high level of dedication and technical expertise to ensure the security and efficacy of the blockchain network.
+You don’t need to be a tech wizard to get started as a validator. While technical expertise can be helpful, OverProtocol is designed to make validator participation accessible to everyone:
 
+- **Everyday Devices Work**: With tools like [OverScape](https://over.network/overscape), you can operate a validator on your regular desktop or laptop.
+- **Simplified Setup**: OverScape automates the most complex tasks, like node syncing and validator registration, so you can focus on contributing to the network.
+- **No Stress**: Whether you’re a blockchain novice or a seasoned pro, OverProtocol offers solutions that fit your experience level.
 
+### Stake OVER to Secure the Network
+
+To participate as a validator, you’ll need to stake OVER tokens. Staking isn’t just a requirement—it’s a way to ensure the network remains safe and secure.
+
+- **Why Staking Matters**: Validators stake OVER as collateral to prove their commitment to the network. This mechanism incentivizes good behavior and penalizes actions that could harm the network.
+- **How to Get OVER**: You can acquire OVER through exchanges or other trusted sources.
+- **Minimum Requirement**: Make sure you have more than 256 OVER to start staking.
+
+Your stake isn’t just a economical requirement—it’s a tangible contribution to the decentralization and security of OverProtocol.
+
+## Operate Validators Without OverScape
+
+For advanced users or those who prefer manual configurations, OverProtocol provides options to set up and manage validators from scratch or migrate existing setups from OverScape. Follow the detailed instructions below based on your requirements.
+
+---
 
 <Tabs
   groupId="set-up-validators"
   defaultValue="scratch"
   values={[
-    {label: 'From scratch', value: 'scratch'},
+    {label: 'From Scratch', value: 'scratch'},
     {label: 'Migration from OverScape', value: 'migration'},
   ]}
 >
@@ -52,7 +67,7 @@ This section is intended for users who wish to set up validator keys using comma
 
 ### 1. Obtain OVER
 
-To participate as a validator, you need 256 OVER tokens or multiples thereof, stored in a single wallet address. This amount is necessary to make the deposit transaction(s) required for validator registration.
+To participate as a validator, you need more than 256 OVER tokens, stored in a single wallet address. This amount is necessary to make the deposit transaction(s) required for validator registration.
 
 ### 2. Generate Validator Keys (Mnemonics)
 
@@ -137,7 +152,7 @@ Follow steps 4 and 5.
 
 :::note
 
-This section is designed for users who are looking to migrate their existing validator setup from OverScape. If you are setting up a validator from scratch, please see the **`From scratch`** tab for detailed instructions.
+This section is designed for users who are looking to migrate their existing validator setup from OverScape. If you are setting up a validator from scratch, please see the **`From Scratch`** tab for detailed instructions.
 
 :::
 
@@ -222,7 +237,7 @@ If your validator is active, the response will include the current state of your
   </TabItem>
 </Tabs>
 
-## Run your validator
+## Run Your Validator
 
 ### Transfer Validator Keys
 
@@ -264,7 +279,7 @@ Importing accounts... 100% [====================================================
 [2024-06-04 15:41:33]  INFO accounts: Imported accounts <YOUR_VALIDATOR_PUBKEYS>, view all of them by running `accounts list`
 ```
 
-### Run your Validator
+### Run Your Validator Client
 
 Run `validator` client to run the validator on your node like following:
 
@@ -296,7 +311,7 @@ Run `validator` client to run the validator on your node like following:
 </Tabs>
 
 `--suggested-fee-recipient` will allow you to earn block priority fees. If no `--suggested-fee-recipient` is set neither on the validator client nor on the beacon node, the corresponding fees will be sent to the burn address, and forever lost.
-
+<!-- 
 ## More on Validator Activation
 
 ### Activation Queue
@@ -334,4 +349,4 @@ Once the exit process is complete, the validator's account status changes in sev
 - **No Longer Active**: The account will no longer perform any network duties as a validator.
 - **Ineligibility for Rewards**: The account ceases to earn staking rewards.
 - **Removal of Stake**: The staked OVER tokens are no longer considered "at stake."
-- **Full Withdrawal**: After some epochs, the staked OVER tokens will be withdrawn to the address set in the deposit data.
+- **Full Withdrawal**: After some epochs, the staked OVER tokens will be withdrawn to the address set in the deposit data. -->
