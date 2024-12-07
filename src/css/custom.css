@@ -6,33 +6,26 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #F5773E; /* 모든 기본 색상 */
-  --ifm-color-primary-dark: #F5773E;
-  --ifm-color-primary-darker: #F5773E;
-  --ifm-color-primary-darkest: #F5773E;
-  --ifm-color-primary-light: #F5773E;
-  --ifm-color-primary-lighter: #F5773E;
-  --ifm-color-primary-lightest: #F5773E;
-  --ifm-code-font-size: 95%; /* 코드블럭 폰트 사이즈 */
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); /* 코드블럭 하이라이트 배경색 */
-  /* --ifm-link-color: var(--ifm-color-primary-dark); Navbar 현재 위치 링크 글자 색깔 */
-  /* --ifm-navbar-height: 5rem; */
-  /* --ifm-menu-link-padding-vertical: 0.75rem; */
-  /* --ifm-menu-link-padding-horizontal: 1rem; */
-  /* --submenu-color: #de0000;  */ /* 우측 서브메뉴 글자 색깔 */
-  /* --ifm-toc-link-color: var(--submenu-color); */
+  --ifm-color-primary: #F5773E; /* Vibrant primary color */
+  --ifm-color-primary-dark: #D86930; /* Slightly darker orange for hover states */
+  --ifm-color-primary-darker: #B54F23; /* Deeper orange for strong accents */
+  --ifm-color-primary-darkest: #8F391A; /* Dark reddish-orange for focus states */
+  --ifm-color-primary-light: #FF8F5A; /* Softer orange for highlights */
+  --ifm-color-primary-lighter: #FFA680; /* Gentle orange for subtle backgrounds */
+  --ifm-color-primary-lightest: #FFBFA5; /* Very light orange for neutral areas */
+  --docusaurus-highlighted-code-line-bg: rgba(245, 119, 62, 0.1); /* Subtle background highlight */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #F5773E;
-  --ifm-color-primary-dark: #F5773E;
-  --ifm-color-primary-darker: #F5773E;
-  --ifm-color-primary-darkest: #F5773E;
-  --ifm-color-primary-light: #F5773E;
-  --ifm-color-primary-lighter: #F5773E;
-  --ifm-color-primary-lightest: #F5773E;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #F5773E; /* Vibrant primary color */
+  --ifm-color-primary-dark: #D86930; /* Slightly darker orange */
+  --ifm-color-primary-darker: #B54F23; /* Deeper orange for accents */
+  --ifm-color-primary-darkest: #8F391A; /* Dark reddish-orange for strong contrast */
+  --ifm-color-primary-light: #FF8F5A; /* Softer orange for highlights */
+  --ifm-color-primary-lighter: #FFA680; /* Light orange for less emphasis */
+  --ifm-color-primary-lightest: #FFBFA5; /* Very light orange, close to neutral */
+  --docusaurus-highlighted-code-line-bg: rgba(245, 119, 62, 0.2); /* Subtle highlight for code lines */
 }
 
 pre.prism-code {
@@ -139,4 +132,48 @@ img {
   text-transform: uppercase;
   color: var(--ifm-color-gray-600);
   margin: 0.7rem;
+}
+
+ul.no-bullets {
+  list-style: none; /* No bullets */
+  padding: 0 16px;
+
+  li {
+    padding: 2px 0 2px 0;
+    display: flex;
+    align-items: start;
+    gap: 8px;
+  }
+}
+
+/* 기본 링크 스타일 */
+.link-style {
+  color: var(--ifm-color-primary); /* 기본 링크 색상: 브랜드 블루 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-weight: bold; /* 굵은 텍스트 */
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+  position: relative; /* 강조 효과를 위한 위치 지정 */
+}
+
+/* 호버 상태 */
+.link-style:hover {
+  color: var(--ifm-color-primary-dark); /* 호버 시 색상 변경 */
+  text-decoration: none; /* 호버 시 밑줄 추가 */
+}
+
+/* 애니메이션 밑줄 효과 (Optional) */
+.link-style::after {
+  content: ""; /* 가상 요소 생성 */
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* 텍스트 아래 위치 */
+  width: 0%; /* 초기 너비 0% */
+  height: 2px; /* 밑줄 두께 */
+  background-color: var(--ifm-color-primary-dark); /* 밑줄 색상 */
+  transition: width 0.3s ease; /* 밑줄 확장 애니메이션 */
+}
+
+/* 호버 시 밑줄 확장 */
+.link-style:hover::after {
+  width: 100%; /* 전체 텍스트 밑줄 확장 */
 }

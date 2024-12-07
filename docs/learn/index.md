@@ -8,12 +8,14 @@ sidebar_position: 1
 
 ### Break Barriers, Join the Cycle, Thrive Together
 
-Blockchain thrives on a virtuous cycle: participation drives growth, and growth fosters participation. **OverProtocol** removes the technical and economic barriers, creating a network where **you can actively participate and contribute**. Be part of the network’s growth cycle—your journey starts here. 🌟
+Blockchain thrives on a virtuous cycle: participation drives growth, and growth fosters participation. **OverProtocol** removes the technical and economic barriers, creating a network where **you can actively participate and contribute**. Be part of the network’s growth cycle—your journey starts here.
 
-- [Get Started with the Network 🤝](/operators/index.md)
-- [Create Your Next Big Idea 🛠️](/developers/index.md)
-- [Connect with the Community 🎉](https://discord.gg/overprotocol)
-- [Discover the Vision 📖](https://drive.google.com/file/d/1DNK0FFOVhnVDRnz8h9RJ1NoDUN4W0He8/view?usp=sharing)
+<ul class="no-bullets">
+  <li>🤝<a class="link-style" href="/operators">Set Up Your Node and Join the Network</a></li>
+  <li>🛠️<a class="link-style" href="/developers">Build Your Smart Contract with OverProtocol</a></li>
+  <li>🎉<a class="link-style" href="https://discord.gg/overprotocol">Connect with the Community</a></li>
+  <li>📖 <a class="link-style" href="https://drive.google.com/file/d/1DNK0FFOVhnVDRnz8h9RJ1NoDUN4W0He8/view?usp=sharing">Explore Our Whitepaper and Future Roadmap</a></li>
+</ul>
 
 ---
 
@@ -36,12 +38,14 @@ Every new participant strengthens the OverProtocol ecosystem. [Join a network](/
 
 ---
 
-### Start Your Journey Today!
+### Start Your Journey Today
 
 Still exploring? Here’s where you can dive deeper:
 
-- [How to Run a Node 🚀](/operators/index.md)
-- [Tools for Developers 💡](/developers/build-your-contract/developer-tools)
-- [OverProtocol FAQ ❓](/operators/faqs)
+<ul class="no-bullets">
+  <li>🚀<a class="link-style" href="/operators">Learn How to Run a Node</a></li>
+  <li>💡<a class="link-style" href="/developers">Discover Tools for Developers</a></li>
+  <li>❓<a class="link-style" href="/operators/faqs">OverProtocol FAQ</a></li>
+</ul>
 
 Let’s build the future of blockchain—together! 🚀

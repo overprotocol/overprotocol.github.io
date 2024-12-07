@@ -71,8 +71,11 @@ If you prefer remote management or lack physical space, a cloud server can be a 
 
 Choosing the right computer is the first step to becoming an OverProtocol node operator. Once your setup is ready:
 
-- [Download the Node Software 🚀](/operators/run-a-node)
-- [Stake and Start Validating 🔑](/operators/operate-validators)
-- [Join the Community for Support 🤝](https://discord.gg/overprotocol)
+<ul class="no-bullets">
+  <li>🚀<a class="link-style" href="/operators/run-a-node">Set Up Your Node Now</a></li>
+  <li>🔑<a class="link-style" href="/developers">Stake Tokens and Start Validating</a></li>
+  <li>🤝<a class="link-style" href="https://discord.gg/overprotocol">Join the Community for Support</a></li>
+  <li>❓<a class="link-style" href="/developers">Find quick answers to common questions</a></li>
+</ul>
 
 Running a node is easier than you think—with the right computer, you’re ready to make an impact! 🌟
