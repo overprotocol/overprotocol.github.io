@@ -87,7 +87,6 @@ Precompiled binaries provide a balance between ease of use and flexibility, allo
   overprotocol
   ├── consensus
   │   ├── beacon-chain
-  │   ├── enr-calculator
   │   ├── prysmctl
   │   └── validator
   └── execution
