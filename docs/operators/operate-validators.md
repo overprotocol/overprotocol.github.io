@@ -214,17 +214,17 @@ If your validator is active, the response will include the current state of your
   "data": [
     {
       "index": "20000",
-      "balance": "253802023102",
+      "balance": "256000000000",
       "status": "active_ongoing",
       "validator": {
         "pubkey": "0x8541054c41a9a36a5ae1717e321850f9c662d61b8430b12abda89030daa301d00b925a19363375f05e5b07d43f643717",
-        "withdrawal_credentials": "0x010000000000000000000000533bf49c40cb17a1c4eb479355e1a10942feb13f",
-        "effective_balance": "248000000000",
+        "withdrawal_credentials": "0x000000000000000000000000533bf49c40cb17a1c4eb479355e1a10942feb13f",
+        "effective_balance": "256000000000",
         "slashed": false,
         "activation_eligibility_epoch": "289",
         "activation_epoch": "295",
         "exit_epoch": "18446744073709551615",
-        "withdrawable_epoch": "18446744073709551615"
+        "principal_balance": "256000000000"
       }
     }
   ],
