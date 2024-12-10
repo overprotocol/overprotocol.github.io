@@ -115,7 +115,7 @@ async function stake(privateKey) {
   const amount = ethers.utils.parseEther("256");
 
   let depositDatas;
-  depositDatas = require("./deposit_data.json"); // The validator key you've generated from step 2.
+  depositDatas = require("./deposit_data.json"); // The deposit data you've generated from step 2.
 
   for (let i = 0; i < depositDatas.length; i++) {
     const tx = await stakingContract.deposit(
@@ -132,7 +132,7 @@ async function stake(privateKey) {
     try {
       const receipt = await tx.wait();
       console.log(`Transaction ${i + 1}:`);
-      console.log(`Transaction Hash: ${receipt.transactionHash}`); // Search by transaction hash at OverView
+      console.log(`Transaction Hash: ${receipt.transactionHash}`);
     } catch (error) {
       console.error(`Error in transaction ${i + 1}: ${error.message}`);
     }
