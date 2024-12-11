@@ -137,13 +137,13 @@ img {
 ul.no-bullets {
   list-style: none; /* No bullets */
   padding: 0 16px;
+}
 
-  li {
-    padding: 2px 0 2px 0;
-    display: flex;
-    align-items: start;
-    gap: 8px;
-  }
+ul.no-bullets li {
+  padding: 2px 0 2px 0;
+  display: flex;
+  align-items: start;
+  gap: 8px;
 }
 
 /* 기본 링크 스타일 */
