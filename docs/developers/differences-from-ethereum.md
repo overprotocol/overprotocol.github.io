@@ -52,7 +52,7 @@ In traditional blockchain architectures, the `nonce` primarily tracks the number
 
 The combination of the `nonce` and the `epochCoverage` value ensures uniqueness for each account. This system allows OverProtocol to maintain the integrity and distinction of account states over time, even through periods of account inactivity and expiration.
 
-For a more detailed explanation, please refer to the [documentation](/learn/key-features/layered-architecture/ethanos#dealing-with-crumb-accounts-restored-epoch).
+For a more detailed explanation, please refer to the [documentation](#dealing-with-crumb-accounts-restored-epoch).
 
 #### `nonce` Field in Transaction
 

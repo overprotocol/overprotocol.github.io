@@ -38,4 +38,4 @@ The tokenomics of OverProtocol ensures:
 - **Sustainability**: OVER's role in staking and transaction fees supports long-term network health.
 - **Security**: Staking mechanisms protect the network from malicious activity by ensuring validators have a vested interest in the system.
 
-For more details on staking and validator rewards, refer to the [Validator Requirements Section →](./validator-requirements).
+For more details on staking and validator rewards, refer to the [Validator Requirements Section →](/learn/consensus/requirements).

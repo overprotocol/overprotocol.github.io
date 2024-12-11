@@ -24,7 +24,7 @@ Storage rent is a proposed economic mechanism designed to address the inefficien
 
 With the storage rent fee, a blockchain storage user would consistenly pay the rent to compensate for the ongoing use of the storage space. This fee incentivizes users to only retain necessary and actively used data, thereby managing the size and efficiency of the blockchain's state. That is, we can expect users to be more judicious about the data they store on the blockchain and to potentially clean up or remove data that is no longer needed.
 
-Such a fee is levied on every Ethanos epoch, and the amount depends on the quantity of data stored with the duration for which it was stored. The storage fee is collected and directed to the [DAO Treasury](/learn/key-features/tokenomics/distribution#treasury), supporting various ecosystem development initiatives.
+Such a fee is levied on every Ethanos epoch, and the amount depends on the quantity of data stored with the duration for which it was stored. The storage fee is collected and directed to the [DAO Treasury](./distribution#treasury), supporting various ecosystem development initiatives.
 
 #### Why it was hard to collect Storage Rent Fees
 
