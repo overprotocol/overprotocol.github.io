@@ -65,4 +65,4 @@ By embracing these principles, OverProtocol achieves its mission of making block
 
 ## What's Next?
 
-Explore how OverProtocol's **core mechanisms** bring these principles to life by implementing innovative technologies like [lightweight nodes](./layered-architecture/) and [advanced consensus models](./consensus/).
+Explore how OverProtocol's **core mechanisms** bring these principles to life by implementing innovative technologies like [lightweight nodes](./layered-architecture/overview) and [advanced consensus models](./consensus/overview).

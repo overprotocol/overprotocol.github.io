@@ -43,7 +43,7 @@ const learnSidebar = [
   },
   {
     type: "category",
-    label: "Consensus",
+    label: "Consensus Mechanism",
     collapsible: true,
     collapsed: true,
     link: {
