@@ -32,7 +32,7 @@ const learnSidebar = [
     type: "category",
     label: "Layered Architecture",
     collapsible: true,
-    collapsed: true,
+    collapsed: false,
     link: {
       type: "doc",
       id: "learn/layered-architecture/overview",
@@ -45,7 +45,7 @@ const learnSidebar = [
     type: "category",
     label: "Consensus Mechanism",
     collapsible: true,
-    collapsed: true,
+    collapsed: false,
     link: {
       type: "doc",
       id: "learn/consensus/overview",
@@ -60,7 +60,7 @@ const learnSidebar = [
     type: "category",
     label: "Tokenomics",
     collapsible: true,
-    collapsed: true,
+    collapsed: false,
     link: {
       type: "doc",
       id: "learn/tokenomics/overview",
