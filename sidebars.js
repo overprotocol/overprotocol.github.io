@@ -21,63 +21,58 @@ const learnSidebar = [
   {
     type: "doc",
     id: "learn/index",
-    label: "What is OverProtocol",
+    label: "Welcome to OverProtocol",
+  },
+  {
+    type: "doc",
+    id: "learn/design-principles",
+    label: "Design Principles",
   },
   {
     type: "category",
-    label: "Key Features",
+    label: "Layered Architecture",
     collapsible: true,
     collapsed: true,
+    link: {
+      type: "doc",
+      id: "learn/layered-architecture/overview",
+    },
+    items: [
+      "learn/layered-architecture/ethanos",
+    ],
+  },
+  {
+    type: "category",
+    label: "Consensus Mechanism",
+    collapsible: true,
+    collapsed: true,
+    link: {
+      type: "doc",
+      id: "learn/consensus/overview",
+    },
+    items: [
+      "learn/consensus/requirements",
+      "learn/consensus/validator-cycle",
+      "learn/consensus/rewards-and-penalties",
+    ],
+  },
+  {
+    type: "category",
+    label: "Tokenomics",
+    collapsible: true,
+    collapsed: true,
+    link: {
+      type: "doc",
+      id: "learn/tokenomics/overview",
+    },
     items: [
       {
-        type: "category",
-        label: "Layered Architecture",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            type: "doc",
-            label: "Overview",
-            id: "learn/key-features/layered-architecture/overview",
-          },
-          "learn/key-features/layered-architecture/ethanos",
-        ],
+        type: "doc",
+        label: "Token Distribution",
+        id: "learn/tokenomics/distribution",
       },
-      {
-        type: "category",
-        label: "Consensus",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            type: "doc",
-            label: "Overview",
-            id: "learn/key-features/over-pos/overview",
-          },
-          "learn/key-features/over-pos/requirements",
-          "learn/key-features/over-pos/rewards-and-penalties",
-        ],
-      },
-      {
-        type: "category",
-        label: "Tokenomics",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            type: "doc",
-            label: "Overview",
-            id: "learn/key-features/tokenomics/overview",
-          },
-          {
-            type: "doc",
-            label: "Token Distribution",
-            id: "learn/key-features/tokenomics/distribution",
-          },
-          "learn/key-features/tokenomics/feedback",
-          "learn/key-features/tokenomics/fee",
-        ],
-      },
+      "learn/tokenomics/feedback",
+      "learn/tokenomics/fee",
     ],
   },
 ];
@@ -92,7 +87,7 @@ const operatorsSidebar = [
   {
     type: "doc",
     id: "operators/index",
-    label: "Overview",
+    label: "Getting Started",
   },
   {
     type: "doc",
@@ -111,7 +106,7 @@ const operatorsSidebar = [
   },
   {
     type: "category",
-    label: "Command line options",
+    label: "Command Line Options",
     collapsible: true,
     collapsed: true,
     items: [
@@ -124,6 +119,19 @@ const operatorsSidebar = [
         type: "doc",
         label: "Chronos",
         id: "operators/CLI-options/chronos",
+      },
+    ],
+  },
+  {
+    type: "category",
+    label: "Advanced Guides",
+    collapsible: true,
+    collapsed: true,
+    items: [
+      {
+        type: "doc",
+        label: "Run with Docker",
+        id: "operators/advanced-guides/run-with-docker",
       },
     ],
   },

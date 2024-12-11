@@ -4,31 +4,25 @@ description: An introduction for distribution information of OVER
 lang: en
 ---
 
-:::info
-**Disclaimer**: The tokenomics details, including the distribution and allocation mechanisms, are still under development and may be adjusted before the mainnet launch to better serve the evolving needs of the OverProtocol ecosystem.
-:::
-
 OverProtocol has a supply schedule that releases 1 billion OVER over 10 years. Upon entering the 11th year, no additional tokens will be issued.
 
 ## Token Allocation
 
 ### 1. Staking Rewards
 
-30% of the total tokens, equating to 300 million OVER, will be distributed over 10 years. The issuance plan allocates 200 million OVER as the minimum guaranteed reward, distributed in equal annual amounts to stakers. The remaining 100 million OVER will be used as an adjustable reward, modulated in real-time by the system without human intervention, based on the desired staking quantity. Further details are described [below](#staking-rewards).
+Staking rewards are structured to ensure the network’s stability and security. These rewards include a minimum guaranteed allocation of 200M OVER and an adjustable allocation of 100M OVER. Each year, 20M OVER is distributed as a fixed reward to participants. In addition, the network dynamically adjusts extra rewards through a feedback mechanism. Further details are described [below](#staking-rewards).
 
 ### 2. DAO Treasury{#treasury}
 
-The DAO Treasury is a pivotal component in the sustainable growth and development of the OverProtocol ecosystem, with the goal of supporting DeFi, Layer 2 solutions, and other ecosystem initiatives. It will introduce governance mechanisms allowing participation from node validators, Nethers stakers, and potentially other contributors in deciding the allocation of treasury funds. The treasury will be funded by a linear distribution of 10% of the total supply (100 million OVER) over ten years, along with the base fee from transaction fees being allocated to the treasury.
+The DAO Treasury serves as a funding resource for ecosystem development, distributed linearly over the first 10 years. The community decides how to allocate these funds through voting, and directing resources to initiatives such as new dApp development, network improvements, and user education campaigns. Additionally, transaction fees and other network-generated revenue are continuously added to the DAO Treasury, providing a steady stream of resources to support ongoing ecosystem growth.
 
 ### 3. Over Community Access Program(OCAP)
 
-Of the total supply, 15% is initially allocated to the OCAP. OCAP facilitates the distribution of OVER in various ways, such as airdrops for early community members and contributors, or through liquidity provision. The goal is to make participation in OverProtocol accessible to those who share our vision.
+Designed to boost engagement and adoption, this program supports activities like liquidity provision and airdrops. It encourages network participation from small-scale contributors and new users, helping to establish a strong initial user base for OverProtocol.
 
-### 4. Others
+### 4. Development and Strategic Investments
 
-The remaining 450 million OVER tokens are earmarked for distribution to four entities: Core
-Contributors, Investors, Over Technologies, and the Over Foundation. The distribution will follow a
-2-year schedule, which includes a 6-month cliff and 18 months of linear vesting.
+Development and strategic investments are allocated to ensure the stable establishment and sustainable growth of the network during its early stages. These funds are distributed to the development team and early investors through a 2-year schedule, which includes a 6-month cliff and 18 months of linear vesting.
 
 <img src="/img/alloc_chart.png" style={{width: 500}} alt="alloc_chart" />
 

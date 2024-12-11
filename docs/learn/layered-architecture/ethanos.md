@@ -1,11 +1,13 @@
 ---
 title: Ethanos
-description: Ethanos is an effective mechanism for managing blockchain's state and history. It periodically resets the state, expiring old data and referencing previous cycles to manage a bounded state size.
+description: Explore the Ethanos Algorithm, the core mechanism behind OverProtocol's layered architecture, enabling scalable and sustainable blockchain participation.
 lang: en
 ---
 
 :::info
-The Ethanos has been designed and implemented, but it introduces overhead when the state size is not sufficiently large. Therefore, Ethanos will remain disabled until the state size within OverProtocol grows sufficiently large. In the meantime, the team plans to undertake additional design and enhancement processes to handle contract storage more efficiently.
+The Ethanos Algorithm [has been designed and implemented](https://github.com/overprotocol/kairos/tree/ethanos) to optimize blockchain data management, ensuring sustainability and scalability. However, Ethanos introduces additional overhead when the state size is relatively small. To maximize efficiency, Ethanos will remain disabled until the state size within OverProtocol grows to a sufficient level.
+
+In the meantime, the OverProtocol team is diligently working on **further enhancing Ethanos alongside other core mechanisms to lighten the protocol**. These ongoing efforts focus on improving contract storage efficiency and refining the algorithm's performance, ensuring it evolves seamlessly to meet the network's growing demands.
 :::
 
 Ethanos is an effective mechanism for managing blockchain's state and history. It periodically resets the state, expiring old data and referencing previous cycles to manage a bounded state size. This approach lowers entry barriers, promotes decentralization, and fosters an inclusive blockchain system.

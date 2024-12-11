@@ -1,103 +1,106 @@
 ---
 title: Run a Node
-description: A description for how to run a node.
+description: Setting up an OverProtocol node allows you to directly contribute to the network’s decentralization and security. This guide provides clear steps for users of all experience levels, ensuring that anyone can start running a node with confidence.
 lang: en
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Once you've set up your hardware in either a local or cloud environment, the next step is to download and run the node client software, enabling you to join the blockchain network.
+### Join the Network Revolution 🚀
 
-## Setting up a Node
+Running an OverProtocol node isn’t just about contributing to a blockchain—it’s about becoming part of a decentralized movement that’s reshaping the future of technology. Whether you’re a beginner or a seasoned tech enthusiast, this guide will help you set up your node and start making an impact.
 
-There are various methods to set up a node in the OverProtocol network, ranging from [user-friendly approaches](#start-with-overscape) for beginners to more [advanced, manual configurations](#build-from-source) for experienced users seeking customized setups. You can checkout network configurations for mainnet and testnets [here](#network-configurations).
+---
 
-### Start with OverScape
+## Ready, Set, Node! 🖥️
 
-[OverScape](https://over.network/overscape) offers a streamlined, user-friendly way to set up your node with minimal technical hassle. This method is ideal for those who prefer a straightforward approach or are new to running nodes. Here’s how to get started:
+Running an OverProtocol node is your gateway to joining a decentralized, secure, and inclusive blockchain network. Choose the setup method that works best for you, whether you're a beginner looking for simplicity or an expert seeking full control.
 
-1. **Download OverScape**: Visit the official OverScape website or trusted source to download the OverScape installation package.
-2. **Install the Software**: Follow the on-screen instructions to install the software on your machine. This will involve agreeing to the terms, selecting an installation directory, and configuring your firewall to allow the application to communicate on the network.
-3. **Launch and Sync**: Once installed, launch the application. It will automatically begin syncing with the OverProtocol blockchain, downloading the necessary blockchain data.
-4. **Node Configuration**: Through OverScape's interface, you can easily configure basic settings. Advanced settings can also be accessed for more tailored operations.
+### Start with OverScape (Beginner-Friendly 🌟)
 
-### Build from Source
+OverScape is designed to make node setup as easy as possible—perfect for first-timers or those who prefer a no-fuss experience.
 
-For advanced users who prefer a hands-on, customized approach, building your node from source allows for maximum customization and optimization. Here’s how you can build from source:
-
-1. **Clone Client Repository**:
-   You first have to clone the the execution client, and the consensus client software of OverProtocol.
-   Access the [official OverProtocol GitHub repository](https://github.com/overprotocol) and clone it to your local machine.
-
-   **_OverProtocol Execution Client [[Kairos](https://github.com/overprotocol/kairos)]_**: The execution layer client handles the processing of transactions and the maintenance of the blockchain state. It must be fully synchronized with the OverProtocol network.
-
-   **_OverProtocol Consensus Client [[Chronos](https://github.com/overprotocol/chronos)]_**: This consensus client works in tandem with the execution layer to achieve network consensus on the current state of the blockchain. Synchronizing this client is crucial for participating in network validation.
-
-2. **Prerequisites**: Make sure all required dependencies and development tools are installed on your machine. These are usually listed in the repository's README.
-
-3. **Compile the Source Code**: Navigate to the cloned directory in your command line tool and run the build commands specified in the build documentation.
-
-4. **Configure Your Node**: After building, configure your node’s settings, including network options and security measures. This may involve editing configuration files manually.
-
-5. **Run the Node**: Execute the node software. You might need to use command line options to start it with specific parameters tailored to your needs.
-
-### Run with Binary
-
-For users who want a balance between ease of setup and control, running a node with pre-compiled binaries is an excellent option. This method allows you to quickly set up a node without the need for compilation while still providing flexibility for configuration. Here's how you can run a node using binaries:
-
-1. **Review Prerequisites and Best Practices**
-
-   | Type                      | Benefits                                                                                                                                          | Recommended Requirements                                                                                                                                                                                                                                                                                                                                   |
-   | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **Execution + Consensus** | - Contributes to the security of Over ecosystem.<br /> - Lets you access the Over network directly without having to trust a third party service. | - **Software:** Execution node client, consensus node client (instructions for clients below)<br />  - **OS:** 64-bit Linux, Mac OS X 10.14+, Windows 10+ 64-bit<br />  - **CPU:** Fast CPU with 4 or more cores<br />  - **Memory:** 16GB RAM or more<br />  - **Storage:** SSD with at least 128GB free space<br />  - **Network:** 25+ MBit/s bandwidth |
-   | **Validator**             | - Lets you stake OVER, propose + validate blocks, earn staking rewards + transaction fee tips.                                                    | - Everything above, plus...<br />  - **Software:** Validator client<br />  - **Hardware:** (Recommended) A new machine that has never been connected to the internet that you can use to securely generate your mnemonic phrase and keypair<br />  - **256 OVER** (Mainnet)<br />  - **256 testnet OVER** (Testnets)                                       |
-
-   **Best practices**
-   - **If you're staking OVER as a validator, try this guide on a testnet first, _then_ mainnet.**
-   - **Keep things simple.** This guidance assumes all client software will run on a single machine.
-   - **Join the community** - join our [OverProtocol Discord server](https://discord.com/invite/overprotocol) for updates and support.
-
-2. **Prepare Binary**
+1. **Download OverScape**
   
-  Create a folder called `overprotocol` on your SSD, and then two subfolders within it: `consensus` and `execution`:
+  Head over to the [OverScape website](https://over.network/overscape) to get the installation package.
+2. **Install the Software**
+  
+  Follow the on-screen instructions to install OverScape. This includes agreeing to terms, selecting an installation directory, and setting up your firewall to allow OverScape to connect to the network.
+3. **Launch and Sync**
+  
+  Open OverScape, and it will automatically start syncing with the OverProtocol blockchain, downloading necessary data.
+4. **Configure Your Node**
+  
+  Adjust basic settings through the intuitive interface. Advanced settings are also available for more customization if needed.
 
-   ```plaintext
-    overprotocol
-    ├── consensus
-    └── execution
-   ```
+### Build from Source (Advanced 🛠️)
 
-    - **Download Client Binaries**:
+:::info
+If you're familiar with Docker and want to set up your own node using it, simply visit [this page](./advanced-guides/run-with-docker).
+:::
 
-      Select the execution client and the consensus client binary zip files for your operating system from the links below and download it to your local machine and extract it to corresponding directory above.
+For experienced users, building the node software from source provides maximum flexibility and customization.
 
-      | Operating System | OverProtocol Execution Client [Kairos]                                                                        | OverProtocol Consensus Client [Chronos]                                                                       |
-      | ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-      | Linux x64        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_linux_amd64.zip)   | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_linux_amd64.zip) |
-      | MacOS X (Apple)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_arm64.zip)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_arm64.zip)   |
-      | MacOS X (Intel)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_amd64.zip)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_amd64.zip)   |
-      | Windows          | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_windows_amd64.zip) | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_windows.zip)     |
+1. **Clone the Repositories**
 
-    Then your binary directory structure should look like this:
+  Access the [official OverProtocol GitHub repository](https://github.com/overprotocol) and clone the following:
+    - **[Kairos](https://github.com/overprotocol/kairos)**: Execution client for processing transactions and maintaining the blockchain state.
+    - **[Chronos](https://github.com/overprotocol/chronos)**: Consensus client for achieving network consensus.
+3. **Compile the Source Code**
 
-      ```plaintext
-      overprotocol
-      ├── consensus
-      │   ├── beacon-chain
-      │   ├── enr-calculator
-      │   ├── prysmctl
-      │   └── validator
-      └── execution
-          ├── bootnode
-          └── geth
-      ```
+  Navigate to the cloned directory in your command line tool and run the build commands specified in the build documentation.
+4. **Configure Your Node**
+  
+  After building, configure your node’s settings, including network options and security measures. This may involve editing configuration files manually.
 
-    And let's try to run a fullnode for dolphin testnet for example.
+  :::info
+  If you are planning to run a validator, **it is strongly advised to use the `--suggested-fee-recipient=<WALLET ADDRESS>` option.** When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips".
+  :::
+5. **Run the Node**
+  
+  Execute the node software. You might need to use command line options to start it with specific parameters tailored to your needs.
 
-3. **Run an Execution Client**
+### Run with Binaries (Intermediate ⚙️)
 
-  Navigate to your execution directory and run the following command to start your execution node
+Precompiled binaries provide a balance between ease of use and flexibility, allowing you to set up your node quickly without compiling from source.
+
+1. **Prepare Your Environment**
+
+  Create a directory named `overprotocol` with two subfolders: `execution` and `consensus`.
+
+  ```plaintext
+  overprotocol
+  ├── consensus
+  └── execution
+  ```
+  
+2. **Download Binaries**
+
+  Select the execution client and the consensus client binary zip files for your operating system from the links below and download it to your local machine and extract it to corresponding directory above.
+
+  | Operating System | Kairos (Execution Client)                                                                                     | Chronos (Consensus Client)                                                                                    |
+  | ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+  | Linux x64        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_linux_amd64.zip)   | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_linux_amd64.zip) |
+  | MacOS X (Apple)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_arm64.zip)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_arm64.zip)   |
+  | MacOS X (Intel)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_amd64.zip)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_amd64.zip)   |
+  | Windows          | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_windows_amd64.zip) | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_windows.zip)     |
+
+  Then your binary directory structure should look like this:
+  ```plaintext
+  overprotocol
+  ├── consensus
+  │   ├── beacon-chain
+  │   ├── prysmctl
+  │   └── validator
+  └── execution
+      ├── bootnode
+      └── geth
+    ```
+
+3. **Run the Execution Client**
+
+  Navigate to the execution folder and start the client:
 
   <Tabs
     groupId="network"
@@ -125,14 +128,11 @@ For users who want a balance between ease of setup and control, running a node w
     </TabItem>
   </Tabs>
 
-  The execution layer client cannot sync without an attached beacon node. We'll see how to setup a beacon node in the next step.
+4. **Run the Consensus Client**
 
-4. **Run a Consensus Client**
-
-  In this step, you'll run a consensus node(chronos).
-
-  There is two main ways to sync a consensus node: from genesis, and from a checkpoint. It is safer and a considerably faster to sync from a checkpoint. When syncing from a checkpoint, the simplest is to connect to a checkpoint sync endpoint. In the following examples, we'll use the checkpoint sync endpoint provided by Over Foundation.
-  Navigate to your execution directory and run the following command to start your consensus node
+  There are two main ways to sync a consensus node: from genesis, and from a checkpoint. It is considerably faster to sync from a checkpoint. In the following examples, we'll use the checkpoint sync endpoint provided by Over Foundation.
+  
+  In the `consensus` folder, start the client using a checkpoint sync for faster setup:
 
   <Tabs
     groupId="network"
@@ -168,21 +168,32 @@ For users who want a balance between ease of setup and control, running a node w
     </TabItem>
   </Tabs>
 
-  If you are planning to run a validator, it is strongly advised to use the `--suggested-fee-recipient=<WALLET ADDRESS>` option. When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips".
+  :::info
+  If you are planning to run a validator, **it is strongly advised to use the `--suggested-fee-recipient=<WALLET ADDRESS>` option.** When your validator proposes a block, it will allow you to earn block priority fees, also sometimes called "tips".
+  :::
 
   **Congratulations!** you’re now running a full OverProtocol node.
 
-1. **Run a validator client**
-   You can follow the [Setting up Validators](./operate-validators) to run a validator client.
+---
 
-## Network Configurations
+### Choose the Right Method for You
+
+- **New to Nodes?** 👉 Start with OverScape for a simple, guided experience.
+- **Want Control?** 👉 Use binaries to customize your setup while saving time.
+- **Advanced User?** 👉 Build from source to fully optimize and personalize your node.
+
+Once your node is running and synced, check out [how to stake and validate](/operators/operate-validators) to take the next step in securing the OverProtocol network.
+
+---
+
+## Network Configurations 🛜
 
 <Tabs
   groupId="network"
   defaultValue="mainnet"
   values={[
     {label: 'Mainnet', value: 'mainnet'},
-    {label: 'Dolphin', value: 'dolphin'},
+    {label: 'Testnet', value: 'testnet'},
   ]}
 >
   <TabItem value="mainnet">
@@ -190,14 +201,14 @@ For users who want a balance between ease of setup and control, running a node w
 | Key                | Value                                |
 | ------------------ | ------------------------------------ |
 | Network            | OverProtocol Mainnet                 |
-| RPC URL            | https://rpc.public.overprotocol.com/ |
+| RPC URL            | https://rpc.overprotocol.com/ |
 | Chain ID           | 54176                                |
 | Currency symbol    | OVER                                 |
-| Block Explorer URL | https://mainnet.view.over.network/   |
+| Block Explorer URL | https://scan.over.network/           |
 
   </TabItem>
 
-  <TabItem value="dolphin">
+  <TabItem value="testnet">
 
 :::tip
 When working with OverProtocol, especially in a testnet environment, it's important to note that testnet configurations and details may change at any time. This variability is typical of test environments, which are often updated or reset to test new features and improvements in the blockchain protocol.
@@ -205,22 +216,22 @@ When working with OverProtocol, especially in a testnet environment, it's import
 
 The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
 
-| Key                | Value                                |
-| ------------------ | ------------------------------------ |
-| Network            | OverProtocol Dolphin                 |
-| RPC URL            | https://wallet-dolphin.over.network/ |
-| Chain ID           | 541764                               |
-| Currency symbol    | OVER                                 |
-| Block Explorer URL | https://dolphin.view.over.network/   |
+| Key                | Value                                 |
+| ------------------ | ------------------------------------- |
+| Network            | OverProtocol Dolphin Testnet          |
+| RPC URL            | https://rpc.dolphin.overprotocol.com/ |
+| Chain ID           | 541764                                |
+| Currency symbol    | OVER                                  |
+| Block Explorer URL | https://dolphin-scan.over.network/    |
 
   </TabItem>
 </Tabs>
 
+---
 
-## Port and Firewall Configurations
+## Port and Firewall Configurations 🧱
 
-If you followed the default setup instructions without customizing the port configurations, your node will use the following network settings. It's crucial to configure your firewall as shown below for smooth node operation. Please note that connection issues with peers often arise due to incorrect firewall settings, so pay close attention to these configurations:
-
+Proper port and firewall configurations are essential to ensure your OverProtocol node operates smoothly and maintains reliable connections with peers. If you’ve followed the default setup instructions, your node will use the following network settings. Incorrect firewall settings are a common cause of connection issues, so double-check these configurations for optimal performance.
 
 
 | Port/protocol   | Firewall rule                       | Reason/caveats                                                                                                                                                                                                                                                 |
@@ -236,23 +247,67 @@ If you followed the default setup instructions without customizing the port conf
 
 <br />
 
-Ensuring these firewall settings are correctly configured will help prevent common connectivity issues and ensure your node can effectively participate in the network.
+By following these guidelines, you’ll ensure your OverProtocol node runs securely and efficiently. If you encounter any issues, check the firewall configuration first or reach out to the [OverProtocol community](https://discord.gg/overprotocol) for support.
 
-## Node Types
+---
 
-OverProtocol supports several types of nodes, each serving distinct functions within the network:
+## Node Types in OverProtocol
 
-- **Full Nodes**: Primarily used for querying data and interacting with the blockchain, full nodes maintain only [the Over Layer](../learn/key-features/layered-architecture/overview) of the blockchain. Setting up a node with default configurations will typically result in a full node.
-- **Archive Nodes**: These nodes store the complete state of the blockchain from its genesis. Due to the extensive historical data they retain, archive nodes generally require significant disk space.
-- **Validator Nodes**: Essential for the security and integrity of the blockchain, validator nodes participate in proposing and voting on blocks. They play a critical role in maintaining the blockchain's consensus mechanism.
+OverProtocol offers multiple node types, each serving specific roles within the network. Understanding these types will help you decide how to best participate based on your goals and resources.
 
-Each node type is integral to the network’s functionality, offering different capabilities and requiring varying levels of resource commitment. Depending on your participation goals and available resources, you can choose the node type that best fits your needs in supporting and engaging with the OverProtocol ecosystem.
+### 1. Full Nodes
+Full nodes are the backbone of the network, used primarily for querying data and interacting with the blockchain. They:
+
+- Maintain essential blockchain data to validate new transactions and blocks.
+- Ensure the network remains decentralized and accessible.
+- Are the default setup for most users when creating a node.
+
+**Ideal for**:
+
+- Users looking for a straightforward way to support the network.
+- Those interested in accessing blockchain data or running decentralized applications (dApps).
+
+### 2. Archive Nodes
+Archive nodes store the entire state of the blockchain from its genesis, preserving every transaction and historical state. These nodes:
+
+- Require significant disk space and computational power.
+- Are typically used for advanced use cases like deep blockchain analytics and historical data retrieval.
+
+**Ideal for**:
+
+- Developers and researchers needing access to full historical data.
+- Enterprises requiring comprehensive blockchain records.
+
+### 3. Validator Nodes
+Validator nodes are critical for securing the network and maintaining its integrity. They:
+
+- Propose and vote on blocks as part of OverProtocol’s consensus mechanism.
+- Require staking of OVER tokens to participate in validation and earn rewards.
+- Play a pivotal role in decentralization and trust within the network.
+
+**Ideal for**:
+
+- Users committed to actively securing the network.
+- Those with resources to stake OVER and operate a high-uptime node.
+
+---
+
+### Choosing the Right Node Type
+Each node type contributes to OverProtocol in unique ways and comes with different levels of responsibility and resource requirements. Consider:
+
+- **Full Nodes**: For general network participation and dApp interaction.
+- **Archive Nodes**: For advanced analytics and historical data needs.
+- **Validator Nodes**: For securing the blockchain and earning rewards.
+
+By selecting the node type that aligns with your goals, you’ll play an essential role in supporting and engaging with the OverProtocol ecosystem.
 
 ## Synchronization Modes
 
-Synchronization process is critical for ensuring that a node in the OverProtocol network is up-to-date with the latest blockchain state. This process involve downloading data from peers, verifying its integrity, and building a local blockchain database. Given the separation of data into the execution layer and the consensus layer in OverProtocol, each layer employs distinct synchronization strategies to manage data effectively.
+The synchronization process is crucial for ensuring that your OverProtocol node stays up-to-date with the latest blockchain state. This involves downloading data from peers, verifying its integrity, and building a local blockchain database. Given OverProtocol’s layered architecture, each layer employs distinct strategies to manage data effectively.
 
-These synchronization modes provide different trade-offs between speed, disk usage, network bandwidth, and security. Choosing the right sync mode for a node depends on the node operator’s specific requirements, including their security preferences, hardware capabilities, and how quickly they need their node to be fully operational.
+These modes offer different trade-offs between speed, disk usage, bandwidth, and security. The choice of sync mode depends on your hardware, network capacity, and operational goals.
+
+---
 
 ### Execution Layer Sync Modes
 
@@ -308,17 +363,17 @@ Normally default setting is enough, but saving previous checkpoints can be usefu
 
 ### Consensus Layer Sync Modes
 
-There are two ways to sync the consensus layer: initial sync, and checkpoint sync. OverScape users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
+There are two ways to sync the consensus layer: full sync, and checkpoint sync. OverScape users can only choose to sync consensus layer through checkpoint sync as it is set by default. The chronos client software runners can choose between the two sync modes.
 
-**Initial sync**:
+**Full sync**:
 
 - This sync mode downloads the beacon chain data, if it has lower head information than its peers.
 - When bootstrapping a node, it has no beacon chain data, so it downloads all the beacon chain data starting from the genesis.
 
-**Checkpoint sync (Initial sync from checkpoint)**:
+**Checkpoint sync (Full sync from checkpoint)**:
 
 - This mode enhances the user experience by allowing consensus layer to sync from a recent weak subjectivity checkpoint instead of from the genesis block.
-- This approach drastically reduces the initial sync time.
+- This approach drastically reduces the full sync time.
 - The source of the checkpoint data is crucial and should be chosen with care, as the node will inherently trust the third party providing the data.
 - Append the following tags to enable the checkpoint sync
 
@@ -326,12 +381,21 @@ There are two ways to sync the consensus layer: initial sync, and checkpoint syn
 $ beacon-chain --checkpoint-sync-url value
 ```
 
+---
+
+### Choosing the Right Mode
+
+| Sync Mode                   | Speed | Disk Usage | Security | Recommended For                     |
+| --------------------------- | ----- | ---------- | -------- | ----------------------------------- |
+| Full Sync (Execution)       | Slow  | High       | Highest  | Security-focused users.             |
+| Snap Sync (Execution)       | Fast  | Moderate   | High     | General users and OverScape.        |
+| Full Sync (Consensus)       | Slow  | High       | Highest  | Advanced users with specific needs. |
+| Checkpoint Sync (Consensus) | Fast  | Low        | Moderate | Default for quick setup.            |
+
+---
+
 ## What's Next
 
-Once your node is up, running and synced, the next step is to
-register and operate validators. This involves configuring your node to participate in the consensus process, enhancing the network's security and stability.
+Once your node is up, running, and synced with the OverProtocol network, the next step is to take an active role in securing the blockchain by [registering and operating validators](./operate-validators). Validators play a critical role in the consensus process, contributing to the network’s security and stability.
 
-For OverScape users this step is pretty much straight-forward. After the node is synced, jump in to the Staking tab to register as a validator.
-
-For advanced users running the client software from scratch follow
-[register and operate validators](./operate-validators) section.
+Becoming a validator lets you directly contribute to OverProtocol’s decentralization while earning staking rewards. Let’s build the future of blockchain—together! 🌟
