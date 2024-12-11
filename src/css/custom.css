@@ -177,3 +177,17 @@ ul.no-bullets {
 .link-style:hover::after {
   width: 100%; /* 전체 텍스트 밑줄 확장 */
 }
+
+/* Custom blockquote styles */
+blockquote {
+  background-color: #fff6e8;
+  border-left: 5px solid var(--ifm-color-primary);
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 0 16px 16px 0;
+}
+
+[data-theme="dark"] blockquote {
+  background-color: #312512;
+  border-left: 5px solid var(--ifm-color-primary-darker);
+}

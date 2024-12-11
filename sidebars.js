@@ -24,6 +24,11 @@ const learnSidebar = [
     label: "Welcome to OverProtocol",
   },
   {
+    type: "doc",
+    id: "learn/design-principles",
+    label: "Design Principles",
+  },
+  {
     type: "category",
     label: "Layered Architecture",
     collapsible: true,
