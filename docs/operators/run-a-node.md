@@ -190,7 +190,7 @@ Once your node is running and synced, check out [how to stake and validate](/ope
   defaultValue="mainnet"
   values={[
     {label: 'Mainnet', value: 'mainnet'},
-    {label: 'Dolphin', value: 'dolphin'},
+    {label: 'Testnet', value: 'testnet'},
   ]}
 >
   <TabItem value="mainnet">
@@ -198,14 +198,14 @@ Once your node is running and synced, check out [how to stake and validate](/ope
 | Key                | Value                                |
 | ------------------ | ------------------------------------ |
 | Network            | OverProtocol Mainnet                 |
-| RPC URL            | https://rpc.public.overprotocol.com/ |
+| RPC URL            | https://rpc.overprotocol.com/ |
 | Chain ID           | 54176                                |
 | Currency symbol    | OVER                                 |
-| Block Explorer URL | https://mainnet.view.over.network/   |
+| Block Explorer URL | https://scan.over.network/           |
 
   </TabItem>
 
-  <TabItem value="dolphin">
+  <TabItem value="testnet">
 
 :::tip
 When working with OverProtocol, especially in a testnet environment, it's important to note that testnet configurations and details may change at any time. This variability is typical of test environments, which are often updated or reset to test new features and improvements in the blockchain protocol.
@@ -213,13 +213,13 @@ When working with OverProtocol, especially in a testnet environment, it's import
 
 The Dolphin testnet operates with the goal of providing an environment identical to that of the mainnet. Additionally, this testnet serves the role of applying and testing updates before they are implemented on the mainnet.
 
-| Key                | Value                                |
-| ------------------ | ------------------------------------ |
-| Network            | OverProtocol Dolphin                 |
-| RPC URL            | https://wallet-dolphin.over.network/ |
-| Chain ID           | 541764                               |
-| Currency symbol    | OVER                                 |
-| Block Explorer URL | https://dolphin.view.over.network/   |
+| Key                | Value                                 |
+| ------------------ | ------------------------------------- |
+| Network            | OverProtocol Dolphin Testnet          |
+| RPC URL            | https://rpc.dolphin.overprotocol.com/ |
+| Chain ID           | 541764                                |
+| Currency symbol    | OVER                                  |
+| Block Explorer URL | https://dolphin-scan.over.network/    |
 
   </TabItem>
 </Tabs>
