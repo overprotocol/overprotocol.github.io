@@ -99,10 +99,6 @@ The $\textit{Maturity Factor}$ is introduced to steer the system towards a more 
 
 To implement such a feedback mechanism, the system requires two key components: the $\textit{Adaptive Validator Churn Limit}$ and $\textit{The Issuance Reserve}$. The explanation follows.
 
-### Adaptive Validator Churn Limit
-
-In a blockchain Proof of Stake (PoS) system, the 'churn limit' refers to the maximum number of validators permitted to enter or exit the network within a specific period. We observed that our feedback system fails to reach a stable status when the number of newly activated validators is equal to the number of exiting validators. To address this, we have implemented an $\textit{Adaptive Validator Churn Limit}$ that adjusts based on current conditions. Specifically, if the number of active validators exceeds the target, the limit for exiting validators is set higher than that for incoming validators. Conversely, if the number of active validators falls below the target, the limit for incoming validators is increased beyond that for exiting ones. This approach effectively alters the number of active validators as needed and facilitates adjustments when the number of active validators is either above or below the target, thus promoting a more flexible and efficient system operation.
-
 ### The Issuance Reserve
 
 The primary function of the issuance reserve is to manage the allocation of additional rewards when needed. Specifically, the reserve is pre-allocated 100 million OVER and serves as a resource for the feedback system to augment rewards when necessary. If the system determines that more rewards should be distributed, the additional amount is provided from this reserve. However, no more than this pre-allocated amount will be issued. The management of the issuance reserve is handled at the protocol level, protecting it from risks such as account hacking and ensuring its use is strictly limited to the dynamic adjustment of yields.

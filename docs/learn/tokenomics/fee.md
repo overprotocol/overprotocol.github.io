@@ -12,7 +12,7 @@ The **Transaction Fee** is a charge applied to each transaction within the OverP
 
 There are two primary objectives that we aim to achieve through the transaction fee design. Firstly, we seek to align user gas usage with an appropriate gas target, ensuring efficient network operation. Secondly, we aim to induce deflationary pressure through the application of **base fees**, thereby promoting a balanced economic environment within the network. For this purpose, we use the commonly known EIP-1559, and adjust its design which we plan to achieve through several future updates.
 
-In the protocol's initial stages, the base fee is collected and directed to the [DAO Treasury](/learn/key-features/tokenomics/distribution#treasury), supporting various ecosystem development initiatives. As the protocol matures, the collection strategy evolves: instead of accruing in the treasury, the base fee is directly burned from each transaction. This nuanced approach balances the initial growth needs with a longer-term strategy of reducing token supply, thereby sustaining the protocol’s economic health.
+In the protocol's initial stages, the base fee is collected and directed to the [DAO Treasury](./distribution#treasury), supporting various ecosystem development initiatives. As the protocol matures, the collection strategy evolves: instead of accruing in the treasury, the base fee is directly burned from each transaction. This nuanced approach balances the initial growth needs with a longer-term strategy of reducing token supply, thereby sustaining the protocol’s economic health.
 
 ## Future Plans
 

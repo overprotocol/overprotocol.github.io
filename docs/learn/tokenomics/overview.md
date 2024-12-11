@@ -1,19 +1,41 @@
 ---
 title: Tokenomics Overview
-description: An overview of OverProtocol's tokenomics
+description: Learn about the economic structure of OverProtocol, including the role of the native token OVER, its allocation, and the mechanisms supporting network growth and sustainability.
 lang: en
 ---
 
-## Principles of Design
+The **OVER token** is the native cryptocurrency of OverProtocol, serving as the backbone of its economic ecosystem. Designed for sustainability, inclusivity, and growth, the tokenomics of OverProtocol ensures that the network remains secure, decentralized, and accessible.
 
-The OverProtocol is dedicated to crafting a robust tokenomics framework, guided by two fundamental principles throughout its design.
+---
 
-Firstly, the tokenomics should enhance the **security** of the blockchain. In Proof of Stake(PoS) systems, The higher the value of tokens protecting the network, the more resilient it becomes against potential attacks. Thus, the system must provide adequate incentives to attract a substantial number of validators who secure the network with their tokens.
+## Core Roles of OVER
 
-Second, the tokenomics should emphasize **stability**, creating a dependable environment that fosters user engagement with the asset and its underlying network. Stability boosts user confidence and equips the system to handle challenges effectively. By being less vulnerable to rapid changes, the system gains the resilience to respond to external influences and facilitate recovery.
+The OVER token is designed to support multiple key functions within the OverProtocol ecosystem:
 
-With these principles as our guide, we meticulously develop our tokenomics strategy, covering allocation, issuance, fees, yield, and other critical elements to ensure alignment with these core tenets. Let’s delve into each of these key components in detail.
+1. **Network Security**
+    - Validators stake OVER to participate in the Proof of Stake (PoS) consensus mechanism.
+    - Staking aligns validators’ incentives with the network’s security and reliability.
 
-## OVER Token
+2. **Transaction Fees**
+    - OVER is used to pay for transaction and smart contract execution fees.
+    - Fees collected are partially allocated to the DAO Treasury, contributing to long-term sustainability.
 
-The native token of OverProtocol is 'Over,' with the symbol 'OVER.' This is the primary currency required for participating in and utilizing the OverProtocol. While there are other tokens on OverProtocol, OVER is the most essential to the protocol’s operations. It facilitates transactions by covering gas fees and is crucial to network security. Users participate in the Proof of Stake (PoS) consensus by staking OVER, contributing to the network’s resilience and trustworthiness.
+3. **Incentives and Rewards**
+    - Validators and active participants are rewarded in OVER for their contributions to network security and scalability.
+    - Reward mechanisms encourage consistent participation and maintain a decentralized validator set.
+
+---
+
+OverProtocol’s tokenomics is designed to create a self-sustaining, inclusive, and scalable blockchain economy. By aligning economic incentives with network goals, the OVER token plays a critical role in fostering innovation, security, and global adoption.
+
+---
+
+## Why Tokenomics Matters
+
+The tokenomics of OverProtocol ensures:
+
+- **Alignment of Incentives**: Economic rewards and penalties are designed to encourage responsible participation.
+- **Sustainability**: OVER's role in staking and transaction fees supports long-term network health.
+- **Security**: Staking mechanisms protect the network from malicious activity by ensuring validators have a vested interest in the system.
+
+For more details on staking and validator rewards, refer to the [Validator Requirements Section →](./validator-requirements).
