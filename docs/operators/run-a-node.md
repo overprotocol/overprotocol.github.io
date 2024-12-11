@@ -36,6 +36,10 @@ OverScape is designed to make node setup as easy as possible—perfect for first
 
 ### Build from Source (Advanced 🛠️)
 
+:::info
+If you're familiar with Docker and want to set up your own node using it, simply visit [this page](./advanced-guides/run-with-docker).
+:::
+
 For experienced users, building the node software from source provides maximum flexibility and customization.
 
 1. **Clone the Repositories**
