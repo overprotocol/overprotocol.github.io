@@ -1,10 +1,12 @@
 ---
 title: Token Distribution
-description: An introduction for distribution information of OVER
+description: Learn about the allocation and initial supply dynamics of OVER tokens in OverProtocol, designed to ensure a stable and sustainable network.
 lang: en
 ---
 
 OverProtocol has a supply schedule that releases 1 billion OVER over 10 years. Upon entering the 11th year, no additional tokens will be issued.
+
+---
 
 ## Token Allocation
 
@@ -25,6 +27,40 @@ Designed to boost engagement and adoption, this program supports activities like
 Development and strategic investments are allocated to ensure the stable establishment and sustainable growth of the network during its early stages. These funds are distributed to the development team and early investors through a 2-year schedule, which includes a 6-month cliff and 18 months of linear vesting.
 
 <img src="/img/alloc_chart.png" style={{width: 500}} alt="alloc_chart" />
+
+---
+
+## Initial Supply
+
+At the genesis of OverProtocol, **190 million OVER tokens** (19% of the total supply) will be circulating to support the network's stability and early operation.
+
+### Circulating Supply at Genesis
+
+1. **OCAP**  
+    - A total of **150 million OVER** from OCAP is circulating at genesis.  
+    - These tokens are allocated for airdrops, liquidity provision, and user engagement to drive initial adoption and ecosystem participation.
+
+2. **Over Foundation(OF) and Over Technologies(OT)**  
+    - Both categories are subject to a 2-year vesting schedule with a 6-month cliff.  
+    - However, **20% of their allocation** (20 million OVER each) is unlocked at genesis.  
+    - These unlocked tokens are deployed as **validator staking resources**, ensuring network security and stability in the early phases.
+
+### Purpose of Initial Circulating Supply
+
+- **Validator Staking**: Tokens from OF and OT are used to stabilize the blockchain by operating validators during the early phase.
+- **Ecosystem Growth**: OCAP provides resources for airdrops, liquidity incentives, and user rewards to encourage network adoption.
+- **Controlled Inflation**: The careful management of initial supply prevents excessive inflation while maintaining security and decentralization.
+
+### Initial Supply Summary
+
+| **Category**                  | **Initial Circulating Supply (OVER)** | **Purpose**                      |
+|-------------------------------|---------------------------------------|----------------------------------|
+| **OCAP**  | 150M                                  | Airdrops, liquidity, and user incentives. |
+| **OF**            | 20M                                   | Validator staking.              |
+| **OT**| 20M                                   | Validator staking.              |
+| **Total**                     | 190M                                  |  |
+
+---
 
 ## Staking Rewards
 
