@@ -6,6 +6,8 @@ lang: en
 
 OverProtocol’s **Proof of Stake (PoS)** consensus mechanism employs a well-defined system of rewards and penalties to encourage responsible participation and ensure the network remains secure, efficient, and decentralized.
 
+---
+
 ## Rewards: Encouraging Active Participation
 
 Validators in OverProtocol earn rewards for contributing to the network's security and efficiency. Rewards are distributed at the end of each **epoch** based on a predefined weighting system that incentivizes key contributions to the consensus process.
@@ -106,18 +108,20 @@ A validator in OverProtocol goes through the following stages during its lifecyc
 
 ---
 
-### Special Cases
+## Special Cases
 
-1. **Bailout**
-   - Validators whose penalties exceed **2% of their original stake** are automatically exited from the network.
-   - **Purpose**: To quickly remove problematic validators and prevent excessive losses to their stake while maintaining network health.
+### Bailout
 
-2. **Inactivity Leak**
-   - Triggered when the chain fails to finalize for **4 consecutive epochs**, indicating that more than one-third of the validators are experiencing issues.
-   - A **forced recovery protocol** is initiated to restore the liveness of the validator set:
-     - Validators with high Inactivity Scores are automatically exited.
-     - This mechanism ensures the remaining validators can stabilize the network and resume normal operations.
-   - **Purpose**: To address severe liveness issues and protect the network from prolonged downtime.
+- Validators whose penalties exceed **2% of their original stake** are automatically exited from the network.
+- **Purpose**: To quickly remove problematic validators and prevent excessive losses to their stake while maintaining network health.
+
+### Inactivity Leak
+
+- Triggered when the chain fails to finalize for **4 consecutive epochs**, indicating that more than one-third of the validators are experiencing issues.
+- A **forced recovery protocol** is initiated to restore the liveness of the validator set:
+  - Validators with high Inactivity Scores are automatically exited.
+  - This mechanism ensures the remaining validators can stabilize the network and resume normal operations.
+- **Purpose**: To address severe liveness issues and protect the network from prolonged downtime.
 
 ---
 

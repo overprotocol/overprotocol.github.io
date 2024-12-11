@@ -52,6 +52,7 @@ const learnSidebar = [
     },
     items: [
       "learn/consensus/requirements",
+      "learn/consensus/validator-cycle",
       "learn/consensus/rewards-and-penalties",
     ],
   },
