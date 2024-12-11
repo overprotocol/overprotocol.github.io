@@ -75,8 +75,8 @@ Precompiled binaries provide a balance between ease of use and flexibility, allo
 
   Select the execution client and the consensus client binary zip files for your operating system from the links below and download it to your local machine and extract it to corresponding directory above.
 
-  | Operating System | Kairos (Execution Client) | Chronos (Consensus Client) |
-  | ---------------- | ------------------------- | -------------------------- |
+  | Operating System | Kairos (Execution Client)                                                                                     | Chronos (Consensus Client)                                                                                    |
+  | ---------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
   | Linux x64        | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_linux_amd64.zip)   | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_linux_amd64.zip) |
   | MacOS X (Apple)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_arm64.zip)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_arm64.zip)   |
   | MacOS X (Intel)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/kairos/kairos_darwin_amd64.zip)  | [Download](https://over-protocol-dist.s3.ap-northeast-2.amazonaws.com/latest/chronos/chronos_osx_amd64.zip)   |
@@ -87,7 +87,6 @@ Precompiled binaries provide a balance between ease of use and flexibility, allo
   overprotocol
   ├── consensus
   │   ├── beacon-chain
-  │   ├── enr-calculator
   │   ├── prysmctl
   │   └── validator
   └── execution
@@ -382,12 +381,12 @@ $ beacon-chain --checkpoint-sync-url value
 
 ### Choosing the Right Mode
 
-| Sync Mode | Speed | Disk Usage | Security | Recommended For |
-| --------- | ----- | ---------- | -------- | --------------- |
-| Full Sync (Execution) | Slow  | High       | Highest  | Security-focused users. |
-| Snap Sync (Execution) | Fast  | Moderate   | High     | General users and OverScape. |
-| Full Sync (Consensus) | Slow | High     | Highest  | Advanced users with specific needs. |
-| Checkpoint Sync (Consensus) | Fast | Low   | Moderate | Default for quick setup. |
+| Sync Mode                   | Speed | Disk Usage | Security | Recommended For                     |
+| --------------------------- | ----- | ---------- | -------- | ----------------------------------- |
+| Full Sync (Execution)       | Slow  | High       | Highest  | Security-focused users.             |
+| Snap Sync (Execution)       | Fast  | Moderate   | High     | General users and OverScape.        |
+| Full Sync (Consensus)       | Slow  | High       | Highest  | Advanced users with specific needs. |
+| Checkpoint Sync (Consensus) | Fast  | Low        | Moderate | Default for quick setup.            |
 
 ---
 
