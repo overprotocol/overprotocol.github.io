@@ -1,23 +1,42 @@
 ---
 title: Over PoS Overview
-description: Over adopts Ethereum's Gasper PoS algorithm for further decentralization.
+description: Discover how OverProtocol's adoption of Proof of Stake and the Gasper mechanism enhances scalability, inclusivity, and sustainability for its blockchain network.
 lang: en
 ---
 
-## Consensus is important
+OverProtocol utilizes a **Proof of Stake (PoS)** consensus mechanism, powered by the Ethereum's [Gasper Protocol](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/) to achieve a blockchain network that is scalable, inclusive, and sustainable. This approach aligns with OverProtocol’s core design principles, ensuring accessibility for all participants while maintaining network security and efficiency.
 
-In the world of blockchain, consensus algorithms are like the referees of a match, ensuring everyone's playing by the same rules. They keep every ledger in the network in sync, validating transactions, and maintaining a decentralized, tamper-proof system that instills trust among participants. There are various kinds of these algorithms, such as **Proof-of-Work (PoW)** which tasks miners with solving complicated math puzzles, and **Proof-of-Stake (PoS)** which selects validators based on their token holdings.
+---
 
-For OverProtocol, PoS sits at the heart of our operations. Participants prepare a substantial amount of OVER tokens from the market and put them up as collateral to create and validate blocks. If they perform their role successfully, they are rewarded with OVER. However, any malicious activity can lead to penalties - anything from suspension to a complete loss of staked OVER tokens. So, playing fair is not just encouraged, it's mandatory.
+### Inclusivity Through Accessibility
 
-## Why PoS
+By replacing energy-intensive mining with staking, OverProtocol lowers the barriers to participation. Small-scale participants can join the network as validators without requiring expensive hardware or large capital investments.
 
-While there's a broad array of PoS algorithms available, we chose to align with Ethereum's [Gasper](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/gasper/) for OverProtocol. Our mission is to build a blockchain that doesn't disproportionately favor a select few, and we wanted our choice of consensus algorithm to reflect that.
+- **Low Entry Threshold**: Over PoS allows validators to contribute with minimal staking requirements.
+- **Dynamic Adaptability**: Over PoS’s staking model adjusts seamlessly to a growing validator base, supporting sustainable network expansion.
 
-Many new blockchains are leaning towards a Delegated Proof of Stake (DPoS) format, where a small group of validators are seleceted (such as Cosmos BFT and Aptos etc). But this can cause performance issues if these validators don't meet high standards. They are expected to manage a robust node operation environment to ensure the speed and performance of the blockchain consensus, making it a tall order for the average person due to the need for advanced infrastructure and significant capital.
+---
 
-Contrastingly, Ethereum's Gasper allows for a larger pool of validators and is more accommodating to those with less sophisticated node operation environments. Aligned with Over's philosophy and vision for blockchain, we've adopted a slightly tweaked version of Gasper. This move ensures a more inclusive consensus process, making participation in the blockchain more accessible to everyone, regardless of their resources.
+### Enhanced Security and Robust Decentralization
 
-In reality, Ethereum's staking has shown a trend towards centralization, with close to 56\% of the staked amount held by the [top four validators](https://blog.obol.tech/ethereum-staking-ecosystem-leading-to-the-shanghai-upgrade/). This concentration goes against the core goal of decentralization, posing a significant roadblock. We believe the root cause lies in the high hardware requirements. Although the consensus protocol theoretically supports millions of validators, the practical requirements for running a node continue to be a formidable barrier.
+Over PoS strengthens network security while fostering decentralization, ensuring that all participants, regardless of their scale, contribute to a resilient and trustworthy blockchain ecosystem.
 
-OverProtocol aims to tackle this issue head-on by harnessing the power of lightweight client techniques. These techniques significantly trim down the resource requirements, making it possible for anyone with a basic PC to run a node and step into the role of a validator. By integrating these techniques with Gasper, Over brings the concept of home staking to life. Consequently, anyone can now contribute to the network's security and stability, regardless of their resources.
+- **Validator Incentive Alignment**: Over PoS economically motivates validators to act in the network’s best interest, ensuring consistent and secure operations.
+- **Robust Decentralization**: By encouraging a diverse validator base, Over PoS minimizes reliance on centralized entities and supports true decentralization.
+
+---
+
+### Sustainability and Environmental Responsibility
+
+PoS eliminates the excessive energy consumption associated with Proof of Work (PoW), aligning OverProtocol with sustainable blockchain practices.
+
+- **Eco-Friendly Operations**: Over PoS reduces the environmental footprint by requiring only minimal computational power.
+- **Optimized Resource Use**: Over PoS ensures that network operations remain lightweight and efficient, even with increasing activity.
+
+---
+
+## Looking Forward
+
+As OverProtocol evolves, Over PoS will continue to play a central role in supporting its mission to build a blockchain that is not only scalable but also inclusive and environmentally responsible.
+
+[Learn More About OverProtocol’s Validator Requirements →](./requirements)

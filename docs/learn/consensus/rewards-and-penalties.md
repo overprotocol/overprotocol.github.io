@@ -1,65 +1,140 @@
 ---
 title: Rewards and Penalties
-description: Description for OverProtocol's reward and penalty system
+description: Understand the rewards and penalties mechanism in OverProtocol's PoS system, designed to incentivize honest participation and ensure network stability.
 lang: en
 ---
 
-The reward and penalty system serves as a mechanism to steer the blockchain network towards enhanced security. Rewards should be designed to encourage honest and diligent participants to continue contributing to the network. On the other hand, penalties should be crafted to deter or swiftly remove participants who might harm the network. However, care should be taken to ensure that excessively stringent penalties do not deter participation by creating psychological barriers.
+OverProtocol’s **Proof of Stake (PoS)** consensus mechanism employs a well-defined system of rewards and penalties to encourage responsible participation and ensure the network remains secure, efficient, and decentralized.
 
-Gasper's reward and penalty structure are delicately parameterized considering these factors. Validators, when given an opportunity to create a block, receive a relatively large reward. However, over extended periods of active validation, the rewards from participating in attestations in every epoch become more significant. In essence, the system rewards validators more as they remain diligently active. Conversely, penalties for not participating are balanced with potential rewards, ensuring that temporary downtimes, like short node outages, are not overly punitive.
+## Rewards: Encouraging Active Participation
 
-However, direct threats to the consensus activate a stringent rule known as **slashing**, invoking strong penalties. Slashing comes into play in situations such as **1) when a proposer broadcasts conflicting blocks** or **2) when an attester makes contradictory votes or engages in double-voting.** Validators who witness these violations become whistleblowers, presenting evidence to the network. Violators face severe asset forfeiture and lose their validating rights.
+Validators in OverProtocol earn rewards for contributing to the network's security and efficiency. Rewards are distributed at the end of each **epoch** based on a predefined weighting system that incentivizes key contributions to the consensus process.
 
-### Introducing Bailout - Rescuing Offline Validators
+---
 
-In OverProtocol, this foundational reward and penalty structure is augmented with an **Bailout (rescuing offline validators)** mechanism. The rescue mechanism swiftly removes validators not maintaining adequate uptime from the consensus. Validators are rescued out of the network if their risk score surpasses a set threshold, which increases during prolonged downtime and decreases upon uptime. The system thereby monitors and rescues those who consistently fail to maintain adequate uptime.
+### Reward Components and Weights
 
-There are two primary reasons for implementing this risk score:
+Rewards are divided into the following components, each with a specific weight that reflects its importance in the consensus process:
 
-#### Reason 1. Safeguarding the Validator's Balance
+1. **Timely Source Weight (18.75%)**
+    - Rewards validators for successfully voting to finalize source checkpoints.
+    - **Source Voting** ensures that a blockchain state is finalized, making it immutable and secure.
+    - This component strengthens the network by locking in key states, reducing the risk of forks.
 
-In any consensus-driven blockchain system, validators pledge a certain amount of assets as collateral. This ensures their vested interest in the proper functioning and security of the network. When validators are inactive or misbehave, they are penalized, causing a deduction from this pledged balance. Over time, if a validator remains inactive, these penalties can accumulate, significantly eroding their collateral.
+2. **Timely Target Weight (37.5%)**
+    - The largest share of rewards, given for timely and accurate voting to justify target checkpoints.
+    - **Target Voting** prepares a checkpoint for finalization in the next round, ensuring consistency and alignment among validators.
+    - By prioritizing justified states, the network achieves seamless progression toward finalization.
 
-The rescue mechanism acts as a protective measure in such scenarios. By detecting and ejecting consistently inactive validators, the system prevents their balance from being drained excessively. It's analogous to a safety net, ensuring that validators do not incur irreversible financial damage due to prolonged inactivity, which might sometimes be beyond their control, such as technical glitches or unforeseen disruptions.
+3. **Timely Head Weight (18.75%)**
+    - Rewards validators for identifying and confirming the correct head of the blockchain.
+    - This encourages validators to maintain up-to-date and accurate views of the blockchain’s state.
+    - Ensures continuous block proposal and validation accuracy.
 
-Moreover, this mechanism protects not just the individual validators but also the overall network's financial incentives. If validators see their peers losing vast amounts of collateral due to extended downtimes, it could deter potential validators from joining or continuing in the network, fearing substantial losses.
+4. **Proposer Weight (12.5%)**
+    - Rewards are allocated to block proposers for generating valid and timely blocks.
+    - This recognizes the critical role of proposers in driving transaction throughput and network efficiency.
 
-#### Reason 2. Ensuring System Security and Optimal Performance
+5. **Light Layer Weight (12.5%)**
+    - OverProtocol introduces the concept of a **Light Layer**, a flexible framework that supports innovative participation across the network.
+    - The Light Layer allows both validators and non-validators to contribute to the network's growth in diverse ways.
+    - Designed to accommodate new roles in the future, the Light Layer ensures scalability and adaptability, encouraging inclusive and innovative participation.
 
-A blockchain network thrives on the active participation of its validators. They are responsible for proposing, verifying, and finalizing transactions or blocks in the chain. Inactive validators can slow down this process. Moreover, a significant number of inactive validators can make the network more susceptible to attacks and reduce its overall security.
+---
 
-The rescue mechanism identifies and removes these inactive participants, ensuring that only active, reliable validators contribute to the consensus process. By doing so, it keeps the network's performance optimized and maintains its security standards.
+### Summary of Reward Weights
 
-### How the Bailout Works
+| **Component**         | **Weight (%)** | **Purpose**                                         |
+|------------------------|----------------|-----------------------------------------------------|
+| **Timely Source**      | 18.75             | Finalize checkpoints, locking states as immutable. |
+| **Timely Target**      | 37.5             | Justify checkpoints for future finalization.       |
+| **Timely Head**        | 18.75             | Confirm the blockchain's correct head state.       |
+| **Proposer**           | 12.5              | Generate and propose valid blocks.                 |
+| **Light Layer**        | 12.5              | Foster diverse and innovative network participation.|
 
-In essence, the rescue mechanism is both a protective and proactive feature, maintaining the financial health of validators and the operational integrity of the network. The risk score is designed to incentivize validators to maintain an uptime higher than 67%, assuming there are at least 16,384 validators in the network. At the network’s initial stage when there are fewer validators, the required uptime hurdle is set to 70%. As the number of validators increases, this hurdle gradually decreases to 67% uptime.
+---
 
-This design takes into account that a higher number of validators can inherently improve the system’s resilience from a statistical perspective, thereby allowing the validator uptime hurdle to be lowered. But, regardless of validator numbers in validator will face an increase in risk score during downtime and a decrease of the score during uptime.
+By aligning rewards with these components, OverProtocol ensures validators focus on maintaining network security, consistency, and accessibility. Validators and participants leveraging the Light Layer framework maximize their contributions while fostering an inclusive and adaptable ecosystem.
 
-#### About the Validator Risk Score
+---
 
-This part depicts the formula and illustration of the validator risk score. First, we define the following.
+## Penalties: Ensuring Network Integrity
 
-$N: \text{number of validators}$
+OverProtocol enforces a robust penalty system throughout the **validator lifecycle** to deter malicious or negligent behavior and maintain the network’s security and reliability. Validators are held accountable during their active participation and through the exit process to ensure seamless network operations.
 
-$P: \text{validator uptime} (0 \leq P\leq 1)$
+---
 
-$\Delta{S_{max}} : \text{maximum risk score increment at one epoch} = 1$
+### Types of Penalties
 
-$V_{min}: \text{minimum number of validators required} = 16384$.
+1. **Inactivity Penalty**
+    - Validators accumulate an **Inactivity Score** if they fail to perform their duties, such as missing votes or attestations.
+    - Once the score exceeds a certain threshold, penalties are applied incrementally to the validator's staked funds.
+    - **Purpose**: To encourage active participation and ensure consistent network performance.
 
-Validator's risk score is added up by $a$ in downtime, and decreased by $b$ in uptime.
+2. **Slashing**
+    - **Immediate 10% stake reduction** occurs in any of the following scenarios:
 
-Then the expectation is $\text{risk score per epoch} = a(1-p)-bp = -(a+b)p +a$, and the x-intercept of this function would be $\frac{a}{a+b}$. We know that value $a$ is $\Delta{S_{max}}$, hence 1. So the x-intercept is $\frac{1}{1+b}$. We target the x-intercept to be the validator uptime threshold. That is, if we denote, $f$: the step function which indicates the required uptime depending on each validator (Illustrated in the figure below), $\frac{1}{1+b} = f$
+        1. Making **two differing attestations** for the same target checkpoint.
+        2. Submitting an attestation whose **source and target votes surround** those in another attestation from the same validator.
+        3. Proposing **more than one distinct block** at the same height or attesting to different head blocks with the same source and target checkpoints.
+    - **Purpose**: To punish malicious actions that compromise network security or consensus integrity.
 
-<img src="/img/Fig-8.png" style={{width: 500}} alt="Required Validator Uptime" />
+---
 
-Then the relationship between the validator's uptime and risk score delta per epoch is shown in the following illustration and equation.
+### Validator Lifecycle and Penalty Application
 
-<img src="/img/Fig-9.png" style={{width: 500}} alt="Delta Risk Score per epoch" />
+A validator in OverProtocol goes through the following stages during its lifecycle. Penalties are applied during specific phases to ensure validators uphold their responsibilities:
 
-$$
-\Delta\text{Risk Score per Epoch}= - \frac{\Delta S_{max}}{f}\cdot{P} + \Delta{S_{max}}
-$$
+1. **Pending Activation**
+    - After submitting a request to activate, the validator enters the **pending state**.
+    - The validator must wait until the next activation window to begin duties. No penalties apply in this stage.
 
-When there are a small number of validators participating in the system, you are required to maintain a relatively high uptime. That is, given $N= V_{min}$, risk score increases when $P \leq 0.70$. The figure's blue-colored line has an x-intercept at $P=0.7$. As more validators participate in the system, the required uptime hurdle lowers. That is, when $N= inf$, risk score increases when $P \leq \frac{2}{3}$. The figure's orange-colored line has an x-intercept near $P=\frac{2}{3}$.
+2. **Active**
+    - Once activated, the validator participates in attestation, block proposals, and other duties.
+    - **Penalties Applied**:
+        - **Inactivity Penalty**: For failing to perform assigned duties (e.g., missing attestations).
+        - **Slashing**: For malicious actions, such as double-signing or surrounding votes.
+
+3. **Exiting**
+    - Validators that voluntarily request exit or are forced to exit due to penalties enter the **exiting state**.
+    - This transition is not immediate; **the validator continues performing duties until the exit becomes effective in the next epoch.**
+    - **Penalties Apply**: Validators in the exiting state are still subject to penalties, including Inactivity Penalties and Slashing, if they fail to fulfill their remaining responsibilities during this period.
+
+4. **Exited**
+    - Once the exit is finalized, the validator no longer participates in consensus and is free to withdraw their remaining stake.
+    - No penalties apply after the validator has fully exited the system.
+
+---
+
+### Special Cases
+
+1. **Bailout**
+   - Validators whose penalties exceed **2% of their original stake** are automatically exited from the network.
+   - **Purpose**: To quickly remove problematic validators and prevent excessive losses to their stake while maintaining network health.
+
+2. **Inactivity Leak**
+   - Triggered when the chain fails to finalize for **4 consecutive epochs**, indicating that more than one-third of the validators are experiencing issues.
+   - A **forced recovery protocol** is initiated to restore the liveness of the validator set:
+     - Validators with high Inactivity Scores are automatically exited.
+     - This mechanism ensures the remaining validators can stabilize the network and resume normal operations.
+   - **Purpose**: To address severe liveness issues and protect the network from prolonged downtime.
+
+---
+
+### Why Penalties Matter
+
+OverProtocol’s penalty system ensures:
+
+- **Network Security**: Malicious actions are swiftly penalized, reducing threats to consensus integrity.
+- **Validator Accountability**: Validators are incentivized to perform their duties diligently.
+- **Stability and Liveness**: Special cases like **Bailout** and **Inactivity Leak** prevent prolonged disruptions, ensuring a robust and reliable network.
+
+---
+
+## Balancing Rewards and Penalties
+
+OverProtocol’s system ensures a balanced approach:
+
+1. **Fair Incentives**: Validators are rewarded generously for honest and consistent behavior.
+2. **Proportional Penalties**: Misbehavior is penalized in proportion to its impact on the network.
+3. **Transparency**: All rewards and penalties are governed by clear, pre-defined rules to foster trust and predictability.

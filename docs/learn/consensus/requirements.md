@@ -1,18 +1,35 @@
 ---
-title: Requirements
-description: Requirements for OverProtocol's consensus participation
+title: Validator Requirements
+description: Learn the key requirements for becoming a validator in OverProtocol, including staking minimums and uptime expectations.
 lang: en
 ---
 
-The requirements for becoming and maintaining the status of a validator within the OverProtocol are set to balance the need for active participation and accessibility. These requirements ensure a stable and robust network while keeping participation as accessible as possible. By aligning the interests of validators with the network's stability and offering a carefully calibrated set of rules, OverProtocol aims to foster a thriving ecosystem where validators play an essential role.
-Below is an explanation of the primary requirements:
+Becoming a validator in OverProtocol requires participants to meet certain criteria to ensure the network’s security, efficiency, and decentralization. These requirements are designed to encourage responsible participation while maintaining OverProtocol's accessibility and sustainability.
 
-## Stake Minimum Amount of OVER to be a validator
+---
 
-The minimum stake requirement of OVER ensures that validators have something significant at risk, motivating them to actively participate in the consensus. This helps stabilize the value of the coin and aids swift consensus. However, OverProtocol recognizes the need for accessibility and wants to avoid creating unnecessary barriers. For now, **256 OVER** is selected as a staking requirement, considering the need to include as many participants as possible without compromising the system's integrity.
+## Key Requirements
 
-## Maintain at Least 70% Uptime
+### 1. Minimum Stake: 256 OVER
 
-Every validator must maintain an **uptime of at least 70%**. This criterion is crucial for the system's stability, as the consensus process depends on both the number of validators and each one's average uptime. Importantly, our mathematical modeling is conducted under the assumption that the system is operated solely by ordinary individuals, not a select few with specialized operational expertise (e.g., blockchain infrastructure providers). The calculations demonstrate that a 70% uptime from an ordinary validator guarantees system safety, assuming that more than 16,384 validators are involved (Ethereum's original design aimed to attract over 16,384 validators to ensure a smooth transition to the Proof-of-Stake (PoS) system).
+To join as a validator, participants must stake at least **256 OVER**, OverProtocol’s native token. This minimum staking requirement serves as a **security deposit** to deter malicious behavior and ensure validators have a vested interest in the network's stability and success.
 
-In our system, we have instituted an evaluation scheme termed **risk score** to assess each validator's uptime. If a validator does not meet the uptime benchmark, its risk score escalates. Once the score exceeds a specific threshold, indicating a significant risk of that validator's participation in consensus, the validator is removed from the validation network. This strategy guarantees that validators remain dedicated to preserving their online presence, thereby positively influencing the network's reliability. For a comprehensive understanding, consult the [Rewards and Penalties](rewards-and-penalties.md/#rescuing-offline-validators).
+- **Security Deposit**: The staked OVER acts as collateral, which can be penalized if a validator acts maliciously or fails to meet network obligations. Misconduct, such as double-signing or prolonged inactivity, can lead to penalties, reducing the staked amount.
+- **Economic Alignment**: By staking OVER, validators demonstrate their commitment to the network, ensuring they are financially incentivized to act honestly and maintain network integrity.
+
+[Learn more about penalties and rewards →](./rewards-and-penalties)
+
+---
+
+### 2. Maintain High Uptime
+
+Validators are required to maintain **maximum possible uptime** to support network reliability. Consistent availability ensures seamless block validation and enhances overall network performance.
+
+- **Why It Matters**: High uptime minimizes disruptions and secures validators’ rewards.
+- **Best Practices**: Ensure robust hardware and reliable network connectivity to avoid penalties for downtime.
+
+---
+
+## Looking Ahead
+
+OverProtocol’s validator requirements are designed to balance accessibility with responsibility, ensuring that participants of all scales can contribute to a secure and efficient network. By meeting these criteria, validators not only help maintain the integrity of OverProtocol but also earn rewards for their active participation.
