@@ -122,6 +122,19 @@ const operatorsSidebar = [
     ],
   },
   {
+    type: "category",
+    label: "Advanced Guides",
+    collapsible: true,
+    collapsed: true,
+    items: [
+      {
+        type: "doc",
+        label: "Run with Docker",
+        id: "operators/advanced-guides/run-with-docker",
+      },
+    ],
+  },
+  {
     type: "doc",
     label: "FAQs",
     id: "operators/faqs",
