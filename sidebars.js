@@ -155,6 +155,11 @@ const developersSidebar = [
     label: "Getting Started",
   },
   {
+    type: "doc",
+    id: "developers/differences-from-ethereum",
+    label: "Difference from Ethereum",
+  },
+  {
     type: "category",
     label: "Build Your Contract",
     collapsible: true,

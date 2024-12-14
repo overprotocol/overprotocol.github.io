@@ -4,15 +4,19 @@ description: A description of OverProtocol's fee mechanisms.
 lang: en
 ---
 
-## Currently Effective
+## Transaction fee
 
-### Transaction fee
+The Transaction Fee in OverProtocol plays a vital role in maintaining the network's functionality and economic balance. Every transaction incurs a fee that is applied to sustain the protocol’s security and operational efficiency while also managing the supply of OVER tokens in circulation.
 
-The **Transaction Fee** is a charge applied to each transaction within the OverProtocol's on-chain activity. This fee serves to reduce the total circulating supply of OVER tokens.
+### What is the Base Fee?
 
-There are two primary objectives that we aim to achieve through the transaction fee design. Firstly, we seek to align user gas usage with an appropriate gas target, ensuring efficient network operation. Secondly, we aim to induce deflationary pressure through the application of **base fees**, thereby promoting a balanced economic environment within the network. For this purpose, we use the commonly known EIP-1559, and adjust its design which we plan to achieve through several future updates.
+The base fee is a core concept introduced with the adoption of EIP-1559, a widely recognized Ethereum improvement proposal. EIP-1559 replaces the traditional gas auction model with a dynamic pricing mechanism, making transaction fees more predictable and efficient. The base fee is a mandatory amount that must be paid for any transaction to be included in a block and is dynamically adjusted based on network demand.
 
 In the protocol's initial stages, the base fee is collected and directed to the [DAO Treasury](./distribution#treasury), supporting various ecosystem development initiatives. As the protocol matures, the collection strategy evolves: instead of accruing in the treasury, the base fee is directly burned from each transaction. This nuanced approach balances the initial growth needs with a longer-term strategy of reducing token supply, thereby sustaining the protocol’s economic health.
+
+### Why is the Base Fee Set at 100 Gwei?
+
+In the early stages of OverProtocol, the minimum base fee is set at 100 Gwei, a deliberate decision to enhance the network's resistance against potential Denial of Service (DoS) attacks. While this may appear to result in higher transaction costs, ensuring network stability and security during its initial phase is a top priority.
 
 ## Future Plans
 
