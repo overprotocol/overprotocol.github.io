@@ -1,12 +1,60 @@
 ---
 title: Differences from Ethereum
-description: A list of differences from Ethereum that can significantly impact how applications are built and function on this platform.
+description: Key differences between OverProtocol and Ethereum, focusing on gas fee structures, calldata costs, and protocol-specific adjustments.
 lang: en
 ---
 
-OverProtocol is an independent Layer 1 protocol that inherits the Ethereum Virtual Machine (EVM), ensuring compatibility with Ethereum's established ecosystem. This compatibility enables developers familiar with Ethereum to transition smoothly and leverage their existing skills. However, there are key distinctions between OverProtocol and Ethereum that developers must understand, as these differences can significantly impact how applications are built and function on this platform. Here are the crucial aspects to consider and the actions to take:
+OverProtocol incorporates several protocol-level changes to differentiate itself from Ethereum. These adjustments aim to optimize network performance, ensure economic sustainability, and manage blockchain growth effectively. Below are the key differences.
+
+---
+
+## 1. Increased Calldata Gas Cost
+
+One significant change is the adjustment of **calldata gas costs**. OverProtocol has [**rolled back EIP-2028**](https://eips.ethereum.org/EIPS/eip-2028), which initially reduced calldata gas costs in Ethereum. As a result, the gas cost for **non-zero transaction data** has increased from **16 gas per byte** to **68 gas per byte**.
+
+### Why Increase Calldata Costs?
+
+- **Control Blockchain Data Growth**: By raising calldata gas costs, OverProtocol aims to limit the rate at which on-chain data grows, ensuring the network remains sustainable in the long term.
+- **Introduce an Appropriate Cost Structure**: Higher costs encourage developers and users to optimize transaction data, reducing unnecessary or excessive on-chain data usage.
+
+---
+
+## 2. Minimum Base Fee of 100 Gwei
+
+OverProtocol adopts the [**EIP-1559 fee mechanism**](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md), introducing a **base fee** that dynamically adjusts based on network demand. However, the **minimum base fee** is set at **100 Gwei**, a higher threshold compared to Ethereum’s dynamic base fee.
+
+### Why a Higher Base Fee?
+
+- **Resilience Against DoS Attacks**: The higher base fee increases the cost of spamming the network, significantly improving security.
+- **Initial Network Stability**: In the early stages of the protocol, stability takes precedence over low transaction fees, ensuring a robust foundation for growth.
+- **Economic Sustainability**: Base fees are either allocated to the [DAO Treasury](/learn/tokenomics/distribution#treasury) during the protocol's initial phase or directly burned in later stages, creating a deflationary effect that supports tokenomics.
+
+---
+
+## **Summary of Key Adjustments**
+
+| Feature                       | OverProtocol                                   | Ethereum                                |
+|-------------------------------|-----------------------------------------------|----------------------------------------|
+| **Calldata Gas Cost**         | 68 gas per byte for non-zero data             | 16 gas per byte (EIP-2028)             |
+| **Base Fee (EIP-1559)**       | Minimum 100 Gwei                              | Dynamically adjusted, no minimum       |
+| **Base Fee Allocation**       | Treasury (initial), burned (mature stages)    | Burned                                  |
+
+---
+
+## **Rationale for These Adjustments**
+
+The changes implemented in OverProtocol reflect the project’s commitment to:
+
+1. **Sustainability**: Preventing excessive data growth and encouraging responsible resource usage.
+2. **Security**: Increasing costs for spamming the network to protect against DoS attacks.
+3. **Economic Stability**: Ensuring tokenomics promote long-term health and deflationary mechanics.
+
+These adjustments differentiate OverProtocol as a blockchain platform optimized for scalability, security, and sustainability.
+
+<!-- OverProtocol is an independent Layer 1 protocol that inherits the Ethereum Virtual Machine (EVM), ensuring compatibility with Ethereum's established ecosystem. This compatibility enables developers familiar with Ethereum to transition smoothly and leverage their existing skills. However, there are key distinctions between OverProtocol and Ethereum that developers must understand, as these differences can significantly impact how applications are built and function on this platform. Here are the crucial aspects to consider and the actions to take:
 
 ## Contracts Getting Swiped
+
 OverProtocol currently doesn’t support restoration of contract accounts. This means that once a contract address becomes inactive, all the OVER the contract was holding is permanently lost, so please take care when deploying and managing contracts.
 
 One important case to note is prefunded contracts going inactive. If a prefunded contract (a contract address that has received OVER before the actual contract is deployed) is not used for more than 2 epochs and goes inactive, it is still restorable while the contract is not deployed since it is technically the same as an EOA. However, it will not be restorable once the contract is deployed, so make sure to restore the address before deploying the contract if there is any chance of it being prefunded. 
@@ -69,4 +117,4 @@ The existing `nonce` field is split into a 64-bit field, with the first 32 bits 
 
 The `SELFDESTRUCT` opcode, updated in accordance with [`EIP-6780`](https://eips.ethereum.org/EIPS/eip-6780), is implemented in such a way that while it does not actually destroy the contract account, it does process refunds. Contracts that are not used will naturally expire over time as the Ethanos epoch progresses.
 
-The rationale behind incorporating EIP-6780 into OverProtocol differs significantly from its application in Ethereum. OverProtocol's implementation is specifically designed to avoid scenarios where a self-destructed contract account becomes indistinguishable from an Externally Owned Account (EOA). This distinction is crucial for maintaining clarity and integrity in the network's account management, ensuring that the lifecycle of contract accounts is handled in a better way.
+The rationale behind incorporating EIP-6780 into OverProtocol differs significantly from its application in Ethereum. OverProtocol's implementation is specifically designed to avoid scenarios where a self-destructed contract account becomes indistinguishable from an Externally Owned Account (EOA). This distinction is crucial for maintaining clarity and integrity in the network's account management, ensuring that the lifecycle of contract accounts is handled in a better way. -->
