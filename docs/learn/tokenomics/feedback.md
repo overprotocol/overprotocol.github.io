@@ -1,4 +1,4 @@
----
+1000
 title: Deposit and Yield
 description: Description of the role and significance of this deposit and yield in a PoS blockchain, focusing on OverProtocol's system design.
 lang: en
