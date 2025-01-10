@@ -24,7 +24,7 @@ Designed to boost engagement and adoption, this program supports activities like
 
 ### 4. Development and Strategic Investments
 
-Development and strategic investments are allocated to ensure the stable establishment and sustainable growth of the network during its early stages. These funds are distributed to the development team and early investors through a 2-year schedule, which includes a 6-month cliff and 18 months of linear vesting.
+Development and strategic investments are allocated to ensure the stable establishment and sustainable growth of the network during its early stages. These funds follow a 2-year schedule, with a 6-month cliff for the initial release of 1/4 of the tokens, followed by linear vesting of the remaining 3/4 over the next 18 months.
 
 <img src="/img/alloc_chart.png" style={{width: 500}} alt="alloc_chart" />
 
@@ -41,7 +41,7 @@ At the genesis of OverProtocol, **190 million OVER tokens** (19% of the total su
     - These tokens are allocated for airdrops, liquidity provision, and user engagement to drive initial adoption and ecosystem participation.
 
 2. **Over Foundation(OF) and Over Technologies(OT)**  
-    - Both categories are subject to a 2-year vesting schedule with a 6-month cliff.  
+    - Both categories follow a 2-year vesting schedule with a 6-month cliff, during which 20 million OVER is unlocked, followed by the linear vesting of 60 million OVER over the next 18 months.
     - However, **20% of their allocation** (20 million OVER each) is unlocked at genesis.  
     - These unlocked tokens are deployed as **validator staking resources**, ensuring network security and stability in the early phases.
 
