@@ -311,8 +311,8 @@ Run `validator` client to run the validator on your node like following:
 </Tabs>
 <br />
 
-:::warning Running a Validator and Beacon Node on a different machine
-When your are running a Validator and a Beacon Node on a different machine, it is highly recommended to use Secure gRPC connections for security measures. Please refer to this [page](./advanced-guides/secure-grpc-connections) for specified configurations.
+:::warning Running a Validator and Beacon Node on a separate machine
+When your are running a Validator and a Beacon Node on a separate machine, it is highly recommended to use Secure gRPC connections for security measures. Please refer to this [page](./advanced-guides/secure-grpc-connections) for specified configurations.
 :::
 
 `--suggested-fee-recipient` will allow you to earn block priority fees. If no `--suggested-fee-recipient` is set neither on the validator client nor on the beacon node, the corresponding fees will be sent to the burn address, and forever lost.
