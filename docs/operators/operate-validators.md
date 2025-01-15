@@ -280,7 +280,10 @@ Importing accounts... 100% [====================================================
 ```
 
 ### Run Your Validator Client
-
+:::warning Running a Validator and Beacon Node on a separate machine
+When your are running a Validator and a Beacon Node on a separate machine, it is highly recommended to use Secure gRPC connections for security measures. Please refer to this [page](./advanced-guides/secure-grpc-connections) for specified configurations.
+:::
+<br />
 Run `validator` client to run the validator on your node like following:
 
 <Tabs

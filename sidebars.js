@@ -133,6 +133,11 @@ const operatorsSidebar = [
         label: "Run with Docker",
         id: "operators/advanced-guides/run-with-docker",
       },
+      {
+        type: "doc",
+        label: "Secure gRPC connections",
+        id: "operators/advanced-guides/secure-grpc-connections",
+      },
     ],
   },
   {
