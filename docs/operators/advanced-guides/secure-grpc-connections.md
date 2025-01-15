@@ -33,7 +33,7 @@ This will generate an output like so:
 # Generating self-signed TLS certificates
 > **NOTICE**: Creating a self-signed certificate is fine for simple TLS connections, though if the deployment will see public usage, it is always recommended to obtain valid certificates from a trusted certificate authority instead.
 
-1. Install (openssl)[https://www.openssl.org/] for your operating system.
+1. Install [openssl](https://www.openssl.org/) for your operating system.
 
 2. Create a root signing key:
 ```bash
