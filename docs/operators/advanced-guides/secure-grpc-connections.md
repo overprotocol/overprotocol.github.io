@@ -10,7 +10,7 @@ The only practical use for using secure gRPC is in the case of connecting a beac
 :::
 A beacon node, by default, hosts a gRPC server on host 127.0.0.1 and port 4000, allowing any other process, such as a validator client, to establish an insecure connection on that port. The beacon node can also allow for secure, TLS connections if ran with the --tls-cert=/path/to/cert.pem and --tls-key=/path/to/cert.key flags, ensuring all connections via gRPC are secured.
 
-A validator client will attempt to connect to a beacon node by default with an insecure connection, but can be a secure TLS connection by using a --tls-cert=/path/to/cert.pem flag, utilising either a server pem certificate or a ca.cert certificate authority file. Assuming a TLS certificate has already been set up with a trusted authority for your beacon node, use the commands below to launch the node and validator. Otherwise, review the following section on creating your own self-signed certificates.
+A validator client will attempt to connect to a beacon node by default with an insecure connection, but can be a secure TLS connection by using a `--tls-cert=/path/to/cert.pem` flag, utilising either a server pem certificate or a `ca.cert` certificate authority file. Assuming a TLS certificate has already been set up with a trusted authority for your beacon node, use the commands below to launch the node and validator. Otherwise, review the following section on creating your own self-signed certificates.
 
 To use secure gRPC with a beacon node:
 ```bash
