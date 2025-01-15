@@ -1,6 +1,6 @@
 ---
 title: Secure gRPC connections
-description: Installation guide using Docker
+description: How to use secure gRPC connections
 lang: en
 ---
 
