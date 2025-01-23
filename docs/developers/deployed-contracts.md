@@ -41,7 +41,7 @@ The Dolphin testnet operates with the goal of providing an environment identical
 |--------------|--------------------------------------------|
 | PoS deposit  | [0x000000000000000000000000000000000beac017](https://dolphin-scan.over.network/address/0x000000000000000000000000000000000beAC017) |
 | Wrapped OVER | [0xd6e9E39c54e2340b498140843E4D7a0a240DE43f](https://dolphin-scan.over.network/token/0xd6e9E39c54e2340b498140843E4D7a0a240DE43f) |
-| Multicall3   | [0xD41c20064E480687271eA8E1BAA4Db8ac9aa6551](https://dolphin-scan.over.network/address/0xD41c20064E480687271eA8E1BAA4Db8ac9aa6551) |
+| Multicall3   | [0x03657CDcDA1523C073b5e09c37dd199E6fBD1b99](https://dolphin-scan.over.network/address/0x03657CDcDA1523C073b5e09c37dd199E6fBD1b99) |
 
   </TabItem>
 </Tabs>
